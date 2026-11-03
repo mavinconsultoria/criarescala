@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://criarescala.com.br/sitemap.xml
