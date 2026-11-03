@@ -5,7 +5,7 @@ Site publicado do Criar Escala: o sistema (`index.html`, arquivo único gerado p
 ## Blog
 - Posts em `blog/<slug>.html`, lista em `blog/index.html`, feed em `blog/feed.xml`, URLs no `sitemap.xml` da raiz.
 - Ritmo: 2 a 3 posts por semana, só sobre escala de trabalho, jornada (EC 141/2026) e gestão de turnos.
-- Rascunhos ficam em `drafts/` (fora do site publicado pelo `netlify.toml`? não: o Netlify publica a raiz; rascunhos usam `noindex` até serem movidos para `blog/`).
+- Rascunhos ficam em `drafts/`. A pasta é publicada, mas com cabeçalho `noindex` (ver `_headers`), e só entra no blog quando o arquivo é movido para `blog/`.
 
 ## Publicação
 Cada push na branch `main` publica no Netlify (projeto `criarescala-app`).
