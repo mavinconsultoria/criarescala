@@ -18,7 +18,7 @@ Regras: dado ou regra trabalhista sempre com fonte oficial citada (planalto.gov.
 | 2026-10-30 | fim-da-escala-6x1-o-que-muda-para-as-equipes |
 | 2026-10-31 | escala-5x2-4x3-outros-modelos-de-jornada |
 | 2026-11-01 | como-calcular-equipe-ideal-para-escala-sem-furo |
-| 2026-11-02 | erros-comuns-ao-planejar-a-escala-de-equipe |
-| 2026-11-03 | escala-de-revezamento-como-organizar-turnos |
+| 2026-11-03 | erros-comuns-ao-planejar-a-escala-de-equipe |
+| 2026-11-02 | escala-de-revezamento-como-organizar-turnos |
 | 2026-11-03 | troca-de-turno-e-banco-de-horas |
 | 2026-11-03 | pequenos-negocios-e-a-escala-de-7-dias-por-semana |
