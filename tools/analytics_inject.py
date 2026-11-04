@@ -72,7 +72,7 @@ def generic(ga, clarity, key, bg, fg, accent, privacy, font):
     return head, '', banner
 
 BRANDS = {
-    'criarescala': lambda: generic('G-2L3P5YF5HM', 'z8ddnrsilw', 'criarescala_cookie_consent', '#111827', '#F9FAFB', '#5B3DF5', None, 'inherit'),
+    'criarescala': lambda: generic('G-2L3P5YF5HM', 'z8ddnrsilw', 'criarescala_cookie_consent', '#111827', '#F9FAFB', '#5B3DF5', 'https://criarescala.com.br/privacidade/', 'inherit'),
     'mavinconsultoria': lambda: generic('G-82E012LG8D', 'z8ddvo13wc', 'mavinconsultoria_cookie_consent', '#0E2233', '#FAF9F6', '#2E6BE6', 'https://mavinseguros.com.br/privacidade/', 'inherit'),
     'savant': lambda: generic('G-82E012LG8D', 'z8ddvo13wc', 'savant_cookie_consent', '#0E2233', '#FAF9F6', '#2E6BE6', '/privacidade', 'inherit'),
 }

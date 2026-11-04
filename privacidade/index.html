@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Medição (GA4 + Clarity) com Consent Mode v2 data-analytics="mavin-v1" -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','wait_for_update':500});
+  (function(){ try { if (localStorage.getItem('criarescala_cookie_consent') === 'accepted') gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'}); } catch(e){} })();
+</script>
+<script>
+/* GA4 e Clarity carregados na primeira interação ou 5 s após o carregamento, para não atrasar a página. */
+(function(w,d){
+  var done=false;
+  function load(){
+    if(done) return; done=true;
+    var g=d.createElement('script'); g.async=true; g.src='https://www.googletagmanager.com/gtag/js?id=G-2L3P5YF5HM'; d.head.appendChild(g);
+    gtag('js', new Date()); gtag('config', 'G-2L3P5YF5HM');
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(w,d,"clarity","script","z8ddnrsilw");
+    var ok=false; try{ ok = localStorage.getItem('criarescala_cookie_consent')==='accepted'; }catch(e){}
+    w.clarity('consentv2',{ad_Storage: ok?'granted':'denied', analytics_Storage: ok?'granted':'denied'});
+    ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){ w.removeEventListener(e,load,{passive:true}); });
+  }
+  ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){ w.addEventListener(e,load,{passive:true,once:true}); });
+  w.addEventListener('load',function(){ setTimeout(load,5000); });
+  /* cliques em WhatsApp, telefone e e-mail viram eventos de conversão */
+  d.addEventListener('click',function(ev){
+    var a=ev.target.closest && ev.target.closest('a[href]'); if(!a) return;
+    var h=a.getAttribute('href')||'', n=null;
+    if(/wa\.me|whatsapp/i.test(h)) n='click_whatsapp'; else if(/^tel:/i.test(h)) n='click_telefone'; else if(/^mailto:/i.test(h)) n='click_email';
+    if(n) gtag('event', n, {link_url:h, page_path:location.pathname});
+  }, true);
+})(window,document);
+</script>
+<!-- Fim da medição -->
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidade | Criar Escala</title>
+<meta name="description" content="Como o Criar Escala e o Escala Grátis tratam dados pessoais e cookies, conforme a LGPD.">
+<link rel="canonical" href="https://criarescala.com.br/privacidade/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>
+  :root{--ink:#111827;--muted:#4B5563;--line:#E5E7EB;--bg:#FFFFFF;--soft:#F5F3FF;--accent:#5B3DF5}
+  @media (prefers-color-scheme:dark){:root{--ink:#F3F4F6;--muted:#9CA3AF;--line:#374151;--bg:#111827;--soft:#1F2937;--accent:#8B7BFF}}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  main{max-width:760px;margin:0 auto;padding:32px 16px 64px}
+  a{color:var(--accent)}
+  .top{font-size:14px;margin-bottom:24px}
+  h1{font-size:30px;line-height:1.2;margin:0 0 6px}
+  .meta{color:var(--muted);font-size:14px;margin:0 0 28px}
+  h2{font-size:19px;margin:32px 0 8px}
+  p,li{color:var(--ink)}
+  .box{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  table{width:100%;border-collapse:collapse;font-size:15px;margin:8px 0}
+  th,td{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:8px 6px}
+  th{color:var(--muted);font-weight:600}
+  footer{margin-top:40px;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<main>
+<p class="top"><a href="/">Voltar ao Criar Escala</a></p>
+<h1>Política de privacidade</h1>
+<p class="meta">Última atualização: 4 de novembro de 2026 · Versão 1.0</p>
+
+<p>Esta política explica quais dados o Criar Escala trata, para que, com quem compartilha e quais são os seus direitos. Ela segue a Lei nº 13.709/2018, a Lei Geral de Proteção de Dados Pessoais (LGPD), e vale para <strong>criarescala.com.br</strong> (incluindo o blog) e <strong>escalagratis.com.br</strong>.</p>
+
+<h2>1. Quem é o controlador</h2>
+<div class="box">
+<p style="margin:0">O Criar Escala é uma solução Mavin Seguros, mantida por:<br>
+<strong>Mavin Consultoria &amp; Corretagem de Seguros Ltda.</strong><br>
+CNPJ 68.132.516/0001-23<br>
+Rua Adelino Leal Nunes, 279, Casa 02, Condomínio San Remo, Novo Mundo, Curitiba/PR, CEP 81.020-080<br>
+E-mail: <a href="mailto:contato@mavinconsultoria.com.br">contato@mavinconsultoria.com.br</a></p>
+</div>
+
+<h2>2. A escala que você monta fica no seu navegador</h2>
+<p>Os dados que você informa para montar a escala (nomes da equipe, turnos, regras da empresa) são salvos apenas no armazenamento local do seu navegador, no seu próprio aparelho. Eles <strong>não são enviados</strong> para os nossos servidores. Se você limpar os dados do navegador ou usar outro aparelho, essa escala não estará lá.</p>
+<p>Por isso, recomendamos não colocar na escala dados além do necessário, como documentos pessoais ou informações de saúde dos colaboradores.</p>
+
+<h2>3. Dados coletados automaticamente</h2>
+<p>Quando você navega no site, podem ser coletados endereço IP, tipo de aparelho e navegador, páginas visitadas, tempo na página, origem do acesso (por exemplo, busca no Google ou link de campanha) e como você interage com as páginas (cliques e rolagem).</p>
+
+<h2>4. Cookies e ferramentas de medição</h2>
+<table>
+<tr><th>Ferramenta</th><th>Para que serve</th><th>Quando é usada</th></tr>
+<tr><td>Armazenamento local do navegador</td><td>Guardar a escala que você montou e a sua escolha sobre cookies.</td><td>Sempre, pois o sistema depende disso para funcionar.</td></tr>
+<tr><td>Google Analytics 4</td><td>Contar visitas, ver de onde elas vêm e quais páginas são mais usadas.</td><td>Só grava cookies depois que você aceita. Se recusar, envia apenas sinais sem identificação.</td></tr>
+<tr><td>Microsoft Clarity</td><td>Gerar mapas de calor e gravações anônimas da navegação (cliques, rolagem e movimentos), para melhorar o sistema. Campos com dados sensíveis são mascarados e não são gravados.</td><td>Só grava cookies depois que você aceita.</td></tr>
+</table>
+<p>Você pode mudar de ideia a qualquer momento apagando os dados do site no seu navegador; o aviso de cookies aparecerá de novo. Não usamos cookies de publicidade neste site.</p>
+
+<h2>5. Para que usamos e com qual base legal</h2>
+<table>
+<tr><th>Finalidade</th><th>Base legal (LGPD)</th></tr>
+<tr><td>Medir o uso do site e melhorar o sistema</td><td>Consentimento (art. 7º, I)</td></tr>
+<tr><td>Responder a quem entra em contato por e-mail</td><td>Procedimentos preliminares a pedido do titular (art. 7º, V)</td></tr>
+<tr><td>Garantir a segurança do site e prevenir abusos</td><td>Legítimo interesse (art. 7º, IX)</td></tr>
+<tr><td>Cumprir obrigações legais, como a guarda de registros de acesso</td><td>Obrigação legal (art. 7º, II)</td></tr>
+</table>
+
+<h2>6. Com quem compartilhamos</h2>
+<p>Não vendemos dados pessoais. Os dados de navegação passam pelos fornecedores que fazem o site funcionar: Cloudflare (hospedagem e segurança), Google (Google Analytics) e Microsoft (Clarity). Também podemos fornecer dados a autoridades públicas mediante requisição legal.</p>
+
+<h2>7. Transferência internacional</h2>
+<p>Esses fornecedores mantêm servidores fora do Brasil, principalmente nos Estados Unidos. A transferência segue o art. 33 da LGPD, com base nas garantias contratuais oferecidas por esses fornecedores.</p>
+
+<h2>8. Por quanto tempo guardamos</h2>
+<p>Os dados de medição ficam guardados pelo prazo configurado em cada ferramenta (no Google Analytics, no máximo 14 meses; no Clarity, as gravações ficam disponíveis por cerca de 30 dias e os mapas de calor de forma agregada). Registros de acesso ao site são guardados por 6 meses, conforme o Marco Civil da Internet (Lei nº 12.965/2014). A escala salva no seu navegador fica lá até você apagá-la.</p>
+
+<h2>9. Seus direitos</h2>
+<p>Você pode pedir confirmação de que tratamos seus dados, acesso, correção, anonimização, bloqueio ou eliminação, informação sobre com quem compartilhamos e revogação do consentimento, pelo e-mail <a href="mailto:contato@mavinconsultoria.com.br">contato@mavinconsultoria.com.br</a>. Respondemos em até 15 dias. Você também pode recorrer à Autoridade Nacional de Proteção de Dados (ANPD).</p>
+
+<h2>10. Crianças e adolescentes</h2>
+<p>O Criar Escala é destinado a empresas e gestores de equipe. Não coletamos intencionalmente dados de menores de 18 anos.</p>
+
+<h2>11. Alterações desta política</h2>
+<p>Esta política pode ser atualizada. A data no topo indica a versão em vigor.</p>
+
+<footer>Criar Escala · criarescala.com.br · escalagratis.com.br · Uma solução Mavin Seguros</footer>
+</main>
+<!-- Banner de consentimento de cookies (LGPD) -->
+<style>
+  #an-cookie-bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;max-width:640px;margin:0 auto;background:#111827;color:#F9FAFB;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.25);padding:10px 12px 10px 16px;display:flex;align-items:center;gap:12px;font-family:inherit;font-size:12px;line-height:1.4;transition:transform .3s ease,opacity .3s ease}
+  #an-cookie-bar.an-hidden{transform:translateY(20px);opacity:0;pointer-events:none}
+  #an-cookie-bar a{color:inherit;text-decoration:underline;opacity:.9}
+  #an-cookie-bar .an-t{flex:1;opacity:.88}
+  #an-cookie-bar .an-a{display:flex;gap:6px;flex-shrink:0}
+  #an-cookie-bar button{font-family:inherit;font-weight:700;font-size:12px;padding:7px 12px;border-radius:8px;border:none;cursor:pointer;white-space:nowrap}
+  #an-cookie-no{background:rgba(127,127,127,.18);color:inherit;font-weight:600}
+  #an-cookie-ok{background:#5B3DF5;color:#fff}
+  @media(max-width:480px){#an-cookie-bar{flex-direction:column;align-items:stretch;text-align:left}#an-cookie-bar .an-a{justify-content:flex-end}}
+</style>
+<div id="an-cookie-bar" class="an-hidden" role="dialog" aria-label="Consentimento de cookies">
+  <div class="an-t">Usamos cookies para medir e melhorar o uso do site. <a href="https://criarescala.com.br/privacidade/">Política de privacidade</a></div>
+  <div class="an-a"><button id="an-cookie-no" type="button">Recusar</button><button id="an-cookie-ok" type="button">Aceitar</button></div>
+</div>
+<script>
+(function(){
+  var bar=document.getElementById('an-cookie-bar'), k='criarescala_cookie_consent', s=null;
+  try{ s=localStorage.getItem(k); }catch(e){}
+  if(!s) bar.classList.remove('an-hidden');
+  function done(v){ try{ localStorage.setItem(k,v); }catch(e){} bar.classList.add('an-hidden'); }
+  document.getElementById('an-cookie-ok').addEventListener('click',function(){
+    gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'});
+    if(window.clarity) clarity('consentv2',{ad_Storage:'granted',analytics_Storage:'granted'});
+    done('accepted');
+  });
+  document.getElementById('an-cookie-no').addEventListener('click',function(){ done('rejected'); });
+})();
+</script>
+</body>
+</html>
