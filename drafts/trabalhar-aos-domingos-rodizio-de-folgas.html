@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Medição (GA4 + Clarity) com Consent Mode v2 data-analytics="mavin-v1" -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','wait_for_update':500});
+  (function(){ try { if (localStorage.getItem('criarescala_cookie_consent') === 'accepted') gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'}); } catch(e){} })();
+</script>
+<script>
+/* GA4 e Clarity carregados na primeira interação ou 5 s após o carregamento, para não atrasar a página. */
+(function(w,d){
+  var done=false;
+  function load(){
+    if(done) return; done=true;
+    var g=d.createElement('script'); g.async=true; g.src='https://www.googletagmanager.com/gtag/js?id=G-2L3P5YF5HM'; d.head.appendChild(g);
+    gtag('js', new Date()); gtag('config', 'G-2L3P5YF5HM');
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(w,d,"clarity","script","z8ddnrsilw");
+    var ok=false; try{ ok = localStorage.getItem('criarescala_cookie_consent')==='accepted'; }catch(e){}
+    w.clarity('consentv2',{ad_Storage: ok?'granted':'denied', analytics_Storage: ok?'granted':'denied'});
+    ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){ w.removeEventListener(e,load,{passive:true}); });
+  }
+  ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){ w.addEventListener(e,load,{passive:true,once:true}); });
+  w.addEventListener('load',function(){ setTimeout(load,5000); });
+  /* cliques em WhatsApp, telefone e e-mail viram eventos de conversão */
+  d.addEventListener('click',function(ev){
+    var a=ev.target.closest && ev.target.closest('a[href]'); if(!a) return;
+    var h=a.getAttribute('href')||'', n=null;
+    if(/wa\.me|whatsapp/i.test(h)) n='click_whatsapp'; else if(/^tel:/i.test(h)) n='click_telefone'; else if(/^mailto:/i.test(h)) n='click_email';
+    if(n) gtag('event', n, {link_url:h, page_path:location.pathname});
+  }, true);
+})(window,document);
+</script>
+<!-- Fim da medição -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trabalhar aos domingos: como montar o rodízio | Criar Escala</title>
+<meta name="description" content="Trabalhar aos domingos é permitido com escala de revezamento. Veja o que dizem a CLT, a Lei 10.101/2000 e a EC 141/2026, e um exemplo de rodízio de folgas aos domingos.">
+<link rel="canonical" href="https://criarescala.com.br/blog/trabalhar-aos-domingos-rodizio-de-folgas.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Criar Escala">
+<meta property="og:title" content="Trabalhar aos domingos: como fazer o rodízio de folgas">
+<meta property="og:description" content="Trabalhar aos domingos é permitido com escala de revezamento. Veja o que dizem a CLT, a Lei 10.101/2000 e a EC 141/2026, e um exemplo de rodízio de folgas aos domingos.">
+<meta property="og:url" content="https://criarescala.com.br/blog/trabalhar-aos-domingos-rodizio-de-folgas.html">
+<meta property="og:image" content="https://criarescala.com.br/og.png">
+<meta property="article:published_time" content="2026-11-26">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/blog/assets/style.css">
+<style>
+  .tabela-escala{overflow-x:auto;margin:8px 0 26px;-webkit-overflow-scrolling:touch}
+  .tabela-escala table{border-collapse:collapse;width:100%;min-width:520px;font-size:.88rem;background:#fff}
+  .tabela-escala th,.tabela-escala td{border:1px solid var(--linha);padding:8px 10px;text-align:center}
+  .tabela-escala th{background:var(--azul-claro);font-weight:700}
+  .tabela-escala td:first-child,.tabela-escala th:first-child{text-align:left;font-weight:700}
+  .tabela-escala td.folga{background:var(--areia);color:var(--cinza)}
+  .tabela-escala caption{caption-side:bottom;text-align:left;font-size:.8rem;color:var(--cinza);padding-top:8px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Trabalhar aos domingos: como fazer o rodízio de folgas",
+  "datePublished": "2026-11-26",
+  "dateModified": "2026-11-26",
+  "author": {
+    "@type": "Organization",
+    "name": "Criar Escala",
+    "url": "https://criarescala.com.br"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Criar Escala",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://criarescala.com.br/apple-touch-icon.png"
+    }
+  },
+  "mainEntityOfPage": "https://criarescala.com.br/blog/trabalhar-aos-domingos-rodizio-de-folgas.html"
+}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="/blog/" class="wm">criar<span class="lime">escala</span><span class="seg">blog</span></a>
+    <nav class="nav-links">
+      <a href="/blog/" class="navlink">Blog</a>
+      <a href="/?utm_source=blog_criarescala&amp;utm_medium=nav" class="btn btn-primary" data-cta="cotacao" data-cta-label="nav">Criar minha escala grátis</a>
+    </nav>
+  </div>
+</header>
+
+<article class="post">
+  <div class="wrap-narrow">
+    <p class="post-meta">Gestão de equipes · 26 nov 2026 · 5 min de leitura</p>
+    <h1>Trabalhar aos domingos: como fazer o rodízio de folgas</h1>
+    <p class="dek">A empresa pode escalar a equipe aos domingos, desde que organize o revezamento e garanta o domingo de folga de tempos em tempos. Veja as regras e um exemplo de rodízio, já com os 2 dias de repouso da jornada de 42 horas.</p>
+    <div class="byline">Equipe Criar Escala</div>
+
+    <div class="post-hero"><img src="/blog/assets/covers/gestao-equipes.svg" alt="Ilustração: Trabalhar aos domingos: como fazer o rodízio de folgas" width="800" height="400"></div>
+
+    <div class="post-body">
+
+<p>Sim, a empresa pode escalar a equipe para <strong>trabalhar aos domingos</strong>, desde que a atividade permita e que exista uma escala de revezamento. A <a href="https://legis.senado.leg.br/norma/530547/publicacao/37353698">CLT</a> (art. 67) garante o descanso semanal que deve coincidir com o domingo, salvo conveniência pública ou necessidade imperiosa do serviço, e manda organizar escala de revezamento nos serviços que exigem trabalho aos domingos. No comércio, a <a href="https://legis.senado.leg.br/norma/551977/publicacao/34619787">Lei 10.101/2000</a> exige que a folga caia no domingo pelo menos uma vez a cada três semanas.</p>
+      <h2>O que a lei diz sobre trabalhar aos domingos</h2>
+      <ul>
+      <li><strong>CLT, art. 67</strong> — descanso semanal de 24 horas consecutivas, que deve coincidir com o domingo, no todo ou em parte, salvo motivo de conveniência pública ou necessidade imperiosa do serviço. O parágrafo único diz que, nos serviços que exijam trabalho aos domingos, será estabelecida escala de revezamento, <strong>mensalmente organizada e constando de quadro sujeito à fiscalização</strong>.</li>
+      <li><strong>CLT, art. 68</strong> — o trabalho em domingo depende de permissão prévia da autoridade competente em matéria de trabalho, concedida a título permanente nas atividades que, por natureza ou conveniência pública, devem funcionar aos domingos. Confirme com o DP se a sua atividade está coberta.</li>
+      <li><strong>Lei 10.101/2000, art. 6º (comércio)</strong> — autoriza o trabalho aos domingos no comércio em geral, observada a legislação municipal. O repouso semanal remunerado deve coincidir, pelo menos 1 vez no período máximo de 3 semanas, com o domingo, respeitadas as demais normas de proteção ao trabalho e o que for negociado coletivamente.</li>
+      <li><strong>Lei 605/1949, art. 1º</strong> — o repouso semanal remunerado é de 24 horas consecutivas, preferentemente aos domingos (<a href="https://legis.senado.leg.br/norma/542134/publicacao/34619313">texto da lei</a>).</li>
+      </ul>
+      <div class="cta-inline">
+        <div class="txt"><strong>Quem folga no domingo este mês?</strong><span>Monte a escala do mês na Criar Escala, sistema 100% grátis.</span></div>
+        <a href="/?utm_source=blog_criarescala&amp;utm_medium=inline-topo&amp;utm_campaign=trabalhar-aos-domingos-rodizio-de-folgas" class="btn btn-ghost" data-cta="cotacao" data-cta-label="inline-topo-trabalhar-aos-domingos-rodizio-de-folgas">Montar minha escala grátis</a>
+      </div>
+      <h2>O que muda com a EC 141/2026</h2>
+      <p>A partir de 16/12/2026, a <a href="https://legis.senado.leg.br/norma/44184944/publicacao/44189027">Emenda Constitucional 141/2026</a> garante repouso semanal remunerado de <strong>2 dias, um dos quais preferencialmente aos domingos</strong> (novo inciso XV do art. 7º da Constituição, em vigor dois meses após a publicação, conforme o art. 10 da emenda). Na mesma data, a jornada passa a ter limite de 42 horas semanais.</p>
+      <p>Na prática, o rodízio continua sendo o caminho para quem abre aos domingos, mas agora cada pessoa precisa de duas folgas na semana: uma delas pode ser o domingo da vez, e a outra cai em um dia de semana.</p>
+      <h2>Como fazer o rodízio de folgas aos domingos: exemplo</h2>
+      <p>Cenário: uma loja do comércio que abre aos domingos, com três pessoas. A cada semana, uma delas folga no domingo e as outras duas trabalham. Assim, cada pessoa tem o domingo de folga uma vez a cada três semanas, o mínimo da Lei 10.101/2000 para o comércio.</p>
+      <div class="tabela-escala">
+        <table>
+          <caption>Exemplo ilustrativo. Cada pessoa também tem a segunda folga da semana em um dia útil, definida na escala do mês.</caption>
+          <thead>
+            <tr><th scope="col">Semana</th><th scope="col">Ana</th><th scope="col">Bruno</th><th scope="col">Carla</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Semana 1</td><td class="folga">Folga no domingo</td><td>Trabalha</td><td>Trabalha</td></tr>
+            <tr><td>Semana 2</td><td>Trabalha</td><td class="folga">Folga no domingo</td><td>Trabalha</td></tr>
+            <tr><td>Semana 3</td><td>Trabalha</td><td>Trabalha</td><td class="folga">Folga no domingo</td></tr>
+            <tr><td>Semana 4</td><td class="folga">Folga no domingo</td><td>Trabalha</td><td>Trabalha</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Três cuidados para o rodízio funcionar:</p>
+      <ul>
+      <li><strong>Escala do mês, por escrito</strong> — a CLT pede a escala de revezamento organizada mensalmente e em quadro sujeito à fiscalização. Divulgue com antecedência.</li>
+      <li><strong>Mais gente, mais domingos de folga</strong> — com equipes maiores, dá para dar o domingo de folga com mais frequência. Três semanas é o limite do comércio, não a meta.</li>
+      <li><strong>Equipe com mulheres</strong> — a CLT tem regra específica (art. 386): havendo trabalho aos domingos, será organizada uma escala de revezamento quinzenal que favoreça o repouso dominical. Confirme com o DP como isso se aplica à sua escala.</li>
+      </ul>
+      <p>Repetir o rodízio à mão mês após mês é onde ele desequilibra. A <a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=trabalhar-aos-domingos-rodizio-de-folgas" data-cta="cotacao" data-cta-label="texto-trabalhar-aos-domingos-rodizio-de-folgas">Criar Escala</a> distribui folgas e turnos da equipe no mês, a partir de como a sua empresa funciona e de quantas pessoas precisam estar no atendimento em cada dia.</p>
+      <div class="cta-inline">
+        <div class="txt"><strong>Seu rodízio de domingos fecha com 2 folgas por semana?</strong><span>A Criar Escala mostra a escala atual e a da nova regra lado a lado.</span></div>
+        <a href="/?utm_source=blog_criarescala&amp;utm_medium=inline&amp;utm_campaign=trabalhar-aos-domingos-rodizio-de-folgas" class="btn btn-ghost" data-cta="cotacao" data-cta-label="inline-trabalhar-aos-domingos-rodizio-de-folgas">Usar a Criar Escala grátis</a>
+      </div>
+      <div class="callout"><strong>Sobre a Criar Escala:</strong> é um sistema 100% grátis da Mavin Seguros para montar a escala do mês. Você conta como a empresa funciona (dias, horários, feriados e quantas pessoas precisam estar no atendimento), cadastra a equipe e a jornada, e recebe a escala pronta no calendário — com a escala atual e a da nova regra da EC 141/2026 lado a lado, e o diagnóstico de se vai precisar de mais gente. Funciona no celular, sem baixar app e sem cadastro para montar e ver a escala, e exporta em PDF e Excel. Como toda simulação, não tem validade jurídica: em caso de dúvida sobre a sua categoria, vale consultar um advogado trabalhista ou o departamento pessoal da sua contabilidade. <a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=trabalhar-aos-domingos-rodizio-de-folgas" data-cta="cotacao" data-cta-label="texto-trabalhar-aos-domingos-rodizio-de-folgas">Monte a sua escala na Criar Escala</a>.</div>
+      <h2>Pontos para revisar no seu rodízio</h2>
+      <ul>
+      <li>A sua atividade tem permissão para funcionar aos domingos? E a lei municipal permite?</li>
+      <li>Cada pessoa tem o domingo de folga dentro do intervalo exigido para a sua atividade?</li>
+      <li>Depois de 16/12/2026, cada semana garante os 2 dias de repouso de todos?</li>
+      </ul>
+      <div class="callout"><strong>Importante:</strong> Este conteúdo é informativo e não é parecer jurídico. A convenção ou o acordo coletivo da sua categoria pode ter regra própria: antes de aplicar, confirme com um advogado trabalhista ou com o departamento pessoal da sua contabilidade.</div>
+      <p>Trabalhar aos domingos é permitido, mas o domingo de folga também precisa estar na escala. <strong><a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=trabalhar-aos-domingos-rodizio-de-folgas" data-cta="cotacao" data-cta-label="texto-trabalhar-aos-domingos-rodizio-de-folgas">Monte o rodízio do mês na Criar Escala</a></strong> e divulgue a escala para a equipe com antecedência.</p>
+      <div class="related">
+        <h4>Continue lendo</h4>
+        <div class="related-links">
+          <a href="/blog/escala-de-revezamento-como-organizar-turnos.html">Escala de revezamento: como organizar turnos sem sobrecarregar ninguém</a>
+          <a href="/blog/pequenos-negocios-e-a-escala-de-7-dias-por-semana.html">Pequenos negócios e a nova escala: o que muda para quem funciona 7 dias por semana</a>
+          <a href="/blog/fim-da-escala-6x1-o-que-muda-para-as-equipes.html">Fim da escala 6x1 já é lei: o que muda na rotina das equipes e como as empresas podem se preparar</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</article>
+
+<section class="section">
+  <div class="wrap">
+    <div class="strip-cta">
+      <div>
+        <h3>Seu rodízio de domingos está equilibrado?</h3>
+        <p>Na Criar Escala você monta a escala do mês, com folgas e turnos distribuídos. Sistema 100% grátis, uma solução da Mavin Seguros.</p>
+      </div>
+      <a href="/?utm_source=blog_criarescala&amp;utm_medium=strip&amp;utm_campaign=trabalhar-aos-domingos-rodizio-de-folgas" class="btn btn-primary" data-cta="cotacao" data-cta-label="strip-trabalhar-aos-domingos-rodizio-de-folgas">Montar minha escala grátis</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="wm">criar<span class="lime">escala</span></div>
+        <p>Sistema gratuito para montar a escala do mês da sua equipe, já com a nova regra de jornada.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Navegue</h5>
+        <a href="/blog/">Blog</a>
+        <a href="/">Criar minha escala</a>
+        <a href="https://mavinseguros.com.br/privacidade/">Política de privacidade</a>
+      </div>
+      <div class="foot-col">
+        <h5>Quem faz</h5>
+        <a href="https://mavinseguros.com.br">Mavin Seguros</a>
+        <a href="mailto:contato@mavinseguros.com.br">contato@mavinseguros.com.br</a>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p class="legal-txt">Criar Escala é uma solução da Mavin. MAVIN CONSULTORIA &amp; CORRETAGEM DE SEGUROS LTDA · CNPJ 68.132.516/0001-23 · R. Adelino Leal Nunes, 279, Novo Mundo, Curitiba/PR. Conteúdo informativo, sem validade jurídica: confirme com um advogado trabalhista ou com o departamento pessoal da sua contabilidade.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/blog/assets/site.js"></script>
+<!-- Banner de consentimento de cookies (LGPD) -->
+<style>
+  #an-cookie-bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;max-width:640px;margin:0 auto;background:#111827;color:#F9FAFB;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.25);padding:10px 12px 10px 16px;display:flex;align-items:center;gap:12px;font-family:inherit;font-size:12px;line-height:1.4;transition:transform .3s ease,opacity .3s ease}
+  #an-cookie-bar.an-hidden{transform:translateY(20px);opacity:0;pointer-events:none}
+  #an-cookie-bar a{color:inherit;text-decoration:underline;opacity:.9}
+  #an-cookie-bar .an-t{flex:1;opacity:.88}
+  #an-cookie-bar .an-a{display:flex;gap:6px;flex-shrink:0}
+  #an-cookie-bar button{font-family:inherit;font-weight:700;font-size:12px;padding:7px 12px;border-radius:8px;border:none;cursor:pointer;white-space:nowrap}
+  #an-cookie-no{background:rgba(127,127,127,.18);color:inherit;font-weight:600}
+  #an-cookie-ok{background:#5B3DF5;color:#fff}
+  @media(max-width:480px){#an-cookie-bar{flex-direction:column;align-items:stretch;text-align:left}#an-cookie-bar .an-a{justify-content:flex-end}}
+</style>
+<div id="an-cookie-bar" class="an-hidden" role="dialog" aria-label="Consentimento de cookies">
+  <div class="an-t">Usamos cookies para medir e melhorar o uso do site. <a href="https://criarescala.com.br/privacidade/">Política de privacidade</a></div>
+  <div class="an-a"><button id="an-cookie-no" type="button">Recusar</button><button id="an-cookie-ok" type="button">Aceitar</button></div>
+</div>
+<script>
+(function(){
+  var bar=document.getElementById('an-cookie-bar'), k='criarescala_cookie_consent', s=null;
+  try{ s=localStorage.getItem(k); }catch(e){}
+  if(!s) bar.classList.remove('an-hidden');
+  function done(v){ try{ localStorage.setItem(k,v); }catch(e){} bar.classList.add('an-hidden'); }
+  document.getElementById('an-cookie-ok').addEventListener('click',function(){
+    gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'});
+    if(window.clarity) clarity('consentv2',{ad_Storage:'granted',analytics_Storage:'granted'});
+    done('accepted');
+  });
+  document.getElementById('an-cookie-no').addEventListener('click',function(){ done('rejected'); });
+})();
+</script>
+</body>
+</html>

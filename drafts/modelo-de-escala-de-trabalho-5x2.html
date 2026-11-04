@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Medição (GA4 + Clarity) com Consent Mode v2 data-analytics="mavin-v1" -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','wait_for_update':500});
+  (function(){ try { if (localStorage.getItem('criarescala_cookie_consent') === 'accepted') gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'}); } catch(e){} })();
+</script>
+<script>
+/* GA4 e Clarity carregados na primeira interação ou 5 s após o carregamento, para não atrasar a página. */
+(function(w,d){
+  var done=false;
+  function load(){
+    if(done) return; done=true;
+    var g=d.createElement('script'); g.async=true; g.src='https://www.googletagmanager.com/gtag/js?id=G-2L3P5YF5HM'; d.head.appendChild(g);
+    gtag('js', new Date()); gtag('config', 'G-2L3P5YF5HM');
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(w,d,"clarity","script","z8ddnrsilw");
+    var ok=false; try{ ok = localStorage.getItem('criarescala_cookie_consent')==='accepted'; }catch(e){}
+    w.clarity('consentv2',{ad_Storage: ok?'granted':'denied', analytics_Storage: ok?'granted':'denied'});
+    ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){ w.removeEventListener(e,load,{passive:true}); });
+  }
+  ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){ w.addEventListener(e,load,{passive:true,once:true}); });
+  w.addEventListener('load',function(){ setTimeout(load,5000); });
+  /* cliques em WhatsApp, telefone e e-mail viram eventos de conversão */
+  d.addEventListener('click',function(ev){
+    var a=ev.target.closest && ev.target.closest('a[href]'); if(!a) return;
+    var h=a.getAttribute('href')||'', n=null;
+    if(/wa\.me|whatsapp/i.test(h)) n='click_whatsapp'; else if(/^tel:/i.test(h)) n='click_telefone'; else if(/^mailto:/i.test(h)) n='click_email';
+    if(n) gtag('event', n, {link_url:h, page_path:location.pathname});
+  }, true);
+})(window,document);
+</script>
+<!-- Fim da medição -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modelo de escala de trabalho 5x2 (planilha grátis) | Criar Escala</title>
+<meta name="description" content="Modelo de escala de trabalho 5x2 pronto para copiar, com exemplo semanal para equipe de 4 pessoas, e como gerar a planilha da sua equipe em Excel, grátis.">
+<link rel="canonical" href="https://criarescala.com.br/blog/modelo-de-escala-de-trabalho-5x2.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Criar Escala">
+<meta property="og:title" content="Modelo de escala de trabalho 5x2 (com planilha grátis)">
+<meta property="og:description" content="Modelo de escala de trabalho 5x2 pronto para copiar, com exemplo semanal para equipe de 4 pessoas, e como gerar a planilha da sua equipe em Excel, grátis.">
+<meta property="og:url" content="https://criarescala.com.br/blog/modelo-de-escala-de-trabalho-5x2.html">
+<meta property="og:image" content="https://criarescala.com.br/og.png">
+<meta property="article:published_time" content="2026-11-19">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/blog/assets/style.css">
+<style>
+  .tabela-escala{overflow-x:auto;margin:8px 0 26px;-webkit-overflow-scrolling:touch}
+  .tabela-escala table{border-collapse:collapse;width:100%;min-width:520px;font-size:.88rem;background:#fff}
+  .tabela-escala th,.tabela-escala td{border:1px solid var(--linha);padding:8px 10px;text-align:center}
+  .tabela-escala th{background:var(--azul-claro);font-weight:700}
+  .tabela-escala td:first-child,.tabela-escala th:first-child{text-align:left;font-weight:700}
+  .tabela-escala td.folga{background:var(--areia);color:var(--cinza)}
+  .tabela-escala caption{caption-side:bottom;text-align:left;font-size:.8rem;color:var(--cinza);padding-top:8px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Modelo de escala de trabalho 5x2 (com planilha grátis)",
+  "datePublished": "2026-11-19",
+  "dateModified": "2026-11-19",
+  "author": {
+    "@type": "Organization",
+    "name": "Criar Escala",
+    "url": "https://criarescala.com.br"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Criar Escala",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://criarescala.com.br/apple-touch-icon.png"
+    }
+  },
+  "mainEntityOfPage": "https://criarescala.com.br/blog/modelo-de-escala-de-trabalho-5x2.html"
+}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="/blog/" class="wm">criar<span class="lime">escala</span><span class="seg">blog</span></a>
+    <nav class="nav-links">
+      <a href="/blog/" class="navlink">Blog</a>
+      <a href="/?utm_source=blog_criarescala&amp;utm_medium=nav" class="btn btn-primary" data-cta="cotacao" data-cta-label="nav">Criar minha escala grátis</a>
+    </nav>
+  </div>
+</header>
+
+<article class="post">
+  <div class="wrap-narrow">
+    <p class="post-meta">Gestão de equipes · 19 nov 2026 · 5 min de leitura</p>
+    <h1>Modelo de escala de trabalho 5x2 (com planilha grátis)</h1>
+    <p class="dek">Um exemplo semanal de escala 5x2 para uma operação que abre todos os dias, já pensado para a jornada de 42 horas que começa em 16/12/2026, e como transformar isso na planilha da sua equipe.</p>
+    <div class="byline">Equipe Criar Escala</div>
+
+    <div class="post-hero"><img src="/blog/assets/covers/gestao-equipes.svg" alt="Ilustração: Modelo de escala de trabalho 5x2 (com planilha grátis)" width="800" height="400"></div>
+
+    <div class="post-body">
+
+<p>Um <strong>modelo de escala de trabalho 5x2</strong> distribui a semana em cinco dias de trabalho e dois de folga para cada pessoa. Abaixo você encontra um exemplo semanal pronto para uma equipe de quatro pessoas em uma operação que abre de segunda a domingo. E a planilha? Ela sai do próprio sistema: na Criar Escala, que é gratuita, você cadastra a sua equipe, recebe a escala do mês montada e exporta em Excel (ou PDF).</p>
+      <p>O assunto ficou urgente porque a <a href="https://legis.senado.leg.br/norma/44184944/publicacao/44189027">Emenda Constitucional 141/2026</a> garante repouso semanal remunerado de 2 dias, um deles preferencialmente aos domingos, e limita a jornada a 42 horas semanais a partir de 16/12/2026 e a 40 horas um ano depois, em 16/12/2027 (arts. 1º, 6º e 10 da emenda, publicada no Diário Oficial em 16/10/2026, conforme a <a href="https://legis.senado.leg.br/norma/44184944">ficha da norma no Senado</a>).</p>
+      <div class="cta-inline">
+        <div class="txt"><strong>Precisa da escala 5x2 da sua equipe, e não de um exemplo?</strong><span>Monte o mês na Criar Escala e exporte em Excel. Grátis.</span></div>
+        <a href="/?utm_source=blog_criarescala&amp;utm_medium=inline-topo&amp;utm_campaign=modelo-de-escala-de-trabalho-5x2" class="btn btn-ghost" data-cta="cotacao" data-cta-label="inline-topo-modelo-de-escala-de-trabalho-5x2">Montar minha escala 5x2</a>
+      </div>
+      <h2>Modelo de escala de trabalho 5x2: exemplo semanal</h2>
+      <p>Cenário do exemplo: comércio aberto todos os dias, das 8h às 17h, com quatro pessoas. Cada uma trabalha das 8h às 17h com 1 hora de intervalo, ou seja, 8 horas trabalhadas por dia. As duas folgas de cada pessoa caem em dias diferentes, para que a loja nunca fique vazia.</p>
+      <div class="tabela-escala">
+        <table>
+          <caption>Exemplo ilustrativo de escala 5x2 semanal. Horário 08h–17h com 1 h de intervalo.</caption>
+          <thead>
+            <tr><th scope="col">Pessoa</th><th scope="col">Seg</th><th scope="col">Ter</th><th scope="col">Qua</th><th scope="col">Qui</th><th scope="col">Sex</th><th scope="col">Sáb</th><th scope="col">Dom</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Ana</td><td class="folga">Folga</td><td class="folga">Folga</td><td>08–17</td><td>08–17</td><td>08–17</td><td>08–17</td><td>08–17</td></tr>
+            <tr><td>Bruno</td><td>08–17</td><td>08–17</td><td class="folga">Folga</td><td class="folga">Folga</td><td>08–17</td><td>08–17</td><td>08–17</td></tr>
+            <tr><td>Carla</td><td>08–17</td><td>08–17</td><td>08–17</td><td>08–17</td><td class="folga">Folga</td><td class="folga">Folga</td><td>08–17</td></tr>
+            <tr><td>Diego</td><td class="folga">Folga</td><td>08–17</td><td>08–17</td><td>08–17</td><td>08–17</td><td>08–17</td><td class="folga">Folga</td></tr>
+            <tr><td>Pessoas no dia</td><td>2</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Como ler o modelo:</p>
+      <ul>
+      <li><strong>Horas por pessoa</strong> — 5 dias × 8 horas = 40 horas na semana. Fica dentro do limite de 42 horas da primeira fase e das 40 horas da segunda, e dentro das 8 horas diárias do novo inciso XIII do art. 7º da Constituição.</li>
+      <li><strong>Intervalo e descanso entre jornadas</strong> — a CLT exige intervalo de no mínimo 1 hora quando o trabalho contínuo passa de 6 horas (<a href="https://legis.senado.leg.br/norma/530547/publicacao/37353698">art. 71</a>) e 11 horas de descanso entre uma jornada e outra (art. 66). Saindo às 17h e voltando às 8h, são 15 horas.</li>
+      <li><strong>Cobertura</strong> — a segunda-feira ficou com 2 pessoas, porque é o dia em que duas folgas coincidem. Se o seu dia mais fraco for outro, mude as folgas de lugar: o ideal é que a folga dupla caia no dia de menor movimento.</li>
+      <li><strong>Domingo</strong> — a emenda diz que um dos dois dias de repouso é <em>preferencialmente</em> aos domingos. Neste exemplo, só o Diego folga no domingo; na semana seguinte, faça o rodízio para que o domingo de folga passe para outra pessoa.</li>
+      </ul>
+      <div class="callout"><strong>E se eu quiser usar as 42 horas?</strong> Com 8 horas por dia, cinco dias dão 40 horas. Para chegar a 42 horas em cinco dias, cada dia teria mais de 8 horas, e o novo texto da Constituição mantém o limite de 8 horas diárias. A emenda (art. 7º) permite que convenção ou acordo coletivo amplie a duração diária durante a transição. Segundo a <a href="https://fenacon.org.br/wp-content/uploads/2026/10/FCOM0007-Nota-Tecnica-6x1-.pdf">nota orientativa da Fenacon</a>, isso significa até 8h24 por dia em cinco dias, e sem norma coletiva o limite prático já fica em 40 horas a partir de 16/12/2026. Confira o que a convenção da sua categoria prevê.</div>
+      <p>Montar esse quadro à mão funciona para uma semana. O problema aparece no mês: feriados e o rodízio do domingo mudam o quadro de uma semana para outra. É isso que a <a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=modelo-de-escala-de-trabalho-5x2" data-cta="cotacao" data-cta-label="texto-modelo-de-escala-de-trabalho-5x2">Criar Escala</a> resolve: você informa como a empresa funciona e quantas pessoas precisam estar no atendimento, cadastra a equipe e a jornada, e recebe a escala do mês pronta no calendário.</p>
+      <h2>Planilha de escala 5x2 grátis: como gerar a da sua equipe</h2>
+      <p>Em vez de um arquivo genérico para preencher, a planilha sai já com a sua equipe:</p>
+      <ol>
+      <li>Abra a Criar Escala no computador ou no celular. Não precisa baixar app nem fazer cadastro para montar e ver a escala.</li>
+      <li>Informe os dias e horários de funcionamento, os feriados e quantas pessoas precisam estar no atendimento.</li>
+      <li>Cadastre a equipe e a jornada de cada pessoa.</li>
+      <li>Confira a escala do mês no calendário, ao lado da escala na nova regra da EC 141/2026.</li>
+      <li>Exporte em Excel para ajustar e arquivar, ou em PDF para imprimir e afixar.</li>
+      </ol>
+      <div class="cta-inline">
+        <div class="txt"><strong>Sua escala 5x2 cobre todos os dias da semana?</strong><span>A Criar Escala monta o mês e mostra se vai precisar de mais gente.</span></div>
+        <a href="/?utm_source=blog_criarescala&amp;utm_medium=inline&amp;utm_campaign=modelo-de-escala-de-trabalho-5x2" class="btn btn-ghost" data-cta="cotacao" data-cta-label="inline-modelo-de-escala-de-trabalho-5x2">Usar a Criar Escala grátis</a>
+      </div>
+      <div class="callout"><strong>Sobre a Criar Escala:</strong> é um sistema 100% grátis da Mavin Seguros para montar a escala do mês. Você conta como a empresa funciona (dias, horários, feriados e quantas pessoas precisam estar no atendimento), cadastra a equipe e a jornada, e recebe a escala pronta no calendário — com a escala atual e a da nova regra da EC 141/2026 lado a lado, e o diagnóstico de se vai precisar de mais gente. Funciona no celular, sem baixar app e sem cadastro para montar e ver a escala, e exporta em PDF e Excel. Como toda simulação, não tem validade jurídica: em caso de dúvida sobre a sua categoria, vale consultar um advogado trabalhista ou o departamento pessoal da sua contabilidade. <a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=modelo-de-escala-de-trabalho-5x2" data-cta="cotacao" data-cta-label="texto-modelo-de-escala-de-trabalho-5x2">Monte a sua escala na Criar Escala</a>.</div>
+      <h2>Antes de adotar o modelo 5x2 na sua empresa</h2>
+      <ul>
+      <li>O que a convenção ou o acordo coletivo da sua categoria diz sobre jornada diária, compensação e trabalho aos domingos?</li>
+      <li>Quais são os dias e horários de maior movimento, onde não pode faltar gente?</li>
+      <li>Com quantos dias de antecedência a equipe vai receber a escala do mês?</li>
+      </ul>
+      <div class="callout"><strong>Importante:</strong> Este conteúdo é informativo e não é parecer jurídico. A convenção ou o acordo coletivo da sua categoria pode ter regra própria: antes de aplicar, confirme com um advogado trabalhista ou com o departamento pessoal da sua contabilidade.</div>
+      <p>O modelo acima mostra a lógica; a escala real depende do tamanho da sua equipe e do movimento de cada dia. <strong><a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=modelo-de-escala-de-trabalho-5x2" data-cta="cotacao" data-cta-label="texto-modelo-de-escala-de-trabalho-5x2">Gere a escala 5x2 do mês na Criar Escala</a></strong> e exporte a planilha em Excel para usar com a equipe.</p>
+      <div class="related">
+        <h4>Continue lendo</h4>
+        <div class="related-links">
+          <a href="/blog/escala-5x2-4x3-outros-modelos-de-jornada.html">Escala 5x2, 4x3 e outros modelos: o que considerar ao montar a escala da equipe</a>
+          <a href="/blog/fim-da-escala-6x1-o-que-muda-para-as-equipes.html">Fim da escala 6x1 já é lei: o que muda na rotina das equipes e como as empresas podem se preparar</a>
+          <a href="/blog/como-calcular-equipe-ideal-para-escala-sem-furo.html">Como calcular quantas pessoas são necessárias para cobrir uma escala sem furo</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</article>
+
+<section class="section">
+  <div class="wrap">
+    <div class="strip-cta">
+      <div>
+        <h3>Quer a planilha da escala 5x2 da sua equipe?</h3>
+        <p>Na Criar Escala você monta a escala do mês com a sua equipe e exporta em Excel ou PDF. Sistema 100% grátis, uma solução da Mavin Seguros.</p>
+      </div>
+      <a href="/?utm_source=blog_criarescala&amp;utm_medium=strip&amp;utm_campaign=modelo-de-escala-de-trabalho-5x2" class="btn btn-primary" data-cta="cotacao" data-cta-label="strip-modelo-de-escala-de-trabalho-5x2">Gerar minha escala grátis</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="wm">criar<span class="lime">escala</span></div>
+        <p>Sistema gratuito para montar a escala do mês da sua equipe, já com a nova regra de jornada.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Navegue</h5>
+        <a href="/blog/">Blog</a>
+        <a href="/">Criar minha escala</a>
+        <a href="https://mavinseguros.com.br/privacidade/">Política de privacidade</a>
+      </div>
+      <div class="foot-col">
+        <h5>Quem faz</h5>
+        <a href="https://mavinseguros.com.br">Mavin Seguros</a>
+        <a href="mailto:contato@mavinseguros.com.br">contato@mavinseguros.com.br</a>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p class="legal-txt">Criar Escala é uma solução da Mavin. MAVIN CONSULTORIA &amp; CORRETAGEM DE SEGUROS LTDA · CNPJ 68.132.516/0001-23 · R. Adelino Leal Nunes, 279, Novo Mundo, Curitiba/PR. Conteúdo informativo, sem validade jurídica: confirme com um advogado trabalhista ou com o departamento pessoal da sua contabilidade.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/blog/assets/site.js"></script>
+<!-- Banner de consentimento de cookies (LGPD) -->
+<style>
+  #an-cookie-bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;max-width:640px;margin:0 auto;background:#111827;color:#F9FAFB;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.25);padding:10px 12px 10px 16px;display:flex;align-items:center;gap:12px;font-family:inherit;font-size:12px;line-height:1.4;transition:transform .3s ease,opacity .3s ease}
+  #an-cookie-bar.an-hidden{transform:translateY(20px);opacity:0;pointer-events:none}
+  #an-cookie-bar a{color:inherit;text-decoration:underline;opacity:.9}
+  #an-cookie-bar .an-t{flex:1;opacity:.88}
+  #an-cookie-bar .an-a{display:flex;gap:6px;flex-shrink:0}
+  #an-cookie-bar button{font-family:inherit;font-weight:700;font-size:12px;padding:7px 12px;border-radius:8px;border:none;cursor:pointer;white-space:nowrap}
+  #an-cookie-no{background:rgba(127,127,127,.18);color:inherit;font-weight:600}
+  #an-cookie-ok{background:#5B3DF5;color:#fff}
+  @media(max-width:480px){#an-cookie-bar{flex-direction:column;align-items:stretch;text-align:left}#an-cookie-bar .an-a{justify-content:flex-end}}
+</style>
+<div id="an-cookie-bar" class="an-hidden" role="dialog" aria-label="Consentimento de cookies">
+  <div class="an-t">Usamos cookies para medir e melhorar o uso do site. <a href="https://criarescala.com.br/privacidade/">Política de privacidade</a></div>
+  <div class="an-a"><button id="an-cookie-no" type="button">Recusar</button><button id="an-cookie-ok" type="button">Aceitar</button></div>
+</div>
+<script>
+(function(){
+  var bar=document.getElementById('an-cookie-bar'), k='criarescala_cookie_consent', s=null;
+  try{ s=localStorage.getItem(k); }catch(e){}
+  if(!s) bar.classList.remove('an-hidden');
+  function done(v){ try{ localStorage.setItem(k,v); }catch(e){} bar.classList.add('an-hidden'); }
+  document.getElementById('an-cookie-ok').addEventListener('click',function(){
+    gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'});
+    if(window.clarity) clarity('consentv2',{ad_Storage:'granted',analytics_Storage:'granted'});
+    done('accepted');
+  });
+  document.getElementById('an-cookie-no').addEventListener('click',function(){ done('rejected'); });
+})();
+</script>
+</body>
+</html>

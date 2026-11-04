@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Medição (GA4 + Clarity) com Consent Mode v2 data-analytics="mavin-v1" -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','wait_for_update':500});
+  (function(){ try { if (localStorage.getItem('criarescala_cookie_consent') === 'accepted') gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'}); } catch(e){} })();
+</script>
+<script>
+/* GA4 e Clarity carregados na primeira interação ou 5 s após o carregamento, para não atrasar a página. */
+(function(w,d){
+  var done=false;
+  function load(){
+    if(done) return; done=true;
+    var g=d.createElement('script'); g.async=true; g.src='https://www.googletagmanager.com/gtag/js?id=G-2L3P5YF5HM'; d.head.appendChild(g);
+    gtag('js', new Date()); gtag('config', 'G-2L3P5YF5HM');
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(w,d,"clarity","script","z8ddnrsilw");
+    var ok=false; try{ ok = localStorage.getItem('criarescala_cookie_consent')==='accepted'; }catch(e){}
+    w.clarity('consentv2',{ad_Storage: ok?'granted':'denied', analytics_Storage: ok?'granted':'denied'});
+    ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){ w.removeEventListener(e,load,{passive:true}); });
+  }
+  ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){ w.addEventListener(e,load,{passive:true,once:true}); });
+  w.addEventListener('load',function(){ setTimeout(load,5000); });
+  /* cliques em WhatsApp, telefone e e-mail viram eventos de conversão */
+  d.addEventListener('click',function(ev){
+    var a=ev.target.closest && ev.target.closest('a[href]'); if(!a) return;
+    var h=a.getAttribute('href')||'', n=null;
+    if(/wa\.me|whatsapp/i.test(h)) n='click_whatsapp'; else if(/^tel:/i.test(h)) n='click_telefone'; else if(/^mailto:/i.test(h)) n='click_email';
+    if(n) gtag('event', n, {link_url:h, page_path:location.pathname});
+  }, true);
+})(window,document);
+</script>
+<!-- Fim da medição -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banco de horas: como funciona com 42 horas | Criar Escala</title>
+<meta name="description" content="Banco de horas: como funciona pela CLT (art. 59, §§ 2º, 5º e 6º) e o que muda com a jornada de 42 horas da EC 141/2026, segundo a nota da Fenacon.">
+<link rel="canonical" href="https://criarescala.com.br/blog/banco-de-horas-jornada-42-horas.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Criar Escala">
+<meta property="og:title" content="Banco de horas: como funciona com a jornada de 42 horas">
+<meta property="og:description" content="Banco de horas: como funciona pela CLT (art. 59, §§ 2º, 5º e 6º) e o que muda com a jornada de 42 horas da EC 141/2026, segundo a nota da Fenacon.">
+<meta property="og:url" content="https://criarescala.com.br/blog/banco-de-horas-jornada-42-horas.html">
+<meta property="og:image" content="https://criarescala.com.br/og.png">
+<meta property="article:published_time" content="2026-11-17">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/blog/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Banco de horas: como funciona com a jornada de 42 horas",
+  "datePublished": "2026-11-17",
+  "dateModified": "2026-11-17",
+  "author": { "@type": "Organization", "name": "Criar Escala", "url": "https://criarescala.com.br" },
+  "publisher": { "@type": "Organization", "name": "Criar Escala", "logo": {"@type":"ImageObject","url":"https://criarescala.com.br/apple-touch-icon.png"} },
+  "mainEntityOfPage": "https://criarescala.com.br/blog/banco-de-horas-jornada-42-horas.html"
+}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="/blog/" class="wm">criar<span class="lime">escala</span><span class="seg">blog</span></a>
+    <nav class="nav-links">
+      <a href="/blog/" class="navlink">Blog</a>
+      <a href="/?utm_source=blog_criarescala&amp;utm_medium=nav&amp;utm_campaign=banco-de-horas-jornada-42-horas" class="btn btn-primary" data-cta="cotacao" data-cta-label="nav-banco-de-horas-jornada-42-horas">Criar minha escala grátis</a>
+    </nav>
+  </div>
+</header>
+
+<article class="post">
+  <div class="wrap-narrow">
+    <p class="post-meta">Gestão de equipes · 17 nov 2026 · 6 min de leitura</p>
+    <h1>Banco de horas: como funciona com a jornada de 42 horas</h1>
+    <p class="dek">A CLT não mudou, mas o teto semanal caiu para 42 horas em 16/12/2026. Veja as três formas de compensar horas e o que revisar na transição.</p>
+    <div class="byline">Equipe Criar Escala</div>
+
+    <div class="post-hero"><img src="/blog/assets/covers/gestao-equipes.svg" alt="Ilustração: Banco de horas: como funciona com a jornada de 42 horas" width="800" height="400"></div>
+
+    <div class="post-body">
+
+      <p>O <strong>banco de horas</strong> funciona assim: as horas trabalhadas a mais em um dia são compensadas com menos horas em outro, sem pagamento de hora extra, dentro dos limites do art. 59 da CLT. Com a jornada de 42 horas a partir de 16/12/2026, essas regras da CLT continuam com o mesmo texto (a EC 141/2026 altera o art. 7º da Constituição, não a CLT), mas o teto semanal que serve de referência para a compensação diminui. Segundo a <a href="https://fenacon.org.br/wp-content/uploads/2026/10/FCOM0007-Nota-Tecnica-6x1-.pdf">nota orientativa da Fenacon</a>, o banco de horas deve ser mantido, ajustando os limites semanais de referência e as regras de saldo.</p>
+      <p>Este post trata das regras. Para o lado do processo, como registrar trocas e manter o saldo de cada pessoa atualizado, veja <a href="/blog/troca-de-turno-e-banco-de-horas.html">Troca de turno e banco de horas: como manter o controle quando a escala muda</a>.</p>
+      <h2>Como funciona o banco de horas na CLT</h2>
+      <p>O <a href="https://www2.camara.leg.br/legin/fed/declei/1940-1949/decreto-lei-5452-1-maio-1943-415500-normaatualizada-pe.html">art. 59 da CLT</a> prevê três formas de compensar horas:</p>
+      <ul>
+      <li><strong>Por acordo ou convenção coletiva (§ 2º)</strong>: o excesso de horas em um dia é compensado pela diminuição em outro, sem acréscimo de salário, desde que, no período máximo de um ano, não passe da soma das jornadas semanais previstas, nem do limite de 10 horas diárias. O art. 611-A, II, dá prevalência à convenção ou ao acordo coletivo que trate de banco de horas anual.</li>
+      <li><strong>Por acordo individual escrito (§ 5º)</strong>: o banco de horas pode ser pactuado direto com o empregado, por escrito, desde que a compensação ocorra no período máximo de seis meses.</li>
+      <li><strong>Compensação no mesmo mês (§ 6º)</strong>: é lícito o regime de compensação por acordo individual, tácito ou escrito, para compensar dentro do mesmo mês.</li>
+      </ul>
+      <p>Outros pontos do mesmo artigo: a hora extra é limitada a 2 por dia e paga com pelo menos 50% a mais que a hora normal (caput e § 1º); se o contrato terminar sem compensação integral, as horas não compensadas são pagas como horas extras, calculadas sobre a remuneração na data da rescisão (§ 3º). O art. 59-B acrescenta que horas extras habituais não descaracterizam o acordo de compensação nem o banco de horas.</p>
+      <div class="cta-inline">
+        <div class="txt"><strong>Quer ver as horas de cada funcionário na nova jornada?</strong><span>A Criar Escala mostra as horas extras por pessoa e da empresa. Grátis.</span></div>
+        <a href="/?utm_source=blog_criarescala&amp;utm_medium=inline-topo&amp;utm_campaign=banco-de-horas-jornada-42-horas" class="btn btn-ghost" data-cta="cotacao" data-cta-label="inline-topo-banco-de-horas-jornada-42-horas">Montar minha escala grátis</a>
+      </div>
+      <h2>Banco de horas com a jornada de 42 horas: o que muda</h2>
+      <ul>
+      <li><strong>Novo teto de referência</strong>: pelo art. 6º da <a href="https://legis.senado.leg.br/norma/44184944/publicacao/44189027">EC 141/2026</a>, a duração do trabalho normal não excederá 42 horas semanais a partir de 16/12/2026 e 40 horas a partir de 16/12/2027 (datas pela contagem da Fenacon). O limite do § 2º fala na "soma das jornadas semanais de trabalho previstas", e essas jornadas ficam menores.</li>
+      <li><strong>Compensação na Constituição</strong>: a nova redação do art. 7º, XIII, mantém a duração normal de até 8 horas diárias, "facultada a compensação de horários e a redução da jornada, mediante acordo ou convenção coletiva de trabalho".</li>
+      <li><strong>Cláusulas coletivas</strong>: pelo art. 3º da emenda, cláusulas de convenções e acordos coletivos sobre duração do trabalho e repouso incompatíveis com a nova regra ficam sem efeito 2 meses após a publicação. A Fenacon classifica a cláusula de banco de horas como "revisar" e recomenda manter o banco anual com parâmetros semanais de 42 horas e, depois, de 40 horas.</li>
+      <li><strong>Valor da hora</strong>: segundo a Fenacon, com o salário mantido e menos horas, o divisor usado para calcular o salário-hora passa de 220 para 210 na fase de 42 horas e para 200 na de 40 horas (CLT, art. 64). Isso afeta o valor das horas extras e do saldo pago na rescisão.</li>
+      </ul>
+      <div class="callout"><strong>O que a lei ainda não responde sozinha:</strong> a emenda não diz como fica o saldo acumulado antes de 16/12/2026, quando o teto era de 44 horas, nem detalha como os bancos por acordo individual (§§ 5º e 6º) se combinam com o novo texto do art. 7º, XIII. A Fenacon recomenda evitar cláusulas que fixem jornada semanal acima de 42 horas na transição "ainda que por compensação" e que deleguem ao acordo individual a duração do trabalho "fora das hipóteses legais". São orientações de entidade, não norma: confirme o seu caso com um advogado trabalhista ou com o departamento pessoal da sua contabilidade, e veja o que a convenção coletiva da categoria diz.</div>
+      <h2>Como organizar o banco de horas na transição</h2>
+      <ol>
+      <li><strong>Feche o saldo atual.</strong> Antes de 16/12/2026, levante quanto cada pessoa tem a compensar ou a dever, com a ajuda de quem cuida da folha.</li>
+      <li><strong>Confira a modalidade.</strong> Banco por norma coletiva (até um ano), por acordo individual escrito (até seis meses) ou compensação no mesmo mês: cada um tem prazo e forma próprios.</li>
+      <li><strong>Atualize a jornada de referência.</strong> A escala nova precisa partir das 42 horas semanais (ou 40, sem norma coletiva que amplie a jornada diária, segundo a Fenacon) para que o saldo seja calculado sobre a base certa.</li>
+      <li><strong>Respeite os limites diários.</strong> Compensação até 10 horas por dia (art. 59, § 2º), intervalo de 1 a 2 horas acima de 6 horas de trabalho (art. 71) e 11 horas entre jornadas (art. 66).</li>
+      </ol>
+      <p>Na <a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=banco-de-horas-jornada-42-horas" data-cta="cotacao" data-cta-label="texto-banco-de-horas-jornada-42-horas">Criar Escala</a>, você monta a escala do mês com a jornada da equipe (44h, 42h, 40h, 12x36 ou personalizada) e vê as horas extras de cada funcionário e o total da empresa, um ponto de partida para acompanhar o banco de horas na mudança de jornada.</p>
+      <div class="callout"><strong>Sobre a Criar Escala:</strong> é um sistema 100% grátis da Mavin Seguros para montar a escala do mês. Você conta como a empresa funciona (dias, horários, feriados e quantas pessoas precisam estar no atendimento), cadastra a equipe e a jornada, e recebe a escala pronta no calendário — com a escala atual e a da nova regra da EC 141/2026 lado a lado, e o diagnóstico de se vai precisar de mais gente. Funciona no celular, sem baixar app e sem cadastro para montar e ver a escala, e exporta em PDF e Excel. Como toda simulação, não tem validade jurídica: em caso de dúvida sobre a sua categoria, vale consultar um advogado trabalhista ou o departamento pessoal da sua contabilidade. <a href="/?utm_source=blog_criarescala&amp;utm_medium=texto-sobre&amp;utm_campaign=banco-de-horas-jornada-42-horas" data-cta="cotacao" data-cta-label="texto-sobre-banco-de-horas-jornada-42-horas">Monte a sua escala na Criar Escala</a>.</div>
+      <div class="cta-inline">
+        <div class="txt"><strong>Vai ajustar o banco de horas para a jornada de 42 horas?</strong><span>Comece pela escala do mês na Criar Escala e exporte em PDF e Excel.</span></div>
+        <a href="/?utm_source=blog_criarescala&amp;utm_medium=inline&amp;utm_campaign=banco-de-horas-jornada-42-horas" class="btn btn-ghost" data-cta="cotacao" data-cta-label="inline-banco-de-horas-jornada-42-horas">Usar a Criar Escala grátis</a>
+      </div>
+      <h2>Pontos para revisar no banco de horas</h2>
+      <ul>
+      <li>O banco de horas da empresa está previsto em convenção ou acordo coletivo, em acordo individual escrito ou é compensação no mesmo mês?</li>
+      <li>A cláusula de banco de horas da convenção coletiva foi revista para o teto de 42 horas?</li>
+      <li>O saldo de cada pessoa foi fechado antes de 16/12/2026?</li>
+      <li>O sistema de folha e ponto já usa o novo divisor e a nova jornada de referência?</li>
+      </ul>
+      <p>O banco de horas continua existindo com a jornada de 42 horas, mas a base de cálculo e as cláusulas coletivas mudam. Este conteúdo é informativo e não é parecer jurídico: confirme com um advogado trabalhista ou com o departamento pessoal da sua contabilidade. <strong>Para ter a base das horas de cada pessoa, <a href="/?utm_source=blog_criarescala&amp;utm_medium=texto-final&amp;utm_campaign=banco-de-horas-jornada-42-horas" data-cta="cotacao" data-cta-label="texto-final-banco-de-horas-jornada-42-horas">monte a escala na Criar Escala</a></strong>.</p>
+      <div class="related">
+        <h4>Continue lendo</h4>
+        <div class="related-links">
+          <a href="/blog/troca-de-turno-e-banco-de-horas.html">Troca de turno e banco de horas: como manter o controle quando a escala muda</a>
+          <a href="/blog/fim-da-escala-6x1-o-que-muda-para-as-equipes.html">Fim da escala 6x1 já é lei: o que muda na rotina das equipes e como as empresas podem se preparar</a>
+          <a href="/blog/erros-comuns-ao-planejar-a-escala-de-equipe.html">Escala de equipe mal planejada: os erros mais comuns e como evitar</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</article>
+
+<section class="section">
+  <div class="wrap">
+    <div class="strip-cta">
+      <div>
+        <h3>Vai rever o banco de horas da equipe?</h3>
+        <p>Na Criar Escala você monta a escala do mês com a nova jornada e vê as horas extras de cada funcionário. Sistema 100% grátis, uma solução da Mavin Seguros.</p>
+      </div>
+      <a href="/?utm_source=blog_criarescala&amp;utm_medium=strip&amp;utm_campaign=banco-de-horas-jornada-42-horas" class="btn btn-primary" data-cta="cotacao" data-cta-label="strip-banco-de-horas-jornada-42-horas">Montar minha escala grátis</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="wm">criar<span class="lime">escala</span></div>
+        <p>Sistema gratuito para montar a escala do mês da sua equipe, já com a nova regra de jornada.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Navegue</h5>
+        <a href="/blog/">Blog</a>
+        <a href="/">Criar minha escala</a>
+        <a href="https://mavinseguros.com.br/privacidade/">Política de privacidade</a>
+      </div>
+      <div class="foot-col">
+        <h5>Quem faz</h5>
+        <a href="https://mavinseguros.com.br">Mavin Seguros</a>
+        <a href="mailto:contato@mavinseguros.com.br">contato@mavinseguros.com.br</a>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p class="legal-txt">Criar Escala é uma solução da Mavin. MAVIN CONSULTORIA &amp; CORRETAGEM DE SEGUROS LTDA · CNPJ 68.132.516/0001-23 · R. Adelino Leal Nunes, 279, Novo Mundo, Curitiba/PR. Conteúdo informativo, sem validade jurídica: confirme com um advogado trabalhista ou com o departamento pessoal da sua contabilidade.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/blog/assets/site.js"></script>
+<!-- Banner de consentimento de cookies (LGPD) -->
+<style>
+  #an-cookie-bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;max-width:640px;margin:0 auto;background:#111827;color:#F9FAFB;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.25);padding:10px 12px 10px 16px;display:flex;align-items:center;gap:12px;font-family:inherit;font-size:12px;line-height:1.4;transition:transform .3s ease,opacity .3s ease}
+  #an-cookie-bar.an-hidden{transform:translateY(20px);opacity:0;pointer-events:none}
+  #an-cookie-bar a{color:inherit;text-decoration:underline;opacity:.9}
+  #an-cookie-bar .an-t{flex:1;opacity:.88}
+  #an-cookie-bar .an-a{display:flex;gap:6px;flex-shrink:0}
+  #an-cookie-bar button{font-family:inherit;font-weight:700;font-size:12px;padding:7px 12px;border-radius:8px;border:none;cursor:pointer;white-space:nowrap}
+  #an-cookie-no{background:rgba(127,127,127,.18);color:inherit;font-weight:600}
+  #an-cookie-ok{background:#5B3DF5;color:#fff}
+  @media(max-width:480px){#an-cookie-bar{flex-direction:column;align-items:stretch;text-align:left}#an-cookie-bar .an-a{justify-content:flex-end}}
+</style>
+<div id="an-cookie-bar" class="an-hidden" role="dialog" aria-label="Consentimento de cookies">
+  <div class="an-t">Usamos cookies para medir e melhorar o uso do site. <a href="https://criarescala.com.br/privacidade/">Política de privacidade</a></div>
+  <div class="an-a"><button id="an-cookie-no" type="button">Recusar</button><button id="an-cookie-ok" type="button">Aceitar</button></div>
+</div>
+<script>
+(function(){
+  var bar=document.getElementById('an-cookie-bar'), k='criarescala_cookie_consent', s=null;
+  try{ s=localStorage.getItem(k); }catch(e){}
+  if(!s) bar.classList.remove('an-hidden');
+  function done(v){ try{ localStorage.setItem(k,v); }catch(e){} bar.classList.add('an-hidden'); }
+  document.getElementById('an-cookie-ok').addEventListener('click',function(){
+    gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'});
+    if(window.clarity) clarity('consentv2',{ad_Storage:'granted',analytics_Storage:'granted'});
+    done('accepted');
+  });
+  document.getElementById('an-cookie-no').addEventListener('click',function(){ done('rejected'); });
+})();
+</script>
+</body>
+</html>

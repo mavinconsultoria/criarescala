@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Medição (GA4 + Clarity) com Consent Mode v2 data-analytics="mavin-v1" -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','wait_for_update':500});
+  (function(){ try { if (localStorage.getItem('criarescala_cookie_consent') === 'accepted') gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'}); } catch(e){} })();
+</script>
+<script>
+/* GA4 e Clarity carregados na primeira interação ou 5 s após o carregamento, para não atrasar a página. */
+(function(w,d){
+  var done=false;
+  function load(){
+    if(done) return; done=true;
+    var g=d.createElement('script'); g.async=true; g.src='https://www.googletagmanager.com/gtag/js?id=G-2L3P5YF5HM'; d.head.appendChild(g);
+    gtag('js', new Date()); gtag('config', 'G-2L3P5YF5HM');
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(w,d,"clarity","script","z8ddnrsilw");
+    var ok=false; try{ ok = localStorage.getItem('criarescala_cookie_consent')==='accepted'; }catch(e){}
+    w.clarity('consentv2',{ad_Storage: ok?'granted':'denied', analytics_Storage: ok?'granted':'denied'});
+    ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){ w.removeEventListener(e,load,{passive:true}); });
+  }
+  ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){ w.addEventListener(e,load,{passive:true,once:true}); });
+  w.addEventListener('load',function(){ setTimeout(load,5000); });
+  /* cliques em WhatsApp, telefone e e-mail viram eventos de conversão */
+  d.addEventListener('click',function(ev){
+    var a=ev.target.closest && ev.target.closest('a[href]'); if(!a) return;
+    var h=a.getAttribute('href')||'', n=null;
+    if(/wa\.me|whatsapp/i.test(h)) n='click_whatsapp'; else if(/^tel:/i.test(h)) n='click_telefone'; else if(/^mailto:/i.test(h)) n='click_email';
+    if(n) gtag('event', n, {link_url:h, page_path:location.pathname});
+  }, true);
+})(window,document);
+</script>
+<!-- Fim da medição -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Escala 6x2: como funciona e quando substitui a 6x1 | Criar Escala</title>
+<meta name="description" content="Escala 6x2: como funciona o ciclo de 6 dias de trabalho e 2 de folga e o que a EC 141/2026 exige com a jornada de 42 horas e as 2 folgas semanais.">
+<link rel="canonical" href="https://criarescala.com.br/blog/escala-6x2-como-funciona.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Criar Escala">
+<meta property="og:title" content="Escala 6x2: como funciona e quando substitui a 6x1">
+<meta property="og:description" content="Escala 6x2: como funciona o ciclo de 6 dias de trabalho e 2 de folga e o que a EC 141/2026 exige com a jornada de 42 horas e as 2 folgas semanais.">
+<meta property="og:url" content="https://criarescala.com.br/blog/escala-6x2-como-funciona.html">
+<meta property="og:image" content="https://criarescala.com.br/og.png">
+<meta property="article:published_time" content="2026-11-12">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/blog/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Escala 6x2: como funciona e quando substitui a 6x1",
+  "datePublished": "2026-11-12",
+  "dateModified": "2026-11-12",
+  "author": { "@type": "Organization", "name": "Criar Escala", "url": "https://criarescala.com.br" },
+  "publisher": { "@type": "Organization", "name": "Criar Escala", "logo": {"@type":"ImageObject","url":"https://criarescala.com.br/apple-touch-icon.png"} },
+  "mainEntityOfPage": "https://criarescala.com.br/blog/escala-6x2-como-funciona.html"
+}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="/blog/" class="wm">criar<span class="lime">escala</span><span class="seg">blog</span></a>
+    <nav class="nav-links">
+      <a href="/blog/" class="navlink">Blog</a>
+      <a href="/?utm_source=blog_criarescala&amp;utm_medium=nav&amp;utm_campaign=escala-6x2-como-funciona" class="btn btn-primary" data-cta="cotacao" data-cta-label="nav-escala-6x2-como-funciona">Criar minha escala grátis</a>
+    </nav>
+  </div>
+</header>
+
+<article class="post">
+  <div class="wrap-narrow">
+    <p class="post-meta">Gestão de equipes · 12 nov 2026 · 5 min de leitura</p>
+    <h1>Escala 6x2: como funciona e quando substitui a 6x1</h1>
+    <p class="dek">A lei não cita a 6x2 pelo nome. Veja como o ciclo de 8 dias se encaixa nas 2 folgas semanais e na jornada de 42 horas a partir de 16/12/2026.</p>
+    <div class="byline">Equipe Criar Escala</div>
+
+    <div class="post-hero"><img src="/blog/assets/covers/gestao-equipes.svg" alt="Ilustração: Escala 6x2: como funciona e quando substitui a 6x1" width="800" height="400"></div>
+
+    <div class="post-body">
+
+      <p>A <strong>escala 6x2</strong> funciona em ciclos de 8 dias: a pessoa trabalha 6 dias seguidos e folga 2. Nem a EC 141/2026 nem a CLT tratam da 6x2 pelo nome, então a pergunta "ela substitui a 6x1?" se responde pelas regras gerais da emenda: a partir de 16/12/2026, repouso semanal remunerado de 2 dias e teto de 42 horas semanais. Como o ciclo de 8 dias não coincide com a semana de 7, a 6x2 pura deixa algumas semanas com só 1 folga, e a emenda trata de semanas assim no regime compensatório do novo § 2º, que depende de convenção ou acordo coletivo.</p>
+      <h2>Como funciona a escala 6x2 na prática</h2>
+      <p>Veja um exemplo começando numa segunda-feira:</p>
+      <ul>
+      <li><strong>Semana 1</strong>: trabalha de segunda a sábado e folga no domingo (1 folga na semana).</li>
+      <li><strong>Semana 2</strong>: folga na segunda e trabalha de terça a domingo (1 folga na semana).</li>
+      <li><strong>Semana 3</strong>: folga na segunda e na terça e trabalha de quarta a domingo (2 folgas na semana).</li>
+      </ul>
+      <p>O padrão continua girando, e os dias de folga mudam a cada ciclo. Duas contas simples ajudam a entender o modelo:</p>
+      <ul>
+      <li><strong>Folgas</strong>: são 2 folgas a cada 8 dias. No longo prazo, isso equivale a 1,75 folga a cada 7 dias (2 × 7 ÷ 8), menos que 2 por semana.</li>
+      <li><strong>Horas</strong>: numa semana com 6 dias de trabalho, 42 horas dão 7 horas por dia (42 ÷ 6). Com 8 horas por dia, 6 dias somariam 48 horas, acima do teto.</li>
+      </ul>
+      <div class="cta-inline">
+        <div class="txt"><strong>A 6x2 fecha a conta da sua operação?</strong><span>Compare escalas na Criar Escala, sistema 100% grátis.</span></div>
+        <a href="/?utm_source=blog_criarescala&amp;utm_medium=inline-topo&amp;utm_campaign=escala-6x2-como-funciona" class="btn btn-ghost" data-cta="cotacao" data-cta-label="inline-topo-escala-6x2-como-funciona">Simular minha escala grátis</a>
+      </div>
+      <h2>O que a lei diz e o que ela não diz sobre a 6x2</h2>
+      <ul>
+      <li><strong>Dois dias de repouso por semana</strong>: o novo art. 7º, XV, da Constituição, na redação da <a href="https://legis.senado.leg.br/norma/44184944/publicacao/44189027">EC 141/2026</a>, garante "repouso semanal remunerado de 2 (dois) dias, um dos quais preferencialmente aos domingos".</li>
+      <li><strong>Semanas com 1 folga: regime compensatório por norma coletiva</strong>: o novo § 2º do art. 7º diz que, "excepcionalmente", convenção ou acordo coletivo podem estabelecer regime compensatório que assegure, na média, 2 dias de repouso semanal dentro do mês-calendário, garantido pelo menos 1 dia a cada semana de trabalho.</li>
+      <li><strong>Teto semanal</strong>: 42 horas a partir de 16/12/2026 e 40 horas a partir de 16/12/2027 (art. 6º da emenda, com as datas contadas pela <a href="https://fenacon.org.br/wp-content/uploads/2026/10/FCOM0007-Nota-Tecnica-6x1-.pdf">nota orientativa da Fenacon</a>).</li>
+      <li><strong>Jornada diária</strong>: até 8 horas (novo art. 7º, XIII, e <a href="https://www2.camara.leg.br/legin/fed/declei/1940-1949/decreto-lei-5452-1-maio-1943-415500-normaatualizada-pe.html">art. 58 da CLT</a>).</li>
+      <li><strong>O que a lei não diz</strong>: não há artigo que autorize ou proíba a "escala 6x2" com esse nome. O que vale é se o desenho da escala cumpre o repouso, o teto semanal e o limite diário.</li>
+      </ul>
+      <div class="callout"><strong>Leitura da Fenacon:</strong> a nota orienta que cláusulas coletivas de "escalas 6x1 ou com 1 folga semanal" perdem efeito em 16/12/2026 e devem ser substituídas por 2 folgas semanais ou pelo regime compensatório do § 2º. Também recomenda evitar compensação de folgas sem ao menos 1 folga em cada semana. O ciclo 6x2 nunca passa de 6 dias seguidos de trabalho, então toda semana tem pelo menos 1 folga; a questão é a média do mês. É orientação de entidade, não norma: confirme o seu caso com um advogado trabalhista ou com o departamento pessoal da sua contabilidade.</div>
+      <h2>Quando a escala 6x2 substitui a 6x1</h2>
+      <ul>
+      <li><strong>Com convenção ou acordo coletivo que preveja o regime compensatório do § 2º</strong>: a escala precisa fechar, mês a mês, a média de 2 folgas por semana com pelo menos 1 folga em cada semana. Como a 6x2 pura dá, no longo prazo, 1,75 folga por semana, o desenho pode precisar de ajustes (folgas extras em alguns ciclos) para chegar à média. Confira com quem cuida da folha.</li>
+      <li><strong>Sem norma coletiva</strong>: a regra é de 2 dias de repouso por semana. Se você ajustar a 6x2 para garantir 2 folgas em toda semana, ela vira, na prática, uma 5x2 com folgas rotativas.</li>
+      <li><strong>Nos dois casos</strong>: a jornada semanal não pode passar do teto (42 horas na transição), o que, nas semanas com 6 dias de trabalho, dá uma média de até 7 horas por dia; e continuam valendo o intervalo do art. 71 da CLT e as 11 horas entre jornadas do art. 66.</li>
+      </ul>
+      <p>Comparar a 6x2 com a 5x2 no papel, semana a semana, é trabalhoso. Na <a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=escala-6x2-como-funciona" data-cta="cotacao" data-cta-label="texto-escala-6x2-como-funciona">Criar Escala</a>, você informa como a empresa funciona e quantas pessoas precisam estar no atendimento, escolhe a jornada (44h, 42h, 40h, 12x36 ou personalizada) e recebe a escala do mês pronta, com a escala atual e a da nova regra lado a lado.</p>
+      <div class="callout"><strong>Sobre a Criar Escala:</strong> é um sistema 100% grátis da Mavin Seguros para montar a escala do mês. Você conta como a empresa funciona (dias, horários, feriados e quantas pessoas precisam estar no atendimento), cadastra a equipe e a jornada, e recebe a escala pronta no calendário — com a escala atual e a da nova regra da EC 141/2026 lado a lado, e o diagnóstico de se vai precisar de mais gente. Funciona no celular, sem baixar app e sem cadastro para montar e ver a escala, e exporta em PDF e Excel. Como toda simulação, não tem validade jurídica: em caso de dúvida sobre a sua categoria, vale consultar um advogado trabalhista ou o departamento pessoal da sua contabilidade. <a href="/?utm_source=blog_criarescala&amp;utm_medium=texto-sobre&amp;utm_campaign=escala-6x2-como-funciona" data-cta="cotacao" data-cta-label="texto-sobre-escala-6x2-como-funciona">Monte a sua escala na Criar Escala</a>.</div>
+      <div class="cta-inline">
+        <div class="txt"><strong>Vai trocar a 6x1 por outro modelo?</strong><span>A Criar Escala mostra se a equipe atual cobre a operação na nova regra.</span></div>
+        <a href="/?utm_source=blog_criarescala&amp;utm_medium=inline&amp;utm_campaign=escala-6x2-como-funciona" class="btn btn-ghost" data-cta="cotacao" data-cta-label="inline-escala-6x2-como-funciona">Usar a Criar Escala grátis</a>
+      </div>
+      <h2>Pontos para revisar antes de adotar a 6x2</h2>
+      <ul>
+      <li>A convenção ou acordo coletivo da categoria prevê o regime compensatório de folgas do novo § 2º?</li>
+      <li>A escala fecha a média de 2 folgas por semana em cada mês, com pelo menos 1 folga em toda semana?</li>
+      <li>Nas semanas com 6 dias de trabalho, a jornada semanal fica dentro de 42 horas?</li>
+      <li>O rodízio garante folga em domingo para cada pessoa com alguma frequência?</li>
+      </ul>
+      <p>A escala 6x2 pode parecer o caminho mais curto para sair da 6x1, mas o ciclo de 8 dias não encaixa sozinho na regra de 2 folgas por semana. Este conteúdo é informativo e não é parecer jurídico: confirme com um advogado trabalhista ou com o departamento pessoal da sua contabilidade antes de mudar a escala. <strong>Para comparar os modelos, <a href="/?utm_source=blog_criarescala&amp;utm_medium=texto-final&amp;utm_campaign=escala-6x2-como-funciona" data-cta="cotacao" data-cta-label="texto-final-escala-6x2-como-funciona">simule a sua escala na Criar Escala</a></strong>.</p>
+      <div class="related">
+        <h4>Continue lendo</h4>
+        <div class="related-links">
+          <a href="/blog/fim-da-escala-6x1-o-que-muda-para-as-equipes.html">Fim da escala 6x1 já é lei: o que muda na rotina das equipes e como as empresas podem se preparar</a>
+          <a href="/blog/escala-5x2-4x3-outros-modelos-de-jornada.html">Escala 5x2, 4x3 e outros modelos: o que considerar ao montar a escala da equipe</a>
+          <a href="/blog/pequenos-negocios-e-a-escala-de-7-dias-por-semana.html">Pequenos negócios e a nova escala: o que muda para quem funciona 7 dias por semana</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</article>
+
+<section class="section">
+  <div class="wrap">
+    <div class="strip-cta">
+      <div>
+        <h3>6x2, 5x2 ou outro modelo?</h3>
+        <p>Na Criar Escala você monta a escala do mês e vê se a operação vai precisar de mais gente com a nova jornada. Sistema 100% grátis, uma solução da Mavin Seguros.</p>
+      </div>
+      <a href="/?utm_source=blog_criarescala&amp;utm_medium=strip&amp;utm_campaign=escala-6x2-como-funciona" class="btn btn-primary" data-cta="cotacao" data-cta-label="strip-escala-6x2-como-funciona">Montar minha escala grátis</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="wm">criar<span class="lime">escala</span></div>
+        <p>Sistema gratuito para montar a escala do mês da sua equipe, já com a nova regra de jornada.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Navegue</h5>
+        <a href="/blog/">Blog</a>
+        <a href="/">Criar minha escala</a>
+        <a href="https://mavinseguros.com.br/privacidade/">Política de privacidade</a>
+      </div>
+      <div class="foot-col">
+        <h5>Quem faz</h5>
+        <a href="https://mavinseguros.com.br">Mavin Seguros</a>
+        <a href="mailto:contato@mavinseguros.com.br">contato@mavinseguros.com.br</a>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p class="legal-txt">Criar Escala é uma solução da Mavin. MAVIN CONSULTORIA &amp; CORRETAGEM DE SEGUROS LTDA · CNPJ 68.132.516/0001-23 · R. Adelino Leal Nunes, 279, Novo Mundo, Curitiba/PR. Conteúdo informativo, sem validade jurídica: confirme com um advogado trabalhista ou com o departamento pessoal da sua contabilidade.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/blog/assets/site.js"></script>
+<!-- Banner de consentimento de cookies (LGPD) -->
+<style>
+  #an-cookie-bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;max-width:640px;margin:0 auto;background:#111827;color:#F9FAFB;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.25);padding:10px 12px 10px 16px;display:flex;align-items:center;gap:12px;font-family:inherit;font-size:12px;line-height:1.4;transition:transform .3s ease,opacity .3s ease}
+  #an-cookie-bar.an-hidden{transform:translateY(20px);opacity:0;pointer-events:none}
+  #an-cookie-bar a{color:inherit;text-decoration:underline;opacity:.9}
+  #an-cookie-bar .an-t{flex:1;opacity:.88}
+  #an-cookie-bar .an-a{display:flex;gap:6px;flex-shrink:0}
+  #an-cookie-bar button{font-family:inherit;font-weight:700;font-size:12px;padding:7px 12px;border-radius:8px;border:none;cursor:pointer;white-space:nowrap}
+  #an-cookie-no{background:rgba(127,127,127,.18);color:inherit;font-weight:600}
+  #an-cookie-ok{background:#5B3DF5;color:#fff}
+  @media(max-width:480px){#an-cookie-bar{flex-direction:column;align-items:stretch;text-align:left}#an-cookie-bar .an-a{justify-content:flex-end}}
+</style>
+<div id="an-cookie-bar" class="an-hidden" role="dialog" aria-label="Consentimento de cookies">
+  <div class="an-t">Usamos cookies para medir e melhorar o uso do site. <a href="https://criarescala.com.br/privacidade/">Política de privacidade</a></div>
+  <div class="an-a"><button id="an-cookie-no" type="button">Recusar</button><button id="an-cookie-ok" type="button">Aceitar</button></div>
+</div>
+<script>
+(function(){
+  var bar=document.getElementById('an-cookie-bar'), k='criarescala_cookie_consent', s=null;
+  try{ s=localStorage.getItem(k); }catch(e){}
+  if(!s) bar.classList.remove('an-hidden');
+  function done(v){ try{ localStorage.setItem(k,v); }catch(e){} bar.classList.add('an-hidden'); }
+  document.getElementById('an-cookie-ok').addEventListener('click',function(){
+    gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'});
+    if(window.clarity) clarity('consentv2',{ad_Storage:'granted',analytics_Storage:'granted'});
+    done('accepted');
+  });
+  document.getElementById('an-cookie-no').addEventListener('click',function(){ done('rejected'); });
+})();
+</script>
+</body>
+</html>
