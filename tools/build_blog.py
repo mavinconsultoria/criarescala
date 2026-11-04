@@ -133,3 +133,7 @@ urls=[('/','2026-10-21'),('/blog/','2026-11-03')]+[(f'/blog/{s}.html',nd) for nd
 open(OUT+'/sitemap.xml','w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join(f'  <url><loc>{B}{u}</loc><lastmod>{d}</lastmod></url>\n' for u,d in urls)+'</urlset>\n')
 open(OUT+'/robots.txt','w').write(f'User-agent: *\nAllow: /\n\nSitemap: {B}/sitemap.xml\n')
 print(len(posts),'posts')
+
+# medição (GA4 + Clarity + banner LGPD) em todas as páginas do blog geradas
+import glob, subprocess
+subprocess.run(['python3', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'analytics_inject.py'), 'criarescala', *glob.glob(OUT + '/blog/*.html')], check=False)
