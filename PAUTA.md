@@ -12,21 +12,25 @@ Regras: dado ou regra trabalhista sempre com fonte oficial citada (planalto.gov.
 
 ## Pauta do mês
 Mês: 2026-11
-Status: proposto em 2026-11-03
+Status: aprovado em 2026-11-04
+
+Critério (aprovado pelo Vinicius em 2026-11-04): tema só entra com volume de busca medido no Planejador de Palavras-chave do Google Ads (conta 141-779-2784, via Windsor.ai; Brasil, português, média mensal dos últimos 12 meses) e regra com fonte oficial. Prioridade: posicionar o blog antes de 16/12/2026 (início da jornada de 42 horas). Título com o termo mais buscado ("escala 5x2", "escala 12x36") e "42 horas" no subtítulo e no texto.
 
 | Data | Título | Arquivo | Status |
 | --- | --- | --- | --- |
-| 2026-11-05 | Escala 12x36: quando é permitida e como montar sem erro | drafts/escala-12x36-quando-e-permitida.html | proposto (fonte: CLT art. 59-A) |
-| 2026-11-07 | Jornada de 42 horas a partir de 16/12: checklist para ajustar a escala ainda em novembro | drafts/jornada-42-horas-checklist-dezembro.html | proposto (fonte: EC 141/2026) |
-| 2026-11-10 | Escala de fim de ano: como cobrir Natal e Ano-Novo sem furo e sem sobrecarregar ninguém | drafts/escala-de-fim-de-ano-natal-ano-novo.html | proposto (fonte: Lei 605/1949) |
-| 2026-11-12 | Folga aos domingos: como fazer o rodízio da equipe | drafts/folga-aos-domingos-rodizio.html | proposto (fonte: Lei 10.101/2000 art. 6º; CLT art. 67) |
-| 2026-11-14 | Trabalho em feriado: pagamento em dobro, folga compensatória e como planejar | drafts/trabalho-em-feriado-e-compensacao.html | proposto (fonte: Lei 605/1949 art. 9º) |
-| 2026-11-17 | Intervalo de almoço e 11 horas entre jornadas: as pausas que a escala precisa respeitar | drafts/intervalo-intrajornada-e-11-horas-entre-jornadas.html | proposto (fonte: CLT arts. 66 e 71) |
-| 2026-11-19 | Escala 5x2 com 40 horas: como distribuir os horários e o sábado | drafts/escala-5x2-40-horas-como-distribuir.html | proposto (fonte: EC 141/2026; CLT art. 58) |
-| 2026-11-21 | Horas extras na escala: o limite de 2 horas por dia e como não depender delas | drafts/horas-extras-limite-e-planejamento.html | proposto (fonte: CLT art. 59) |
-| 2026-11-24 | Contrato em tempo parcial: quando ajuda a fechar a escala | drafts/tempo-parcial-como-alternativa.html | proposto (fonte: CLT art. 58-A) |
-| 2026-11-26 | Escala para restaurantes e bares: almoço, jantar e fim de semana | drafts/escala-para-restaurantes-e-bares.html | proposto (fonte: CLT; EC 141/2026) |
-| 2026-11-28 | Escala para salões de beleza e clínicas: agenda, encaixes e folgas | drafts/escala-para-saloes-e-clinicas.html | proposto (fonte: CLT; EC 141/2026) |
+| 2026-11-05 | Escala 5x2 com jornada de 42 horas: como montar a partir de 16/12 | drafts/escala-5x2-jornada-42-horas-como-montar.html | aprovado (busca/mês: escala 5x2 74.000; 42 horas semanais 110–1.300; fonte: EC 141/2026; nota Fenacon) |
+| 2026-11-07 | Escala 12x36 depois do fim da 6x1: o que muda e o que continua | drafts/escala-12x36-depois-do-fim-da-6x1.html | aprovado (busca/mês: escala 12x36 27.100; como funciona 12.100; fonte: EC 141/2026; CLT art. 59-A) |
+| 2026-11-10 | Intervalo intrajornada e interjornada: as pausas que a escala precisa respeitar | drafts/intervalo-intrajornada-e-interjornada.html | aprovado (busca/mês: interjornada 8.100; intrajornada 6.600; art. 71 CLT 8.100; fonte: CLT arts. 66 e 71) |
+| 2026-11-12 | Escala 6x2: como funciona e quando substitui a 6x1 | drafts/escala-6x2-como-funciona.html | aprovado (busca/mês: escala 6x2 5.400; como funciona 1.900; fonte: EC 141/2026; CLT) |
+| 2026-11-14 | Escala 4x3: como funciona e quando compensa | drafts/escala-4x3-como-funciona.html | aprovado (busca/mês: escala 4x3 8.100; fonte: EC 141/2026; CLT) |
+| 2026-11-17 | Banco de horas: como funciona com a jornada de 42 horas | drafts/banco-de-horas-jornada-42-horas.html | aprovado (busca/mês: banco de horas 6.600; como funciona 4.400; fonte: CLT art. 59; nota Fenacon) |
+| 2026-11-19 | Modelo de escala de trabalho 5x2 (com planilha grátis) | drafts/modelo-de-escala-de-trabalho-5x2.html | aprovado (busca/mês: modelo de escala de trabalho 1.000; planilha de escala 720; fonte: EC 141/2026) |
+| 2026-11-21 | Trabalhar no feriado: é obrigatório, paga em dobro ou dá folga? | drafts/trabalhar-no-feriado-obrigatorio-dobro-ou-folga.html | aprovado (busca/mês: trabalho em feriado 2.900; feriado trabalhado 2.900; fonte: Lei 605/1949 art. 9º) |
+| 2026-11-24 | Escala 5x1: ainda é permitida com 2 folgas semanais? | drafts/escala-5x1-e-permitida.html | aprovado (busca/mês: escala 5x1 6.600; fonte: EC 141/2026 (confirmar no texto; se não houver resposta clara, trocar o tema)) |
+| 2026-11-26 | Trabalhar aos domingos: como fazer o rodízio de folgas | drafts/trabalhar-aos-domingos-rodizio-de-folgas.html | aprovado (busca/mês: trabalhar aos domingos 880; fonte: Lei 10.101/2000 art. 6º; CLT art. 67) |
+| 2026-11-28 | Limite de hora extra por dia: o que muda com a nova jornada | drafts/limite-de-hora-extra-por-dia.html | aprovado (busca/mês: limite de hora extra por dia 390; fonte: CLT art. 59; nota Fenacon) |
+
+Também aprovado: atualizar o post publicado fim-da-escala-6x1-o-que-muda-para-as-equipes (termo "fim da escala 6x1", 165.000/mês) com os prazos oficiais e links para os posts acima.
 
 ## Já publicado
 | Data | Post |
