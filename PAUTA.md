@@ -18,7 +18,7 @@ Critério (aprovado pelo Vinicius em 2026-11-04): tema só entra com volume de b
 
 | Data | Título | Arquivo | Status |
 | --- | --- | --- | --- |
-| 2026-11-05 | Escala 5x2 com jornada de 42 horas: como montar a partir de 16/12 | drafts/escala-5x2-jornada-42-horas-como-montar.html | agendado 2026-11-05 (busca/mês: escala 5x2 74.000; 42 horas semanais 110–1.300; fonte: EC 141/2026; nota Fenacon) |
+| 2026-11-05 | Escala 5x2 com jornada de 42 horas: como montar a partir de 16/12 | blog/escala-5x2-jornada-42-horas-como-montar.html | publicado (busca/mês: escala 5x2 74.000; 42 horas semanais 110–1.300; fonte: EC 141/2026; nota Fenacon) |
 | 2026-11-07 | Escala 12x36 depois do fim da 6x1: o que muda e o que continua | drafts/escala-12x36-depois-do-fim-da-6x1.html | agendado 2026-11-07 (busca/mês: escala 12x36 27.100; como funciona 12.100; fonte: EC 141/2026; CLT art. 59-A) |
 | 2026-11-10 | Intervalo intrajornada e interjornada: as pausas que a escala precisa respeitar | drafts/intervalo-intrajornada-e-interjornada.html | agendado 2026-11-10 (busca/mês: interjornada 8.100; intrajornada 6.600; art. 71 CLT 8.100; fonte: CLT arts. 66 e 71) |
 | 2026-11-12 | Escala 6x2: como funciona e quando substitui a 6x1 | drafts/escala-6x2-como-funciona.html | agendado 2026-11-12 (busca/mês: escala 6x2 5.400; como funciona 1.900; fonte: EC 141/2026; CLT) |
