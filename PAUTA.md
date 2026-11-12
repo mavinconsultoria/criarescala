@@ -21,7 +21,7 @@ Critério (aprovado pelo Vinicius em 2026-11-04): tema só entra com volume de b
 | 2026-11-05 | Escala 5x2 com jornada de 42 horas: como montar a partir de 16/12 | blog/escala-5x2-jornada-42-horas-como-montar.html | publicado (busca/mês: escala 5x2 74.000; 42 horas semanais 110–1.300; fonte: EC 141/2026; nota Fenacon) |
 | 2026-11-07 | Escala 12x36 depois do fim da 6x1: o que muda e o que continua | blog/escala-12x36-depois-do-fim-da-6x1.html | publicado (busca/mês: escala 12x36 27.100; como funciona 12.100; fonte: EC 141/2026; CLT art. 59-A) |
 | 2026-11-10 | Intervalo intrajornada e interjornada: as pausas que a escala precisa respeitar | blog/intervalo-intrajornada-e-interjornada.html | publicado |
-| 2026-11-12 | Escala 6x2: como funciona e quando substitui a 6x1 | drafts/escala-6x2-como-funciona.html | agendado 2026-11-12 (busca/mês: escala 6x2 5.400; como funciona 1.900; fonte: EC 141/2026; CLT) |
+| 2026-11-12 | Escala 6x2: como funciona e quando substitui a 6x1 | blog/escala-6x2-como-funciona.html | publicado |
 | 2026-11-14 | Escala 4x3: como funciona e quando compensa | drafts/escala-4x3-como-funciona.html | agendado 2026-11-14 (busca/mês: escala 4x3 8.100; fonte: EC 141/2026; CLT) |
 | 2026-11-17 | Banco de horas: como funciona com a jornada de 42 horas | drafts/banco-de-horas-jornada-42-horas.html | agendado 2026-11-17 (busca/mês: banco de horas 6.600; como funciona 4.400; fonte: CLT art. 59; nota Fenacon) |
 | 2026-11-19 | Modelo de escala de trabalho 5x2 (com planilha grátis) | drafts/modelo-de-escala-de-trabalho-5x2.html | agendado 2026-11-19 (busca/mês: modelo de escala de trabalho 1.000; planilha de escala 720; fonte: EC 141/2026) |
