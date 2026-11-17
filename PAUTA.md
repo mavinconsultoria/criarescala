@@ -23,7 +23,7 @@ Critério (aprovado pelo Vinicius em 2026-11-04): tema só entra com volume de b
 | 2026-11-10 | Intervalo intrajornada e interjornada: as pausas que a escala precisa respeitar | blog/intervalo-intrajornada-e-interjornada.html | publicado |
 | 2026-11-12 | Escala 6x2: como funciona e quando substitui a 6x1 | blog/escala-6x2-como-funciona.html | publicado |
 | 2026-11-14 | Escala 4x3: como funciona e quando compensa | drafts/escala-4x3-como-funciona.html | agendado 2026-11-14 (busca/mês: escala 4x3 8.100; fonte: EC 141/2026; CLT) |
-| 2026-11-17 | Banco de horas: como funciona com a jornada de 42 horas | drafts/banco-de-horas-jornada-42-horas.html | agendado 2026-11-17 (busca/mês: banco de horas 6.600; como funciona 4.400; fonte: CLT art. 59; nota Fenacon) |
+| 2026-11-17 | Banco de horas: como funciona com a jornada de 42 horas | drafts/banco-de-horas-jornada-42-horas.html | publicado (busca/mês: banco de horas 6.600; como funciona 4.400; fonte: CLT art. 59; nota Fenacon) |
 | 2026-11-19 | Modelo de escala de trabalho 5x2 (com planilha grátis) | drafts/modelo-de-escala-de-trabalho-5x2.html | agendado 2026-11-19 (busca/mês: modelo de escala de trabalho 1.000; planilha de escala 720; fonte: EC 141/2026) |
 | 2026-11-21 | Trabalhar no feriado: é obrigatório, paga em dobro ou dá folga? | drafts/trabalhar-no-feriado-obrigatorio-dobro-ou-folga.html | agendado 2026-11-21 (busca/mês: trabalho em feriado 2.900; feriado trabalhado 2.900; fonte: Lei 605/1949 art. 9º) |
 | 2026-11-24 | Escala 5x1: ainda é permitida com 2 folgas semanais? | drafts/escala-5x1-e-permitida.html | agendado 2026-11-24 (busca/mês: escala 5x1 6.600; fonte: EC 141/2026 (confirmar no texto; se não houver resposta clara, trocar o tema)) |
