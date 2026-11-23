@@ -1151,6 +1151,12 @@ function defaults(){
  return {company:'',segment:'Comércio',month:nextMonth(),week:wk,exceptions:{},work:440,daysPerWeek:6,brk:60,preset:'44',need:{_:1},multi:false,roles:[],people:[],sunRule:'month'};
 }
 let S={step:0,cfg:defaults(),plan:null,edits:{},version:1,memo:'',view:'month',weekNo:0,dayNo:1,monthTouched:false};
+// Lalia: origem do cadastro (?c= código do e-mail, UTMs de anúncio) e envio do cadastro
+(function(){try{const q=new URLSearchParams(location.search);const o=JSON.parse(localStorage.getItem('ce2-origem')||'{}');if(q.get('c'))o.codigo=q.get('c');['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid','fbclid'].forEach(k=>{if(q.get(k))(o.utm=o.utm||{})[k]=q.get(k)});localStorage.setItem('ce2-origem',JSON.stringify(o))}catch(e){}})();
+function enviarLalia(){try{let o={};try{o=JSON.parse(localStorage.getItem('ce2-origem')||'{}')}catch(e){}
+ const email=(profile&&profile.email)||(contact&&contact.includes('@')?contact:'');if(!email)return;const p=profile||{};
+ fetch('https://crm-mavin.mavinconsultoria.workers.dev/api/webhook/criarescala/cadastro',{method:'POST',headers:{'content-type':'application/json'},keepalive:true,
+  body:JSON.stringify({email,nome:p.name||null,cargo:p.role||null,whatsapp:p.phone||(contact&&!contact.includes('@')?contact:null),cnpj:p.cnpj||null,ponto:p.ponto||null,aceita_dicas:!!prefs.commercial,codigo:o.codigo||null,utm:o.utm||{},pagina:location.pathname,escalas:(attempts||[]).length})}).catch(()=>{})}catch(e){}}
 let device='',contact='',contactTouched=false,profile=null,prefs={ops:true,commercial:true},attempts=[],leads=[],readOnly=false,started=false,holInit={};
 function load(){try{const m=JSON.parse(localStorage.getItem('ce2')||'{}');if(m.S){S=m.S;started=!!m.started}contact=m.contact||'';profile=m.profile||null;prefs=m.prefs||prefs;attempts=m.attempts||[];leads=m.leads||[];device=m.device||''}catch{}
  if(!device)device='d'+Math.random().toString(36).slice(2,10)}
@@ -1398,10 +1404,10 @@ function validate(c){
 function suspicious(c){return c.includes('@')?/^(teste|fake|asdf|aaaa|123|xxx)/i.test(c)||/[bcdfghjklmnpqrstvwxyz]{8}/i.test(c.split('@')[0]):/(\d)\1{6}/.test(c.replace(/\D/g,''))||/12345678|87654321/.test(c.replace(/\D/g,''))}
 function acceptContact(v,comm){contact=v;prefs.commercial=!!comm;
  const sus=suspicious(v);if(sus)attempts.push({at:new Date().toISOString(),device,type:v.includes('@')?'E-mail':'WhatsApp',masked:v.includes('@')?v.slice(0,2)+'***@'+v.split('@')[1]:v.slice(0,4)+'•••••••'});
- attempts=attempts.slice(-50);leads.push({at:new Date().toISOString(),device,masked:v.includes('@')?v.slice(0,2)+'***@'+v.split('@')[1]:v.slice(0,4)+'•••••••',segment:C().segment,sus,commercial:!!comm});leads=leads.slice(-100);save()}
+ attempts=attempts.slice(-50);leads.push({at:new Date().toISOString(),device,masked:v.includes('@')?v.slice(0,2)+'***@'+v.split('@')[1]:v.slice(0,4)+'•••••••',segment:C().segment,sus,commercial:!!comm});leads=leads.slice(-100);save();enviarLalia()}
 function contactModal(then){modal(`<h2>Sua escala está pronta para sair.</h2><p>Para onde enviamos uma cópia? Assim você também a encontra no mês que vem.</p>
  <input id="mcontact" placeholder="(11) 91234-5678 ou voce@empresa.com.br" value="${esc(contact)}"><div class="err" id="merr"></div>
- <label class="inline"><input type="checkbox" id="mcons" ${prefs.commercial?'checked':''}> Quero receber dicas e ofertas para minha empresa. <span class="hint">(opcional)</span></label>
+ <label class="inline"><input type="checkbox" id="mcons" ${prefs.commercial?'checked':''}> Quero receber dicas e ofertas para minha empresa, do Criar Escala e das empresas da Mavin Consultoria. <span class="hint">(opcional)</span></label>
  <button class="pri big" onclick="okContact()">Continuar</button>`);window._then=then}
 window.contactModal=contactModal;
 window.okContact=()=>{const v=$('mcontact').value.trim(),e=validate(v);if(e){$('merr').textContent=e;return}acceptContact(v,$('mcons').checked);closeModal();window._then&&window._then()};
@@ -1775,14 +1781,14 @@ window.register=()=>{modal(`<h2>${profile?'Sua conta':'Cadastro grátis'}</h2><p
  <label>E-mail</label><input id="re" value="${esc(profile?.email||(contact.includes('@')?contact:''))}"><label>WhatsApp</label><input id="rw" value="${esc(profile?.phone||(contact.includes('@')?'':contact))}">
  <label>CNPJ <span class="hint">(opcional)</span></label><input id="rj" value="${esc(profile?.cnpj||'')}" inputmode="numeric">
  <label>Como controla o ponto hoje? <span class="hint">(opcional)</span></label><select id="rp"><option value="">Prefiro não dizer</option><option ${profile?.ponto==='manual'?'selected':''} value="manual">Manual (papel/planilha)</option><option ${profile?.ponto==='digital'?'selected':''} value="digital">Digital (relógio/app)</option><option ${profile?.ponto==='nao'?'selected':''} value="nao">Não faço controle</option></select>
- <label class="inline"><input type="checkbox" id="rcm" ${prefs.commercial?'checked':''}> Quero receber dicas e ofertas para minha empresa.</label><div class="err" id="rerr"></div><button class="pri big" onclick="saveReg()">Cadastrar e liberar</button>`)};
+ <label class="inline"><input type="checkbox" id="rcm" ${prefs.commercial?'checked':''}> Quero receber dicas e ofertas para minha empresa, do Criar Escala e das empresas da Mavin Consultoria. <a href="/privacidade/" target="_blank" rel="noopener">Política de privacidade</a></label><div class="err" id="rerr"></div><button class="pri big" onclick="saveReg()">Cadastrar e liberar</button>`)};
 window.saveReg=()=>{const n=$('rn').value.trim(),r=$('rc').value.trim(),e=$('re').value.trim(),w=$('rw').value.trim();
  if(!n||!r)return $('rerr').textContent='Informe nome e cargo.';const ee=validate(e);if(ee||!e.includes('@'))return $('rerr').textContent=ee||'Informe um e-mail válido.';const we=validate(w);if(we||w.includes('@'))return $('rerr').textContent=we||'Informe um WhatsApp válido.';
- profile={name:n,role:r,email:e,phone:w,cnpj:$('rj').value.trim(),ponto:$('rp').value};if(!contact)acceptContact(e,$('rcm').checked);prefs.commercial=$('rcm').checked;save();closeModal();toast('Cadastro feito. Semana e dia liberados.');if(S.plan)renderResult()};
+ profile={name:n,role:r,email:e,phone:w,cnpj:$('rj').value.trim(),ponto:$('rp').value};if(!contact)acceptContact(e,$('rcm').checked);prefs.commercial=$('rcm').checked;save();enviarLalia();closeModal();toast('Cadastro feito. Semana e dia liberados.');if(S.plan)renderResult()};
 window.openPrefs=()=>{modal(`<h2>Preferências</h2><label class="inline"><input type="checkbox" id="pp1" ${prefs.ops?'checked':''} onchange="prefs_('ops',this.checked)"> Lembretes para o gestor (ex.: preparar a escala do próximo mês)</label>
- <label class="inline"><input type="checkbox" id="pp2" ${prefs.commercial?'checked':''} onchange="prefs_('commercial',this.checked)"> Dicas e ofertas para minha empresa</label>
+ <label class="inline"><input type="checkbox" id="pp2" ${prefs.commercial?'checked':''} onchange="prefs_('commercial',this.checked)"> Dicas e ofertas para minha empresa (Criar Escala e empresas da Mavin Consultoria)</label>
  <div class="row" style="margin-top:12px"><button onclick="optOut()">Não receber mais nada</button><button onclick="wipe()">Apagar meus dados deste navegador</button></div><p class="hint">Nunca enviamos mensagens aos seus funcionários.</p>`)};
-window.prefs_=(k,v)=>{prefs[k]=v;save()};window.optOut=()=>{prefs.ops=prefs.commercial=false;save();closeModal();toast('Pronto, você não receberá comunicações.')};
+window.prefs_=(k,v)=>{prefs[k]=v;save();if(k==='commercial')enviarLalia()};window.optOut=()=>{prefs.ops=prefs.commercial=false;save();enviarLalia();closeModal();toast('Pronto, você não receberá comunicações.')};
 window.wipe=()=>{try{localStorage.removeItem('ce2')}catch{}location.href=location.href.split('#')[0]};
 window.admin=()=>{const byDev={};attempts.forEach(a=>byDev[a.device]=(byDev[a.device]||0)+1);const rep=Object.entries(byDev).filter(([,n])=>n>=2);
  modal(`<h2>Admin · demonstração</h2>${rep.length?`<div class="box warn"><b>⚠ Possível contato falso repetido</b>: ${rep.map(([d,n])=>`dispositivo ${d.slice(0,6)}… (${n}x)`).join(', ')}. Contatos suspeitos não são bloqueados; só sinalizados. No produto real, o agrupamento usaria IP/sessão com aviso de privacidade.</div>`:'<p class="hint">Nenhuma repetição suspeita.</p>'}
