@@ -52,7 +52,7 @@ for s in slugs:
     t=t.replace(f'"datePublished": "{d}"',f'"datePublished": "{nd}"').replace(f'"dateModified": "{d}"',f'"dateModified": "{nd}"').replace(f'content="{d}"',f'content="{nd}"')
     y,m,dd=d.split('-'); ny,nm,ndd=nd.split('-')
     t=t.replace(f'· {dd} {MES[m]} {y} ·',f'· {ndd} {MES[nm]} {ny} ·')
-    url=f'{B}/blog/{s}.html'
+    url=f'{B}/blog/{s}'
     t=t.replace(f'https://blog.mavinseguros.com.br/drafts/{s}.html',url)
     t=t.replace('https://blog.mavinseguros.com.br/assets/favicon-512.png',B+'/og.png')
     t=t.replace('— mavin. seguros</title>','| Criar Escala</title>').replace('content="mavin. seguros"','content="Criar Escala"')
@@ -66,12 +66,12 @@ for s in slugs:
     t=t.replace('href="/posts/','href="/blog/')
     t=t.replace('https://criarescala.com.br?utm_source=blog&amp;','/?utm_source=blog_criarescala&amp;').replace('https://criarescala.com.br/?utm_source=blog&amp;','/?utm_source=blog_criarescala&amp;')
     assert 'blog.mavinseguros' not in t, s
-    open(f'{OUT}/blog/{s}.html','w',encoding='utf-8').write(t)
+    open(f'{OUT}/blog/{s}','w',encoding='utf-8').write(t)
     title=html.unescape(re.search(r'<h1>(.*?)</h1>',t,re.S).group(1)); dek=re.search(r'<p class="dek">(.*?)</p>',t,re.S).group(1)
     meta=re.search(r'class="post-meta">Gestão de equipes · ([^<]*)',t).group(1)
     posts.append((nd,s,title,dek,meta))
 posts.sort(reverse=True)
-rows=''.join(f'''      <a class="row-post" href="/blog/{s}.html">
+rows=''.join(f'''      <a class="row-post" href="/blog/{s}">
         <div class="row-img"><img src="/blog/assets/covers/gestao-equipes.svg" alt="" loading="lazy" width="800" height="450"></div>
         <div>
           <span class="row-tag">Gestão de equipes</span>
@@ -82,14 +82,14 @@ rows=''.join(f'''      <a class="row-post" href="/blog/{s}.html">
         <span class="row-arrow">→</span>
       </a>
 ''' for nd,s,ti,dk,me in posts)
-ld={"@context":"https://schema.org","@type":"Blog","name":"Blog Criar Escala","url":B+"/blog/","publisher":{"@type":"Organization","name":"Criar Escala","url":B+"/"},"blogPost":[{"@type":"BlogPosting","headline":ti,"url":f"{B}/blog/{s}.html","datePublished":nd} for nd,s,ti,dk,me in posts]}
+ld={"@context":"https://schema.org","@type":"Blog","name":"Blog Criar Escala","url":B+"/blog/","publisher":{"@type":"Organization","name":"Criar Escala","url":B+"/"},"blogPost":[{"@type":"BlogPosting","headline":ti,"url":f"{B}/blog/{s}","datePublished":nd} for nd,s,ti,dk,me in posts]}
 desc='Escala de trabalho, fim da 6x1, jornada de 42h e 40h, revezamento e cobertura de turnos: guias práticos para quem organiza a equipe.'
 idx=f'''<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog Criar Escala: escala de trabalho, fim da 6x1 e gestão de turnos</title>
+<title>Blog Criar Escala: escala de trabalho e fim da 6x1</title>
 <meta name="description" content="{desc}">
 <link rel="canonical" href="{B}/blog/">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Criar Escala">
@@ -127,9 +127,9 @@ idx=f'''<!DOCTYPE html>
 </html>
 '''
 open(OUT+'/blog/index.html','w',encoding='utf-8').write(idx)
-items=''.join(f'<item><title>{html.escape(ti)}</title><link>{B}/blog/{s}.html</link><guid>{B}/blog/{s}.html</guid><pubDate>{__import__('email.utils').utils.format_datetime(__import__('datetime').datetime.fromisoformat(nd+'T10:00:00-03:00'))}</pubDate><description>{dk}</description></item>' for nd,s,ti,dk,me in posts)
+items=''.join(f'<item><title>{html.escape(ti)}</title><link>{B}/blog/{s}</link><guid>{B}/blog/{s}</guid><pubDate>{__import__('email.utils').utils.format_datetime(__import__('datetime').datetime.fromisoformat(nd+'T10:00:00-03:00'))}</pubDate><description>{dk}</description></item>' for nd,s,ti,dk,me in posts)
 open(OUT+'/blog/feed.xml','w',encoding='utf-8').write(f'<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Blog Criar Escala</title><link>{B}/blog/</link><description>{desc}</description>{items}</channel></rss>\n')
-urls=[('/','2026-10-21'),('/blog/','2026-11-03')]+[(f'/blog/{s}.html',nd) for nd,s,*_ in posts]
+urls=[('/','2026-10-21'),('/blog/','2026-11-03')]+[(f'/blog/{s}',nd) for nd,s,*_ in posts]
 open(OUT+'/sitemap.xml','w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join(f'  <url><loc>{B}{u}</loc><lastmod>{d}</lastmod></url>\n' for u,d in urls)+'</urlset>\n')
 open(OUT+'/robots.txt','w').write(f'User-agent: *\nAllow: /\n\nSitemap: {B}/sitemap.xml\n')
 print(len(posts),'posts')
