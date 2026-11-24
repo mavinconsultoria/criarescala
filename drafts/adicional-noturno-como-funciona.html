@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Medição (GA4 + Clarity) com Consent Mode v2 data-analytics="mavin-v1" -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','wait_for_update':500});
+  (function(){ try { if (localStorage.getItem('criarescala_cookie_consent') === 'accepted') gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'}); } catch(e){} })();
+</script>
+<script>
+/* GA4 e Clarity carregados na primeira interação ou 5 s após o carregamento, para não atrasar a página. */
+(function(w,d){
+  var done=false;
+  function load(){
+    if(done) return; done=true;
+    var g=d.createElement('script'); g.async=true; g.src='https://www.googletagmanager.com/gtag/js?id=G-2L3P5YF5HM'; d.head.appendChild(g);
+    gtag('js', new Date()); gtag('config', 'G-2L3P5YF5HM');
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(w,d,"clarity","script","z8ddnrsilw");
+    var ok=false; try{ ok = localStorage.getItem('criarescala_cookie_consent')==='accepted'; }catch(e){}
+    w.clarity('consentv2',{ad_Storage: ok?'granted':'denied', analytics_Storage: ok?'granted':'denied'});
+    ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){ w.removeEventListener(e,load,{passive:true}); });
+  }
+  ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){ w.addEventListener(e,load,{passive:true,once:true}); });
+  w.addEventListener('load',function(){ setTimeout(load,5000); });
+  /* cliques em WhatsApp, telefone e e-mail viram eventos de conversão */
+  d.addEventListener('click',function(ev){
+    var a=ev.target.closest && ev.target.closest('a[href]'); if(!a) return;
+    var h=a.getAttribute('href')||'', n=null;
+    if(/wa\.me|whatsapp/i.test(h)) n='click_whatsapp'; else if(/^tel:/i.test(h)) n='click_telefone'; else if(/^mailto:/i.test(h)) n='click_email';
+    if(n) gtag('event', n, {link_url:h, page_path:location.pathname});
+  }, true);
+})(window,document);
+</script>
+<!-- Fim da medição -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adicional noturno: horário, hora reduzida e escala | Criar Escala</title>
+<meta name="description" content="Na CLT, trabalho noturno vai das 22h às 5h, a hora noturna tem 52min30s e o adicional é de no mínimo 20% (art. 73). Veja como isso entra na escala de 42 horas.">
+<link rel="canonical" href="https://criarescala.com.br/blog/adicional-noturno-como-funciona">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Criar Escala">
+<meta property="og:title" content="Adicional noturno: horário, hora reduzida e como fica na escala">
+<meta property="og:description" content="Na CLT, trabalho noturno vai das 22h às 5h, a hora noturna tem 52min30s e o adicional é de no mínimo 20% (art. 73). Veja como isso entra na escala de 42 horas.">
+<meta property="og:url" content="https://criarescala.com.br/blog/adicional-noturno-como-funciona">
+<meta property="og:image" content="https://criarescala.com.br/og.png">
+<meta property="article:published_time" content="2026-12-05">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/blog/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Adicional noturno: horário, hora reduzida e como fica na escala",
+  "datePublished": "2026-12-05",
+  "dateModified": "2026-12-05",
+  "author": {
+    "@type": "Organization",
+    "name": "Criar Escala",
+    "url": "https://criarescala.com.br"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Criar Escala",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://criarescala.com.br/apple-touch-icon.png"
+    }
+  },
+  "mainEntityOfPage": "https://criarescala.com.br/blog/adicional-noturno-como-funciona"
+}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="/blog/" class="wm">criar<span class="lime">escala</span><span class="seg">blog</span></a>
+    <nav class="nav-links">
+      <a href="/blog/" class="navlink">Blog</a>
+      <a href="/?utm_source=blog_criarescala&amp;utm_medium=nav" class="btn btn-primary" data-cta="cotacao" data-cta-label="nav">Criar minha escala grátis</a>
+    </nav>
+  </div>
+</header>
+
+<article class="post">
+  <div class="wrap-narrow">
+    <p class="post-meta">Gestão de equipes · 05 dez 2026 · 5 min de leitura</p>
+    <h1>Adicional noturno: horário, hora reduzida e como fica na escala</h1>
+    <p class="dek">A CLT define o horário noturno, a hora reduzida e o adicional mínimo. A EC 141/2026 não muda essas regras, mas muda o limite semanal e o valor da hora a partir de 16/12/2026.</p>
+    <div class="byline">Equipe Criar Escala</div>
+
+    <div class="post-hero"><img src="/blog/assets/covers/gestao-equipes.svg" alt="Ilustração: Adicional noturno: horário, hora reduzida e como fica na escala" width="800" height="400"></div>
+
+    <div class="post-body">
+
+<p>O <strong>adicional noturno</strong> é o acréscimo pago pelo trabalho feito à noite. Pelo art. 73 da <a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm">CLT</a>, para o trabalhador urbano, é noturno o trabalho entre as 22 horas de um dia e as 5 horas do dia seguinte, a hora noturna é contada como 52 minutos e 30 segundos, e a remuneração tem acréscimo de pelo menos 20% sobre a hora diurna. A <a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm">Constituição</a> (art. 7º, IX) garante que o trabalho noturno seja pago acima do diurno.</p>
+      <h2>Adicional noturno: as regras da CLT</h2>
+      <ul>
+      <li><strong>Horário noturno urbano</strong> — das 22h às 5h (art. 73, § 2º).</li>
+      <li><strong>Hora reduzida</strong> — cada hora noturna é computada como 52 minutos e 30 segundos (art. 73, § 1º).</li>
+      <li><strong>Adicional mínimo</strong> — 20% sobre a hora diurna (art. 73, caput). A convenção coletiva pode prever percentual maior, mas não pode suprimir nem reduzir a remuneração do trabalho noturno superior à do diurno (art. 611-B, VI).</li>
+      <li><strong>Horário misto</strong> — no turno que pega parte do dia e parte da noite, as regras do trabalho noturno valem para as horas noturnas (art. 73, § 4º).</li>
+      <li><strong>Prorrogação</strong> — às prorrogações do trabalho noturno aplica-se o mesmo capítulo (art. 73, § 5º). Na escala 12x36, o art. 59-A, parágrafo único, considera compensadas as prorrogações de trabalho noturno.</li>
+      <li><strong>Trabalhador rural</strong> — tem regra própria: noturno das 21h às 5h na lavoura e das 20h às 4h na pecuária, com acréscimo de 25% (<a href="https://www.planalto.gov.br/ccivil_03/leis/l5889.htm">Lei 5.889/1973</a>, art. 7º).</li>
+      </ul>
+      <div class="cta-inline">
+        <div class="txt"><strong>Sua escala noturna cabe nas 42 horas?</strong><span>Simule na Criar Escala, sistema 100% grátis.</span></div>
+        <a href="/?utm_source=blog_criarescala&amp;utm_medium=inline-topo&amp;utm_campaign=adicional-noturno-como-funciona" class="btn btn-ghost" data-cta="cotacao" data-cta-label="inline-topo-adicional-noturno-como-funciona">Simular minha escala grátis</a>
+      </div>
+      <h2>Como a hora reduzida entra na escala</h2>
+      <p>A hora noturna menor faz o relógio e a jornada contarem diferente. Um turno das 22h às 5h tem 7 horas de relógio (420 minutos). Dividindo por 52,5 minutos, dá 8 horas noturnas. Ou seja, quem trabalha das 22h às 5h cumpre o equivalente a 8 horas de jornada.</p>
+      <p>Na escala, isso pesa na conta da semana. Com o limite de 42 horas semanais a partir de 16/12/2026, cinco turnos das 22h às 5h somam 40 horas, dentro do limite. Seis turnos somariam 48 horas, acima dele. Quem monta escala noturna precisa contar as horas já convertidas, não as horas de relógio.</p>
+      <p>Também continuam valendo as pausas: o intervalo durante a jornada e as 11 horas de descanso entre uma jornada e outra (arts. 71 e 66 da CLT). Veja os detalhes em <a href="/blog/intervalo-intrajornada-e-interjornada">intervalo intrajornada e interjornada</a>.</p>
+      <h2>O que muda com a jornada de 42 horas</h2>
+      <p>A <a href="https://legis.senado.leg.br/norma/44184944/publicacao/44189027">EC 141/2026</a> não altera o art. 73 da CLT: o horário, a hora reduzida e o adicional mínimo continuam os mesmos. O que muda é a base:</p>
+      <ul>
+      <li><strong>Limite semanal menor</strong> — 42 horas a partir de 16/12/2026 e 40 horas a partir de 16/12/2027 (art. 6º da emenda), com 2 dias de repouso semanal remunerado.</li>
+      <li><strong>Hora normal mais cara</strong> — o adicional é calculado sobre a hora normal. Pelo art. 64 da CLT, o salário-hora do mensalista é o salário dividido por 30 vezes as horas diárias. Segundo a <a href="https://fenacon.org.br/wp-content/uploads/2026/10/FCOM0007-Nota-Tecnica-6x1-.pdf">nota orientativa da Fenacon</a>, o divisor passa de 220 para 210 na fase de 42 horas, sem redução de salário. Exemplo: com salário de R$ 2.200, a hora vai de R$ 10,00 (2.200 ÷ 220) para cerca de R$ 10,48 (2.200 ÷ 210), e o adicional de 20% por hora noturna vai de R$ 2,00 para cerca de R$ 2,10.</li>
+      </ul>
+      <p>Confirme o divisor e o percentual da sua categoria com a contabilidade antes de fechar a folha de dezembro.</p>
+      <p>Na <a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=adicional-noturno-como-funciona" data-cta="cotacao" data-cta-label="texto-adicional-noturno-como-funciona">Criar Escala</a>, você monta a escala do mês com os turnos da equipe e vê as horas de cada funcionário na escala atual e na da nova regra, lado a lado, com o diagnóstico de se a equipe noturna dá conta ou se vai precisar de mais gente.</p>
+      <div class="cta-inline">
+        <div class="txt"><strong>Precisa redesenhar os turnos da noite?</strong><span>A Criar Escala monta o mês na nova regra e mostra se vai faltar gente.</span></div>
+        <a href="/?utm_source=blog_criarescala&amp;utm_medium=inline&amp;utm_campaign=adicional-noturno-como-funciona" class="btn btn-ghost" data-cta="cotacao" data-cta-label="inline-adicional-noturno-como-funciona">Usar a Criar Escala grátis</a>
+      </div>
+      <div class="callout"><strong>Sobre a Criar Escala:</strong> é um sistema 100% grátis da Mavin Seguros para montar a escala do mês. Você conta como a empresa funciona (dias, horários, feriados e quantas pessoas precisam estar no atendimento), cadastra a equipe e a jornada, e recebe a escala pronta no calendário — com a escala atual e a da nova regra da EC 141/2026 lado a lado, e o diagnóstico de se vai precisar de mais gente. Funciona no celular, sem baixar app e sem cadastro para montar e ver a escala, e exporta em PDF e Excel. Como toda simulação, não tem validade jurídica: em caso de dúvida sobre a sua categoria, vale consultar um advogado trabalhista ou o departamento pessoal da sua contabilidade. <a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=adicional-noturno-como-funciona" data-cta="cotacao" data-cta-label="texto-adicional-noturno-como-funciona">Monte a sua escala na Criar Escala</a>.</div>
+      <h2>Pontos para revisar na escala noturna</h2>
+      <ul>
+      <li>A escala conta as horas noturnas já convertidas em hora reduzida?</li>
+      <li>A convenção da categoria prevê adicional noturno maior que 20%?</li>
+      <li>Com o limite de 42 horas, a escala noturna atual passa do limite semanal em alguma semana?</li>
+      <li>O sistema de folha já usa o novo divisor a partir de 16/12/2026?</li>
+      </ul>
+      <div class="callout"><strong>Importante:</strong> Este conteúdo é informativo e não é parecer jurídico. A convenção ou o acordo coletivo da sua categoria pode ter regra própria: antes de aplicar, confirme com um advogado trabalhista ou com o departamento pessoal da sua contabilidade.</div>
+      <p>A regra do adicional noturno não mudou, mas a conta da semana mudou. <strong><a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=adicional-noturno-como-funciona" data-cta="cotacao" data-cta-label="texto-adicional-noturno-como-funciona">Simule a escala noturna na Criar Escala</a></strong> e veja se os turnos da noite cabem nas 42 horas.</p>
+      <div class="related">
+        <h4>Continue lendo</h4>
+        <div class="related-links">
+          <a href="/blog/intervalo-intrajornada-e-interjornada">Intervalo intrajornada e interjornada: as pausas que a escala precisa respeitar</a>
+          <a href="/blog/escala-12x36-depois-do-fim-da-6x1">Escala 12x36 depois do fim da 6x1: o que muda e o que continua</a>
+          <a href="/blog/limite-de-hora-extra-por-dia">Limite de hora extra por dia: o que muda com a nova jornada</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</article>
+
+<section class="section">
+  <div class="wrap">
+    <div class="strip-cta">
+      <div>
+        <h3>Quantas horas noturnas a sua escala soma?</h3>
+        <p>Na Criar Escala você monta a escala do mês com os turnos da equipe e vê as horas de cada funcionário na nova regra. Sistema 100% grátis, uma solução da Mavin Seguros.</p>
+      </div>
+      <a href="/?utm_source=blog_criarescala&amp;utm_medium=strip&amp;utm_campaign=adicional-noturno-como-funciona" class="btn btn-primary" data-cta="cotacao" data-cta-label="strip-adicional-noturno-como-funciona">Simular minha escala grátis</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="wm">criar<span class="lime">escala</span></div>
+        <p>Sistema gratuito para montar a escala do mês da sua equipe, já com a nova regra de jornada.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Navegue</h5>
+        <a href="/blog/">Blog</a>
+        <a href="/">Criar minha escala</a>
+        <a href="https://mavinseguros.com.br/privacidade/">Política de privacidade</a>
+      </div>
+      <div class="foot-col">
+        <h5>Quem faz</h5>
+        <a href="https://mavinseguros.com.br">Mavin Seguros</a>
+        <a href="mailto:contato@mavinseguros.com.br">contato@mavinseguros.com.br</a>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p class="legal-txt">Criar Escala é uma solução da Mavin. MAVIN CONSULTORIA &amp; CORRETAGEM DE SEGUROS LTDA · CNPJ 68.132.516/0001-23 · R. Adelino Leal Nunes, 279, Novo Mundo, Curitiba/PR. Conteúdo informativo, sem validade jurídica: confirme com um advogado trabalhista ou com o departamento pessoal da sua contabilidade.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/blog/assets/site.js"></script>
+<!-- Banner de consentimento de cookies (LGPD) -->
+<style>
+  #an-cookie-bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;max-width:640px;margin:0 auto;background:#111827;color:#F9FAFB;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.25);padding:10px 12px 10px 16px;display:flex;align-items:center;gap:12px;font-family:inherit;font-size:12px;line-height:1.4;transition:transform .3s ease,opacity .3s ease}
+  #an-cookie-bar.an-hidden{transform:translateY(20px);opacity:0;pointer-events:none}
+  #an-cookie-bar a{color:inherit;text-decoration:underline;opacity:.9}
+  #an-cookie-bar .an-t{flex:1;opacity:.88}
+  #an-cookie-bar .an-a{display:flex;gap:6px;flex-shrink:0}
+  #an-cookie-bar button{font-family:inherit;font-weight:700;font-size:12px;padding:7px 12px;border-radius:8px;border:none;cursor:pointer;white-space:nowrap}
+  #an-cookie-no{background:rgba(127,127,127,.18);color:inherit;font-weight:600}
+  #an-cookie-ok{background:#5B3DF5;color:#fff}
+  @media(max-width:480px){#an-cookie-bar{flex-direction:column;align-items:stretch;text-align:left}#an-cookie-bar .an-a{justify-content:flex-end}}
+</style>
+<div id="an-cookie-bar" class="an-hidden" role="dialog" aria-label="Consentimento de cookies">
+  <div class="an-t">Usamos cookies para medir e melhorar o uso do site. <a href="https://criarescala.com.br/privacidade/">Política de privacidade</a></div>
+  <div class="an-a"><button id="an-cookie-no" type="button">Recusar</button><button id="an-cookie-ok" type="button">Aceitar</button></div>
+</div>
+<script>
+(function(){
+  var bar=document.getElementById('an-cookie-bar'), k='criarescala_cookie_consent', s=null;
+  try{ s=localStorage.getItem(k); }catch(e){}
+  if(!s) bar.classList.remove('an-hidden');
+  function done(v){ try{ localStorage.setItem(k,v); }catch(e){} bar.classList.add('an-hidden'); }
+  document.getElementById('an-cookie-ok').addEventListener('click',function(){
+    gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'});
+    if(window.clarity) clarity('consentv2',{ad_Storage:'granted',analytics_Storage:'granted'});
+    done('accepted');
+  });
+  document.getElementById('an-cookie-no').addEventListener('click',function(){ done('rejected'); });
+})();
+</script>
+</body>
+</html>

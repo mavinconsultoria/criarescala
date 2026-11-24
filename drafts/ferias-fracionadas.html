@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Medição (GA4 + Clarity) com Consent Mode v2 data-analytics="mavin-v1" -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','wait_for_update':500});
+  (function(){ try { if (localStorage.getItem('criarescala_cookie_consent') === 'accepted') gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'}); } catch(e){} })();
+</script>
+<script>
+/* GA4 e Clarity carregados na primeira interação ou 5 s após o carregamento, para não atrasar a página. */
+(function(w,d){
+  var done=false;
+  function load(){
+    if(done) return; done=true;
+    var g=d.createElement('script'); g.async=true; g.src='https://www.googletagmanager.com/gtag/js?id=G-2L3P5YF5HM'; d.head.appendChild(g);
+    gtag('js', new Date()); gtag('config', 'G-2L3P5YF5HM');
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(w,d,"clarity","script","z8ddnrsilw");
+    var ok=false; try{ ok = localStorage.getItem('criarescala_cookie_consent')==='accepted'; }catch(e){}
+    w.clarity('consentv2',{ad_Storage: ok?'granted':'denied', analytics_Storage: ok?'granted':'denied'});
+    ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){ w.removeEventListener(e,load,{passive:true}); });
+  }
+  ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){ w.addEventListener(e,load,{passive:true,once:true}); });
+  w.addEventListener('load',function(){ setTimeout(load,5000); });
+  /* cliques em WhatsApp, telefone e e-mail viram eventos de conversão */
+  d.addEventListener('click',function(ev){
+    var a=ev.target.closest && ev.target.closest('a[href]'); if(!a) return;
+    var h=a.getAttribute('href')||'', n=null;
+    if(/wa\.me|whatsapp/i.test(h)) n='click_whatsapp'; else if(/^tel:/i.test(h)) n='click_telefone'; else if(/^mailto:/i.test(h)) n='click_email';
+    if(n) gtag('event', n, {link_url:h, page_path:location.pathname});
+  }, true);
+})(window,document);
+</script>
+<!-- Fim da medição -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Férias fracionadas: como dividir em 3 períodos | Criar Escala</title>
+<meta name="description" content="Férias fracionadas pela CLT: até 3 períodos, um com pelo menos 14 dias e os outros com 5 ou mais, sem começar nos 2 dias antes de feriado ou folga. Veja como planejar a escala.">
+<link rel="canonical" href="https://criarescala.com.br/blog/ferias-fracionadas">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Criar Escala">
+<meta property="og:title" content="Férias fracionadas: como dividir em até 3 períodos sem furar a escala">
+<meta property="og:description" content="Férias fracionadas pela CLT: até 3 períodos, um com pelo menos 14 dias e os outros com 5 ou mais, sem começar nos 2 dias antes de feriado ou folga. Veja como planejar a escala.">
+<meta property="og:url" content="https://criarescala.com.br/blog/ferias-fracionadas">
+<meta property="og:image" content="https://criarescala.com.br/og.png">
+<meta property="article:published_time" content="2026-12-26">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/blog/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Férias fracionadas: como dividir em até 3 períodos sem furar a escala",
+  "datePublished": "2026-12-26",
+  "dateModified": "2026-12-26",
+  "author": {
+    "@type": "Organization",
+    "name": "Criar Escala",
+    "url": "https://criarescala.com.br"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Criar Escala",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://criarescala.com.br/apple-touch-icon.png"
+    }
+  },
+  "mainEntityOfPage": "https://criarescala.com.br/blog/ferias-fracionadas"
+}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="/blog/" class="wm">criar<span class="lime">escala</span><span class="seg">blog</span></a>
+    <nav class="nav-links">
+      <a href="/blog/" class="navlink">Blog</a>
+      <a href="/?utm_source=blog_criarescala&amp;utm_medium=nav" class="btn btn-primary" data-cta="cotacao" data-cta-label="nav">Criar minha escala grátis</a>
+    </nav>
+  </div>
+</header>
+
+<article class="post">
+  <div class="wrap-narrow">
+    <p class="post-meta">Gestão de equipes · 26 dez 2026 · 6 min de leitura</p>
+    <h1>Férias fracionadas: como dividir em até 3 períodos sem furar a escala</h1>
+    <p class="dek">A CLT permite dividir as férias em até 3 períodos, com a concordância do empregado e tamanhos mínimos. Veja as regras, o aviso de férias, o início vedado antes de feriado e de folga e como planejar o rodízio da equipe.</p>
+    <div class="byline">Equipe Criar Escala</div>
+
+    <div class="post-hero"><img src="/blog/assets/covers/gestao-equipes.svg" alt="Ilustração: Férias fracionadas: como dividir em até 3 períodos sem furar a escala" width="800" height="400"></div>
+
+    <div class="post-body">
+
+<p>As <strong>férias fracionadas</strong> podem ser divididas em até 3 períodos, desde que o empregado concorde. Um dos períodos precisa ter pelo menos 14 dias corridos, e os outros, pelo menos 5 dias corridos cada. A regra está no art. 134, § 1º, da <a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm">CLT</a>. O § 3º do mesmo artigo proíbe que as férias comecem nos dois dias que antecedem feriado ou dia de repouso semanal remunerado.</p>
+      <h2>Regras das férias fracionadas na CLT</h2>
+      <ul>
+      <li><strong>Prazo para conceder</strong> — as férias são concedidas por ato do empregador nos 12 meses seguintes à data em que o empregado adquiriu o direito (art. 134, caput). Fora desse prazo, a remuneração das férias é paga em dobro (art. 137).</li>
+      <li><strong>Divisão em até 3 períodos</strong> — só com a concordância do empregado, com um período de no mínimo 14 dias corridos e os demais de no mínimo 5 dias corridos (art. 134, § 1º).</li>
+      <li><strong>Início vedado</strong> — as férias não podem começar no período de dois dias antes de feriado ou de dia de repouso semanal remunerado (art. 134, § 3º).</li>
+      <li><strong>Quem escolhe a data</strong> — a época das férias é a que melhor atende aos interesses do empregador (art. 136), com duas exceções: membros da mesma família que trabalham na empresa podem tirar férias juntos, se não houver prejuízo ao serviço, e o estudante menor de 18 anos pode fazer as férias coincidirem com as escolares (§§ 1º e 2º).</li>
+      </ul>
+      <h2>Exemplos de divisão de 30 dias</h2>
+      <ul>
+      <li><strong>Valem</strong> — 14 + 11 + 5; 14 + 8 + 8; 20 + 5 + 5; 15 + 15; 25 + 5.</li>
+      <li><strong>Não valem</strong> — 10 + 10 + 10 (nenhum período chega a 14 dias) e 14 + 12 + 4 (um período tem menos de 5 dias).</li>
+      </ul>
+      <p>Quem teve faltas injustificadas pode ter direito a menos dias de férias (art. 130). Com 24 dias, por exemplo, a divisão em 3 períodos ainda fecha (14 + 5 + 5).</p>
+      <div class="cta-inline">
+        <div class="txt"><strong>Quem cobre quem sai de férias?</strong><span>Monte a escala do mês na Criar Escala, sistema 100% grátis.</span></div>
+        <a href="/?utm_source=blog_criarescala&amp;utm_medium=inline-topo&amp;utm_campaign=ferias-fracionadas" class="btn btn-ghost" data-cta="cotacao" data-cta-label="inline-topo-ferias-fracionadas">Simular minha escala grátis</a>
+      </div>
+      <h2>Aviso de férias: prazo e pagamento</h2>
+      <ul>
+      <li><strong>Aviso por escrito com 30 dias de antecedência</strong> — a concessão das férias deve ser comunicada por escrito ao empregado com antecedência mínima de 30 dias, e ele dá recibo (art. 135). Programe o aviso de cada período fracionado com essa antecedência.</li>
+      <li><strong>Pagamento até 2 dias antes</strong> — a remuneração das férias, e o abono, se houver, é paga até 2 dias antes do início do período (art. 145).</li>
+      <li><strong>Anotação</strong> — com a carteira de trabalho digital, a anotação da concessão é feita no sistema oficial (art. 135, § 3º).</li>
+      </ul>
+      <h2>Início vedado: o que muda com os 2 dias de repouso</h2>
+      <p>Desde 16/12/2026, a <a href="https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc141.htm">EC 141/2026</a> garante repouso semanal remunerado de 2 dias, um dos quais preferencialmente aos domingos (novo art. 7º, XV, da Constituição). Pela leitura do texto, os dois dias são de repouso semanal remunerado, e a <a href="https://fenacon.org.br/wp-content/uploads/2026/10/FCOM0007-Nota-Tecnica-6x1-.pdf">nota orientativa da Fenacon</a> recomenda não tratar o segundo dia como não remunerado. Isso afeta o § 3º do art. 134: o dia de início das férias não pode cair nos dois dias que antecedem nenhum dos dois dias de folga.</p>
+      <p>Exemplo: em uma escala 5x2 com folgas no sábado e no domingo, os dois dias antes do sábado são quinta e sexta, e os dois dias antes do domingo são sexta e sábado. Assim, as férias podem começar de segunda a quarta-feira, desde que não haja feriado nos dois dias seguintes. Em escalas com folgas em dias variados, como a 6x2, a conta é feita pela folga de cada pessoa. Confirme a leitura com o departamento pessoal antes de fechar as datas.</p>
+      <h2>Licença-paternidade e férias a partir de 2027</h2>
+      <p>A <a href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/L15371.htm">Lei 15.371/2026</a>, que entra em vigor em 1º/1/2027 (art. 14), incluiu os §§ 4º e 5º no art. 134 da CLT: o empregado pode tirar as férias logo depois do fim da licença-paternidade, desde que avise com pelo menos 30 dias de antecedência da data prevista do parto ou da emissão do termo judicial de guarda. Se o parto for antecipado, a antecedência é dispensada. Na escala, vale deixar essa possibilidade prevista para quem tem filho a caminho.</p>
+      <div class="cta-inline">
+        <div class="txt"><strong>As férias de 2027 já estão no calendário?</strong><span>A Criar Escala monta o mês e mostra os dias sem cobertura.</span></div>
+        <a href="/?utm_source=blog_criarescala&amp;utm_medium=inline&amp;utm_campaign=ferias-fracionadas" class="btn btn-ghost" data-cta="cotacao" data-cta-label="inline-ferias-fracionadas">Usar a Criar Escala grátis</a>
+      </div>
+      <h2>Como planejar o rodízio de férias da equipe</h2>
+      <ol>
+      <li><strong>Liste os períodos concessivos</strong> — para cada pessoa, a data-limite para conceder as férias. É o que evita o pagamento em dobro.</li>
+      <li><strong>Separe quem faz a mesma função</strong> — duas pessoas que se cobrem não devem sair no mesmo período. O fracionamento ajuda: períodos menores encaixam em semanas de menos movimento.</li>
+      <li><strong>Evite os picos</strong> — o período de 14 dias ou mais costuma ser o mais difícil de cobrir. Marque-o primeiro, fora das datas de maior movimento.</li>
+      <li><strong>Confira o dia de início</strong> — nunca nos dois dias antes de feriado ou de qualquer dia de folga da pessoa.</li>
+      <li><strong>Refaça a escala do mês</strong> — com a pessoa de férias, as folgas e os turnos dos colegas mudam. Confira se cada dia continua coberto e se ninguém passa do limite de 42 horas semanais.</li>
+      </ol>
+      <p>Férias coletivas seguem outra regra: podem ser divididas em dois períodos anuais, nenhum com menos de 10 dias corridos (art. 139, § 1º).</p>
+      <p>Na <a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=ferias-fracionadas" data-cta="cotacao" data-cta-label="texto-ferias-fracionadas">Criar Escala</a>, você monta a escala do mês e o sistema mostra quantas pessoas estão em cada dia e se a cobertura fecha, com a escala atual e a da nova regra lado a lado.</p>
+      <div class="callout"><strong>Sobre a Criar Escala:</strong> é um sistema 100% grátis da Mavin Seguros para montar a escala do mês. Você conta como a empresa funciona (dias, horários, feriados e quantas pessoas precisam estar no atendimento), cadastra a equipe e a jornada, e recebe a escala pronta no calendário — com a escala atual e a da nova regra da EC 141/2026 lado a lado, e o diagnóstico de se vai precisar de mais gente. Funciona no celular, sem baixar app e sem cadastro para montar e ver a escala, e exporta em PDF e Excel. Como toda simulação, não tem validade jurídica: em caso de dúvida sobre a sua categoria, vale consultar um advogado trabalhista ou o departamento pessoal da sua contabilidade. <a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=ferias-fracionadas" data-cta="cotacao" data-cta-label="texto-ferias-fracionadas">Monte a sua escala na Criar Escala</a>.</div>
+      <h2>Pontos para revisar na sua empresa</h2>
+      <ul>
+      <li>Há férias vencendo nos próximos meses que ainda não estão na escala?</li>
+      <li>O fracionamento tem a concordância do empregado registrada?</li>
+      <li>O dia de início de cada período evita os dois dias antes de feriado e de folga?</li>
+      <li>A convenção coletiva da categoria tem regra própria sobre férias?</li>
+      </ul>
+      <div class="callout"><strong>Importante:</strong> Este conteúdo é informativo e não é parecer jurídico. A convenção ou o acordo coletivo da sua categoria pode ter regra própria: antes de aplicar, confirme com um advogado trabalhista ou com o departamento pessoal da sua contabilidade.</div>
+      <p>Fracionar as férias ajuda a manter a escala coberta, desde que cada período respeite os tamanhos mínimos e o dia de início. <strong><a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=ferias-fracionadas" data-cta="cotacao" data-cta-label="texto-ferias-fracionadas">Monte a escala do mês na Criar Escala</a></strong> e veja como fica a cobertura com cada pessoa de férias.</p>
+      <div class="related">
+        <h4>Continue lendo</h4>
+        <div class="related-links">
+          <a href="/blog/como-calcular-equipe-ideal-para-escala-sem-furo">Como calcular quantas pessoas são necessárias para cobrir uma escala sem furo</a>
+          <a href="/blog/erros-comuns-ao-planejar-a-escala-de-equipe">Escala de equipe mal planejada: os erros mais comuns e como evitar</a>
+          <a href="/blog/escala-6x2-como-funciona">Escala 6x2: como funciona e quando substitui a 6x1</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</article>
+
+<section class="section">
+  <div class="wrap">
+    <div class="strip-cta">
+      <div>
+        <h3>Férias da equipe sem buraco na escala</h3>
+        <p>Na Criar Escala você monta a escala do mês, com quem está em cada dia, e vê se a cobertura fecha na nova regra. Sistema 100% grátis, uma solução da Mavin Seguros.</p>
+      </div>
+      <a href="/?utm_source=blog_criarescala&amp;utm_medium=strip&amp;utm_campaign=ferias-fracionadas" class="btn btn-primary" data-cta="cotacao" data-cta-label="strip-ferias-fracionadas">Simular minha escala grátis</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="wm">criar<span class="lime">escala</span></div>
+        <p>Sistema gratuito para montar a escala do mês da sua equipe, já com a nova regra de jornada.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Navegue</h5>
+        <a href="/blog/">Blog</a>
+        <a href="/">Criar minha escala</a>
+        <a href="https://mavinseguros.com.br/privacidade/">Política de privacidade</a>
+      </div>
+      <div class="foot-col">
+        <h5>Quem faz</h5>
+        <a href="https://mavinseguros.com.br">Mavin Seguros</a>
+        <a href="mailto:contato@mavinseguros.com.br">contato@mavinseguros.com.br</a>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p class="legal-txt">Criar Escala é uma solução da Mavin. MAVIN CONSULTORIA &amp; CORRETAGEM DE SEGUROS LTDA · CNPJ 68.132.516/0001-23 · R. Adelino Leal Nunes, 279, Novo Mundo, Curitiba/PR. Conteúdo informativo, sem validade jurídica: confirme com um advogado trabalhista ou com o departamento pessoal da sua contabilidade.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/blog/assets/site.js"></script>
+<!-- Banner de consentimento de cookies (LGPD) -->
+<style>
+  #an-cookie-bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;max-width:640px;margin:0 auto;background:#111827;color:#F9FAFB;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.25);padding:10px 12px 10px 16px;display:flex;align-items:center;gap:12px;font-family:inherit;font-size:12px;line-height:1.4;transition:transform .3s ease,opacity .3s ease}
+  #an-cookie-bar.an-hidden{transform:translateY(20px);opacity:0;pointer-events:none}
+  #an-cookie-bar a{color:inherit;text-decoration:underline;opacity:.9}
+  #an-cookie-bar .an-t{flex:1;opacity:.88}
+  #an-cookie-bar .an-a{display:flex;gap:6px;flex-shrink:0}
+  #an-cookie-bar button{font-family:inherit;font-weight:700;font-size:12px;padding:7px 12px;border-radius:8px;border:none;cursor:pointer;white-space:nowrap}
+  #an-cookie-no{background:rgba(127,127,127,.18);color:inherit;font-weight:600}
+  #an-cookie-ok{background:#5B3DF5;color:#fff}
+  @media(max-width:480px){#an-cookie-bar{flex-direction:column;align-items:stretch;text-align:left}#an-cookie-bar .an-a{justify-content:flex-end}}
+</style>
+<div id="an-cookie-bar" class="an-hidden" role="dialog" aria-label="Consentimento de cookies">
+  <div class="an-t">Usamos cookies para medir e melhorar o uso do site. <a href="https://criarescala.com.br/privacidade/">Política de privacidade</a></div>
+  <div class="an-a"><button id="an-cookie-no" type="button">Recusar</button><button id="an-cookie-ok" type="button">Aceitar</button></div>
+</div>
+<script>
+(function(){
+  var bar=document.getElementById('an-cookie-bar'), k='criarescala_cookie_consent', s=null;
+  try{ s=localStorage.getItem(k); }catch(e){}
+  if(!s) bar.classList.remove('an-hidden');
+  function done(v){ try{ localStorage.setItem(k,v); }catch(e){} bar.classList.add('an-hidden'); }
+  document.getElementById('an-cookie-ok').addEventListener('click',function(){
+    gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'});
+    if(window.clarity) clarity('consentv2',{ad_Storage:'granted',analytics_Storage:'granted'});
+    done('accepted');
+  });
+  document.getElementById('an-cookie-no').addEventListener('click',function(){ done('rejected'); });
+})();
+</script>
+</body>
+</html>

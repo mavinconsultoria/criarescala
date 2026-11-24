@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Medição (GA4 + Clarity) com Consent Mode v2 data-analytics="mavin-v1" -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','wait_for_update':500});
+  (function(){ try { if (localStorage.getItem('criarescala_cookie_consent') === 'accepted') gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'}); } catch(e){} })();
+</script>
+<script>
+/* GA4 e Clarity carregados na primeira interação ou 5 s após o carregamento, para não atrasar a página. */
+(function(w,d){
+  var done=false;
+  function load(){
+    if(done) return; done=true;
+    var g=d.createElement('script'); g.async=true; g.src='https://www.googletagmanager.com/gtag/js?id=G-2L3P5YF5HM'; d.head.appendChild(g);
+    gtag('js', new Date()); gtag('config', 'G-2L3P5YF5HM');
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(w,d,"clarity","script","z8ddnrsilw");
+    var ok=false; try{ ok = localStorage.getItem('criarescala_cookie_consent')==='accepted'; }catch(e){}
+    w.clarity('consentv2',{ad_Storage: ok?'granted':'denied', analytics_Storage: ok?'granted':'denied'});
+    ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){ w.removeEventListener(e,load,{passive:true}); });
+  }
+  ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){ w.addEventListener(e,load,{passive:true,once:true}); });
+  w.addEventListener('load',function(){ setTimeout(load,5000); });
+  /* cliques em WhatsApp, telefone e e-mail viram eventos de conversão */
+  d.addEventListener('click',function(ev){
+    var a=ev.target.closest && ev.target.closest('a[href]'); if(!a) return;
+    var h=a.getAttribute('href')||'', n=null;
+    if(/wa\.me|whatsapp/i.test(h)) n='click_whatsapp'; else if(/^tel:/i.test(h)) n='click_telefone'; else if(/^mailto:/i.test(h)) n='click_email';
+    if(n) gtag('event', n, {link_url:h, page_path:location.pathname});
+  }, true);
+})(window,document);
+</script>
+<!-- Fim da medição -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jornada parcial: como funciona o tempo parcial | Criar Escala</title>
+<meta name="description" content="Jornada parcial pela CLT (art. 58-A): até 30 horas semanais sem hora extra ou até 26 horas com até 6 extras. Veja como usar o tempo parcial para cobrir fins de semana.">
+<link rel="canonical" href="https://criarescala.com.br/blog/jornada-parcial-tempo-parcial">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Criar Escala">
+<meta property="og:title" content="Jornada parcial: como funciona o contrato de tempo parcial na escala">
+<meta property="og:description" content="Jornada parcial pela CLT (art. 58-A): até 30 horas semanais sem hora extra ou até 26 horas com até 6 extras. Veja como usar o tempo parcial para cobrir fins de semana.">
+<meta property="og:url" content="https://criarescala.com.br/blog/jornada-parcial-tempo-parcial">
+<meta property="og:image" content="https://criarescala.com.br/og.png">
+<meta property="article:published_time" content="2026-12-31">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/blog/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Jornada parcial: como funciona o contrato de tempo parcial na escala",
+  "datePublished": "2026-12-31",
+  "dateModified": "2026-12-31",
+  "author": {
+    "@type": "Organization",
+    "name": "Criar Escala",
+    "url": "https://criarescala.com.br"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Criar Escala",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://criarescala.com.br/apple-touch-icon.png"
+    }
+  },
+  "mainEntityOfPage": "https://criarescala.com.br/blog/jornada-parcial-tempo-parcial"
+}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="/blog/" class="wm">criar<span class="lime">escala</span><span class="seg">blog</span></a>
+    <nav class="nav-links">
+      <a href="/blog/" class="navlink">Blog</a>
+      <a href="/?utm_source=blog_criarescala&amp;utm_medium=nav" class="btn btn-primary" data-cta="cotacao" data-cta-label="nav">Criar minha escala grátis</a>
+    </nav>
+  </div>
+</header>
+
+<article class="post">
+  <div class="wrap-narrow">
+    <p class="post-meta">Gestão de equipes · 31 dez 2026 · 5 min de leitura</p>
+    <h1>Jornada parcial: como funciona o contrato de tempo parcial na escala</h1>
+    <p class="dek">O contrato de tempo parcial tem dois formatos na CLT: até 30 horas por semana sem hora extra ou até 26 horas com até 6 horas extras. Veja as regras, o que a EC 141/2026 muda e como usar para cobrir fins de semana.</p>
+    <div class="byline">Equipe Criar Escala</div>
+
+    <div class="post-hero"><img src="/blog/assets/covers/gestao-equipes.svg" alt="Ilustração: Jornada parcial: como funciona o contrato de tempo parcial na escala" width="800" height="400"></div>
+
+    <div class="post-body">
+
+<p>A <strong>jornada parcial</strong>, ou regime de tempo parcial, é o contrato com carga semanal reduzida previsto no art. 58-A da <a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm">CLT</a>. Há dois formatos: até <strong>30 horas semanais, sem hora extra</strong>, ou até <strong>26 horas semanais, com até 6 horas extras</strong> por semana. O salário é proporcional à jornada, em relação a quem faz a mesma função em tempo integral (§ 1º).</p>
+      <h2>Como funciona o contrato de tempo parcial</h2>
+      <ul>
+      <li><strong>Até 30 horas por semana</strong> — sem possibilidade de horas suplementares semanais (art. 58-A, caput).</li>
+      <li><strong>Até 26 horas por semana</strong> — com possibilidade de até 6 horas suplementares semanais. Se o contrato for de menos de 26 horas, as horas além do contratado também são extras e também ficam limitadas a 6 por semana (caput e § 4º).</li>
+      <li><strong>Adicional de 50%</strong> — as horas suplementares são pagas com acréscimo de 50% sobre o salário-hora normal (§ 3º).</li>
+      <li><strong>Compensação na semana seguinte</strong> — as horas suplementares podem ser compensadas até a semana imediatamente posterior; se não forem, são pagas na folha do mês seguinte (§ 5º).</li>
+      <li><strong>Para quem já é empregado</strong> — a mudança para tempo parcial é feita por opção do empregado, na forma prevista em negociação coletiva (§ 2º).</li>
+      <li><strong>Férias</strong> — seguem o art. 130 da CLT, como as do tempo integral, e o empregado pode converter um terço em abono pecuniário (§§ 6º e 7º).</li>
+      </ul>
+      <div class="cta-inline">
+        <div class="txt"><strong>Quantas horas de cobertura faltam no seu fim de semana?</strong><span>Monte a escala do mês na Criar Escala, sistema 100% grátis.</span></div>
+        <a href="/?utm_source=blog_criarescala&amp;utm_medium=inline-topo&amp;utm_campaign=jornada-parcial-tempo-parcial" class="btn btn-ghost" data-cta="cotacao" data-cta-label="inline-topo-jornada-parcial-tempo-parcial">Simular minha escala grátis</a>
+      </div>
+      <h2>O que muda com a EC 141/2026</h2>
+      <ul>
+      <li><strong>As horas do contrato não caem</strong> — 30 e 26 horas já ficam abaixo dos novos limites de 42 horas (desde 16/12/2026) e 40 horas (a partir de 16/12/2027). Pelo art. 4º da <a href="https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc141.htm">emenda</a>, jornadas já fixadas em até 40 horas semanais não têm redução proporcional.</li>
+      <li><strong>Os 2 dias de repouso valem para todos</strong> — o novo art. 7º, XV, da Constituição garante repouso semanal remunerado de 2 dias, um preferencialmente aos domingos. A <a href="https://fenacon.org.br/wp-content/uploads/2026/10/FCOM0007-Nota-Tecnica-6x1-.pdf">nota orientativa da Fenacon</a> registra que, nas jornadas reduzidas, as 2 folgas semanais passam a valer. Quem está em tempo parcial trabalha no máximo 5 dias por semana, salvo o regime compensatório por norma coletiva (novo § 2º do art. 7º).</li>
+      <li><strong>O limite diário continua</strong> — a duração normal segue em até 8 horas por dia (art. 7º, XIII). Com 30 horas em 5 dias, são 6 horas por dia; em 4 dias, 7 horas e 30 minutos.</li>
+      </ul>
+      <h2>Como usar o tempo parcial para cobrir fins de semana</h2>
+      <p>Com os 2 dias de repouso, a equipe de tempo integral passa a ter mais folgas, e o fim de semana é onde a cobertura costuma apertar. O tempo parcial ajuda a fechar essa conta:</p>
+      <ul>
+      <li><strong>Contrato de fim de semana estendido</strong> — por exemplo, sexta, sábado e domingo, 8 horas por dia, somam 24 horas: cabe no formato de 26 horas, com espaço para até 6 horas extras na semana de maior movimento.</li>
+      <li><strong>Folgas da equipe integral no fim de semana</strong> — com alguém de tempo parcial no sábado e no domingo, fica mais fácil dar a folga de domingo à equipe de tempo integral.</li>
+      <li><strong>O domingo também precisa de rodízio</strong> — quem trabalha só no fim de semana também tem direito a folgar no domingo de tempos em tempos. No comércio, a <a href="https://www.planalto.gov.br/ccivil_03/leis/l10101.htm">Lei 10.101/2000</a> (art. 6º, parágrafo único) exige que o repouso coincida com o domingo pelo menos 1 vez a cada 3 semanas. Veja como montar o <a href="/blog/trabalhar-aos-domingos-rodizio-de-folgas">rodízio de folgas aos domingos</a>.</li>
+      <li><strong>Intervalos</strong> — turnos de mais de 4 e até 6 horas pedem intervalo de 15 minutos; acima de 6 horas, de pelo menos 1 hora (art. 71 da CLT).</li>
+      </ul>
+      <p>Se a demanda do fim de semana é incerta, o <a href="/blog/trabalho-intermitente-na-escala">trabalho intermitente</a> é outra opção, com convocação a cada período. O tempo parcial dá mais previsibilidade: a pessoa tem horário fixo e entra na escala todo mês.</p>
+      <div class="cta-inline">
+        <div class="txt"><strong>Equipe integral e de tempo parcial na mesma escala?</strong><span>A Criar Escala monta o mês com jornadas diferentes e exporta em PDF e Excel.</span></div>
+        <a href="/?utm_source=blog_criarescala&amp;utm_medium=inline&amp;utm_campaign=jornada-parcial-tempo-parcial" class="btn btn-ghost" data-cta="cotacao" data-cta-label="inline-jornada-parcial-tempo-parcial">Usar a Criar Escala grátis</a>
+      </div>
+      <p>Na <a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=jornada-parcial-tempo-parcial" data-cta="cotacao" data-cta-label="texto-jornada-parcial-tempo-parcial">Criar Escala</a>, você cadastra cada pessoa com a sua jornada, inclusive jornada personalizada, informa quantas pessoas precisam estar no atendimento em cada dia, e o sistema monta a escala do mês e mostra a escala atual e a da nova regra lado a lado.</p>
+      <div class="callout"><strong>Sobre a Criar Escala:</strong> é um sistema 100% grátis da Mavin Seguros para montar a escala do mês. Você conta como a empresa funciona (dias, horários, feriados e quantas pessoas precisam estar no atendimento), cadastra a equipe e a jornada, e recebe a escala pronta no calendário — com a escala atual e a da nova regra da EC 141/2026 lado a lado, e o diagnóstico de se vai precisar de mais gente. Funciona no celular, sem baixar app e sem cadastro para montar e ver a escala, e exporta em PDF e Excel. Como toda simulação, não tem validade jurídica: em caso de dúvida sobre a sua categoria, vale consultar um advogado trabalhista ou o departamento pessoal da sua contabilidade. <a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=jornada-parcial-tempo-parcial" data-cta="cotacao" data-cta-label="texto-jornada-parcial-tempo-parcial">Monte a sua escala na Criar Escala</a>.</div>
+      <h2>Pontos para revisar na sua empresa</h2>
+      <ul>
+      <li>O contrato de tempo parcial deixa claro se é de até 30 horas sem extras ou de até 26 horas com extras?</li>
+      <li>As horas extras do tempo parcial estão dentro do limite de 6 por semana e são compensadas ou pagas no prazo?</li>
+      <li>Quem trabalha em tempo parcial tem 2 dias de repouso por semana e o domingo de folga no rodízio?</li>
+      <li>A convenção coletiva da categoria tem regra própria sobre tempo parcial?</li>
+      </ul>
+      <div class="callout"><strong>Importante:</strong> Este conteúdo é informativo e não é parecer jurídico. A convenção ou o acordo coletivo da sua categoria pode ter regra própria: antes de aplicar, confirme com um advogado trabalhista ou com o departamento pessoal da sua contabilidade.</div>
+      <p>O tempo parcial é uma forma previsível de reforçar o fim de semana com a nova regra de folgas. <strong><a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=jornada-parcial-tempo-parcial" data-cta="cotacao" data-cta-label="texto-jornada-parcial-tempo-parcial">Monte a escala do mês na Criar Escala</a></strong> e veja onde a cobertura aperta.</p>
+      <div class="related">
+        <h4>Continue lendo</h4>
+        <div class="related-links">
+          <a href="/blog/pequenos-negocios-e-a-escala-de-7-dias-por-semana">Pequenos negócios e a nova escala: o que muda para quem funciona 7 dias por semana</a>
+          <a href="/blog/trabalhar-aos-domingos-rodizio-de-folgas">Trabalhar aos domingos: como fazer o rodízio de folgas</a>
+          <a href="/blog/escala-5x2-jornada-42-horas-como-montar">Escala 5x2 com jornada de 42 horas: como montar a partir de 16/12</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</article>
+
+<section class="section">
+  <div class="wrap">
+    <div class="strip-cta">
+      <div>
+        <h3>Fins de semana cobertos sem estourar as 42 horas</h3>
+        <p>Na Criar Escala você cadastra a equipe com jornadas diferentes e monta a escala do mês na nova regra. Sistema 100% grátis, uma solução da Mavin Seguros.</p>
+      </div>
+      <a href="/?utm_source=blog_criarescala&amp;utm_medium=strip&amp;utm_campaign=jornada-parcial-tempo-parcial" class="btn btn-primary" data-cta="cotacao" data-cta-label="strip-jornada-parcial-tempo-parcial">Simular minha escala grátis</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="wm">criar<span class="lime">escala</span></div>
+        <p>Sistema gratuito para montar a escala do mês da sua equipe, já com a nova regra de jornada.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Navegue</h5>
+        <a href="/blog/">Blog</a>
+        <a href="/">Criar minha escala</a>
+        <a href="https://mavinseguros.com.br/privacidade/">Política de privacidade</a>
+      </div>
+      <div class="foot-col">
+        <h5>Quem faz</h5>
+        <a href="https://mavinseguros.com.br">Mavin Seguros</a>
+        <a href="mailto:contato@mavinseguros.com.br">contato@mavinseguros.com.br</a>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p class="legal-txt">Criar Escala é uma solução da Mavin. MAVIN CONSULTORIA &amp; CORRETAGEM DE SEGUROS LTDA · CNPJ 68.132.516/0001-23 · R. Adelino Leal Nunes, 279, Novo Mundo, Curitiba/PR. Conteúdo informativo, sem validade jurídica: confirme com um advogado trabalhista ou com o departamento pessoal da sua contabilidade.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/blog/assets/site.js"></script>
+<!-- Banner de consentimento de cookies (LGPD) -->
+<style>
+  #an-cookie-bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;max-width:640px;margin:0 auto;background:#111827;color:#F9FAFB;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.25);padding:10px 12px 10px 16px;display:flex;align-items:center;gap:12px;font-family:inherit;font-size:12px;line-height:1.4;transition:transform .3s ease,opacity .3s ease}
+  #an-cookie-bar.an-hidden{transform:translateY(20px);opacity:0;pointer-events:none}
+  #an-cookie-bar a{color:inherit;text-decoration:underline;opacity:.9}
+  #an-cookie-bar .an-t{flex:1;opacity:.88}
+  #an-cookie-bar .an-a{display:flex;gap:6px;flex-shrink:0}
+  #an-cookie-bar button{font-family:inherit;font-weight:700;font-size:12px;padding:7px 12px;border-radius:8px;border:none;cursor:pointer;white-space:nowrap}
+  #an-cookie-no{background:rgba(127,127,127,.18);color:inherit;font-weight:600}
+  #an-cookie-ok{background:#5B3DF5;color:#fff}
+  @media(max-width:480px){#an-cookie-bar{flex-direction:column;align-items:stretch;text-align:left}#an-cookie-bar .an-a{justify-content:flex-end}}
+</style>
+<div id="an-cookie-bar" class="an-hidden" role="dialog" aria-label="Consentimento de cookies">
+  <div class="an-t">Usamos cookies para medir e melhorar o uso do site. <a href="https://criarescala.com.br/privacidade/">Política de privacidade</a></div>
+  <div class="an-a"><button id="an-cookie-no" type="button">Recusar</button><button id="an-cookie-ok" type="button">Aceitar</button></div>
+</div>
+<script>
+(function(){
+  var bar=document.getElementById('an-cookie-bar'), k='criarescala_cookie_consent', s=null;
+  try{ s=localStorage.getItem(k); }catch(e){}
+  if(!s) bar.classList.remove('an-hidden');
+  function done(v){ try{ localStorage.setItem(k,v); }catch(e){} bar.classList.add('an-hidden'); }
+  document.getElementById('an-cookie-ok').addEventListener('click',function(){
+    gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'});
+    if(window.clarity) clarity('consentv2',{ad_Storage:'granted',analytics_Storage:'granted'});
+    done('accepted');
+  });
+  document.getElementById('an-cookie-no').addEventListener('click',function(){ done('rejected'); });
+})();
+</script>
+</body>
+</html>

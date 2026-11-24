@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Medição (GA4 + Clarity) com Consent Mode v2 data-analytics="mavin-v1" -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','wait_for_update':500});
+  (function(){ try { if (localStorage.getItem('criarescala_cookie_consent') === 'accepted') gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'}); } catch(e){} })();
+</script>
+<script>
+/* GA4 e Clarity carregados na primeira interação ou 5 s após o carregamento, para não atrasar a página. */
+(function(w,d){
+  var done=false;
+  function load(){
+    if(done) return; done=true;
+    var g=d.createElement('script'); g.async=true; g.src='https://www.googletagmanager.com/gtag/js?id=G-2L3P5YF5HM'; d.head.appendChild(g);
+    gtag('js', new Date()); gtag('config', 'G-2L3P5YF5HM');
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(w,d,"clarity","script","z8ddnrsilw");
+    var ok=false; try{ ok = localStorage.getItem('criarescala_cookie_consent')==='accepted'; }catch(e){}
+    w.clarity('consentv2',{ad_Storage: ok?'granted':'denied', analytics_Storage: ok?'granted':'denied'});
+    ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){ w.removeEventListener(e,load,{passive:true}); });
+  }
+  ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){ w.addEventListener(e,load,{passive:true,once:true}); });
+  w.addEventListener('load',function(){ setTimeout(load,5000); });
+  /* cliques em WhatsApp, telefone e e-mail viram eventos de conversão */
+  d.addEventListener('click',function(ev){
+    var a=ev.target.closest && ev.target.closest('a[href]'); if(!a) return;
+    var h=a.getAttribute('href')||'', n=null;
+    if(/wa\.me|whatsapp/i.test(h)) n='click_whatsapp'; else if(/^tel:/i.test(h)) n='click_telefone'; else if(/^mailto:/i.test(h)) n='click_email';
+    if(n) gtag('event', n, {link_url:h, page_path:location.pathname});
+  }, true);
+})(window,document);
+</script>
+<!-- Fim da medição -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Como calcular hora extra com a jornada de 42 horas | Criar Escala</title>
+<meta name="description" content="Passo a passo para calcular hora extra: valor da hora (CLT, art. 64), divisor 220 ou 210 e adicional mínimo de 50% (CF, art. 7º, XVI). Antes e depois de 16/12/2026.">
+<link rel="canonical" href="https://criarescala.com.br/blog/como-calcular-hora-extra-42-horas">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Criar Escala">
+<meta property="og:title" content="Como calcular hora extra com a jornada de 42 horas">
+<meta property="og:description" content="Passo a passo para calcular hora extra: valor da hora (CLT, art. 64), divisor 220 ou 210 e adicional mínimo de 50% (CF, art. 7º, XVI). Antes e depois de 16/12/2026.">
+<meta property="og:url" content="https://criarescala.com.br/blog/como-calcular-hora-extra-42-horas">
+<meta property="og:image" content="https://criarescala.com.br/og.png">
+<meta property="article:published_time" content="2026-12-10">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/blog/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Como calcular hora extra com a jornada de 42 horas",
+  "datePublished": "2026-12-10",
+  "dateModified": "2026-12-10",
+  "author": {
+    "@type": "Organization",
+    "name": "Criar Escala",
+    "url": "https://criarescala.com.br"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Criar Escala",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://criarescala.com.br/apple-touch-icon.png"
+    }
+  },
+  "mainEntityOfPage": "https://criarescala.com.br/blog/como-calcular-hora-extra-42-horas"
+}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="/blog/" class="wm">criar<span class="lime">escala</span><span class="seg">blog</span></a>
+    <nav class="nav-links">
+      <a href="/blog/" class="navlink">Blog</a>
+      <a href="/?utm_source=blog_criarescala&amp;utm_medium=nav" class="btn btn-primary" data-cta="cotacao" data-cta-label="nav">Criar minha escala grátis</a>
+    </nav>
+  </div>
+</header>
+
+<article class="post">
+  <div class="wrap-narrow">
+    <p class="post-meta">Gestão de equipes · 10 dez 2026 · 6 min de leitura</p>
+    <h1>Como calcular hora extra com a jornada de 42 horas</h1>
+    <p class="dek">O cálculo tem três passos: achar o valor da hora, aplicar o adicional e multiplicar pelas horas. Com a jornada de 42 horas a partir de 16/12/2026, o primeiro passo muda.</p>
+    <div class="byline">Equipe Criar Escala</div>
+
+    <div class="post-hero"><img src="/blog/assets/covers/gestao-equipes.svg" alt="Ilustração: Como calcular hora extra com a jornada de 42 horas" width="800" height="400"></div>
+
+    <div class="post-body">
+
+<p>Para <strong>calcular hora extra</strong>, divida o salário mensal pelo divisor de horas do mês para achar o valor da hora normal, acrescente pelo menos 50% e multiplique pelo número de horas extras. O adicional mínimo de 50% está na <a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm">Constituição</a> (art. 7º, XVI) e no art. 59, § 1º, da <a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm">CLT</a>. O que muda com a <a href="https://legis.senado.leg.br/norma/44184944/publicacao/44189027">EC 141/2026</a> é o divisor: com a jornada de 42 horas a partir de 16/12/2026, a hora normal fica mais cara, e a hora extra também.</p>
+      <h2>Passo 1: o valor da hora normal</h2>
+      <p>Pelo art. 64 da CLT, o salário-hora do mensalista é o salário mensal dividido por 30 vezes o número de horas da jornada diária. Na prática, o divisor sai da jornada semanal dividida por 6 e multiplicada por 30:</p>
+      <ul>
+      <li><strong>44 horas semanais</strong> — 44 ÷ 6 × 30 = divisor 220.</li>
+      <li><strong>42 horas semanais</strong> (a partir de 16/12/2026) — 42 ÷ 6 × 30 = divisor 210.</li>
+      <li><strong>40 horas semanais</strong> (a partir de 16/12/2027) — 40 ÷ 6 × 30 = divisor 200.</li>
+      </ul>
+      <p>A <a href="https://fenacon.org.br/wp-content/uploads/2026/10/FCOM0007-Nota-Tecnica-6x1-.pdf">nota orientativa da Fenacon</a> chega aos mesmos divisores, com base no art. 64 da CLT. Como a emenda proíbe reduzir o salário (art. 2º), o mesmo salário dividido por menos horas dá uma hora mais cara. A convenção da categoria pode prever outro divisor: confirme com a contabilidade.</p>
+      <div class="cta-inline">
+        <div class="txt"><strong>Quantas horas extras a sua escala gera?</strong><span>A Criar Escala mostra as horas extras de cada funcionário. Grátis.</span></div>
+        <a href="/?utm_source=blog_criarescala&amp;utm_medium=inline-topo&amp;utm_campaign=como-calcular-hora-extra-42-horas" class="btn btn-ghost" data-cta="cotacao" data-cta-label="inline-topo-como-calcular-hora-extra-42-horas">Simular minha escala grátis</a>
+      </div>
+      <h2>Passo 2: o adicional de hora extra</h2>
+      <ul>
+      <li><strong>Mínimo de 50%</strong> — a hora extra vale pelo menos 50% a mais que a hora normal (CF, art. 7º, XVI; CLT, art. 59, § 1º). A convenção ou o acordo coletivo pode prever percentual maior, mas não pode reduzir esse mínimo (CLT, art. 611-B, X).</li>
+      <li><strong>Hora extra de 100%</strong> — não há uma regra geral na CLT que fixe 100%. Esse percentual costuma vir da convenção coletiva para certos dias, como domingos e feriados. Para o feriado trabalhado sem folga em outro dia, a <a href="https://www.planalto.gov.br/ccivil_03/leis/l0605.htm">Lei 605/1949</a> (art. 9º) manda pagar em dobro.</li>
+      <li><strong>Hora extra noturna</strong> — se a hora extra cair entre 22h e 5h, também entra o adicional noturno (CLT, art. 73). Veja <a href="/blog/adicional-noturno-como-funciona">como funciona o adicional noturno</a>.</li>
+      </ul>
+      <h2>Passo 3: a conta completa, antes e depois de 16/12</h2>
+      <p>Exemplo com salário de R$ 2.200 e 10 horas extras com adicional de 50% no mês:</p>
+      <ol>
+      <li><strong>Até 15/12/2026 (44 horas)</strong> — hora normal: 2.200 ÷ 220 = R$ 10,00. Hora extra: 10,00 × 1,5 = R$ 15,00. Total: 15,00 × 10 = R$ 150,00.</li>
+      <li><strong>A partir de 16/12/2026 (42 horas)</strong> — hora normal: 2.200 ÷ 210 = cerca de R$ 10,48. Hora extra: cerca de R$ 15,71. Total: cerca de R$ 157,14.</li>
+      </ol>
+      <p>Além do valor maior por hora, a quantidade de horas extras tende a subir: o que passar da jornada normal, diária ou semanal, entra na conta, e o limite semanal cai de 44 para 42 horas. O limite de 2 horas extras por dia continua o mesmo (CLT, art. 59), como explicamos em <a href="/blog/limite-de-hora-extra-por-dia">limite de hora extra por dia</a>.</p>
+      <div class="callout"><strong>Reflexo no DSR:</strong> pela Lei 605/1949 (art. 7º, a e b), as horas extras habituais entram no cálculo do descanso semanal remunerado de quem recebe por dia, semana, quinzena, mês ou hora. Quem cuida da folha aplica esse reflexo junto com o pagamento das horas extras. Veja mais em <a href="/blog/dsr-descanso-semanal-remunerado">DSR: o descanso semanal remunerado</a>.</div>
+      <h2>Dezembro de 2026: o mês com duas regras</h2>
+      <p>Em dezembro, a primeira metade do mês segue o limite de 44 horas e, a partir de 16/12/2026 (uma quarta-feira), vale o de 42 horas. A semana de 14 a 20 de dezembro tem dias nas duas regras. Como apurar as horas extras dessa semana e qual divisor usar em cada parte do mês é uma decisão para tomar com o departamento pessoal ou a contabilidade, antes de fechar a folha.</p>
+      <p>Para saber quanta hora extra a escala vai gerar antes de ela acontecer, simule. Na <a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=como-calcular-hora-extra-42-horas" data-cta="cotacao" data-cta-label="texto-como-calcular-hora-extra-42-horas">Criar Escala</a>, você monta a escala do mês e vê a escala atual e a da nova regra lado a lado, com as horas extras de cada funcionário e o total da empresa, e o que a equipe precisa para cada fase: contratar, usar hora extra ou contrato por prazo determinado.</p>
+      <div class="cta-inline">
+        <div class="txt"><strong>Hora extra ou contratação: o que sai melhor?</strong><span>Compare na Criar Escala, sistema 100% grátis.</span></div>
+        <a href="/?utm_source=blog_criarescala&amp;utm_medium=inline&amp;utm_campaign=como-calcular-hora-extra-42-horas" class="btn btn-ghost" data-cta="cotacao" data-cta-label="inline-como-calcular-hora-extra-42-horas">Usar a Criar Escala grátis</a>
+      </div>
+      <div class="callout"><strong>Sobre a Criar Escala:</strong> é um sistema 100% grátis da Mavin Seguros para montar a escala do mês. Você conta como a empresa funciona (dias, horários, feriados e quantas pessoas precisam estar no atendimento), cadastra a equipe e a jornada, e recebe a escala pronta no calendário — com a escala atual e a da nova regra da EC 141/2026 lado a lado, e o diagnóstico de se vai precisar de mais gente. Funciona no celular, sem baixar app e sem cadastro para montar e ver a escala, e exporta em PDF e Excel. Como toda simulação, não tem validade jurídica: em caso de dúvida sobre a sua categoria, vale consultar um advogado trabalhista ou o departamento pessoal da sua contabilidade. <a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=como-calcular-hora-extra-42-horas" data-cta="cotacao" data-cta-label="texto-como-calcular-hora-extra-42-horas">Monte a sua escala na Criar Escala</a>.</div>
+      <h2>Pontos para revisar antes de fechar a folha</h2>
+      <ul>
+      <li>O sistema de folha vai usar o divisor 210 a partir de 16/12/2026, ou a convenção da categoria prevê outro?</li>
+      <li>A convenção prevê adicional maior que 50% ou hora extra de 100% em algum dia?</li>
+      <li>Como será apurada a semana de 14 a 20 de dezembro, que tem dias nas duas regras?</li>
+      <li>Existe acordo ou norma coletiva que autorize a hora extra e o banco de horas da equipe?</li>
+      </ul>
+      <div class="callout"><strong>Importante:</strong> Este conteúdo é informativo e não é parecer jurídico. A convenção ou o acordo coletivo da sua categoria pode ter regra própria: antes de aplicar, confirme com um advogado trabalhista ou com o departamento pessoal da sua contabilidade.</div>
+      <p>A fórmula da hora extra é a mesma, mas o divisor muda em 16/12/2026. <strong><a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=como-calcular-hora-extra-42-horas" data-cta="cotacao" data-cta-label="texto-como-calcular-hora-extra-42-horas">Simule a escala na Criar Escala</a></strong> e veja quantas horas extras a escala da sua equipe vai gerar na nova regra.</p>
+      <div class="related">
+        <h4>Continue lendo</h4>
+        <div class="related-links">
+          <a href="/blog/limite-de-hora-extra-por-dia">Limite de hora extra por dia: o que muda com a nova jornada</a>
+          <a href="/blog/banco-de-horas-jornada-42-horas">Banco de horas: como funciona com a jornada de 42 horas</a>
+          <a href="/blog/dsr-descanso-semanal-remunerado">DSR: o descanso semanal remunerado na escala de 42 horas</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</article>
+
+<section class="section">
+  <div class="wrap">
+    <div class="strip-cta">
+      <div>
+        <h3>Quanto a sua equipe vai fazer de hora extra na nova regra?</h3>
+        <p>Na Criar Escala você monta a escala do mês e vê as horas extras de cada funcionário e o total da empresa. Sistema 100% grátis, uma solução da Mavin Seguros.</p>
+      </div>
+      <a href="/?utm_source=blog_criarescala&amp;utm_medium=strip&amp;utm_campaign=como-calcular-hora-extra-42-horas" class="btn btn-primary" data-cta="cotacao" data-cta-label="strip-como-calcular-hora-extra-42-horas">Simular minha escala grátis</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="wm">criar<span class="lime">escala</span></div>
+        <p>Sistema gratuito para montar a escala do mês da sua equipe, já com a nova regra de jornada.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Navegue</h5>
+        <a href="/blog/">Blog</a>
+        <a href="/">Criar minha escala</a>
+        <a href="https://mavinseguros.com.br/privacidade/">Política de privacidade</a>
+      </div>
+      <div class="foot-col">
+        <h5>Quem faz</h5>
+        <a href="https://mavinseguros.com.br">Mavin Seguros</a>
+        <a href="mailto:contato@mavinseguros.com.br">contato@mavinseguros.com.br</a>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p class="legal-txt">Criar Escala é uma solução da Mavin. MAVIN CONSULTORIA &amp; CORRETAGEM DE SEGUROS LTDA · CNPJ 68.132.516/0001-23 · R. Adelino Leal Nunes, 279, Novo Mundo, Curitiba/PR. Conteúdo informativo, sem validade jurídica: confirme com um advogado trabalhista ou com o departamento pessoal da sua contabilidade.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/blog/assets/site.js"></script>
+<!-- Banner de consentimento de cookies (LGPD) -->
+<style>
+  #an-cookie-bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;max-width:640px;margin:0 auto;background:#111827;color:#F9FAFB;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.25);padding:10px 12px 10px 16px;display:flex;align-items:center;gap:12px;font-family:inherit;font-size:12px;line-height:1.4;transition:transform .3s ease,opacity .3s ease}
+  #an-cookie-bar.an-hidden{transform:translateY(20px);opacity:0;pointer-events:none}
+  #an-cookie-bar a{color:inherit;text-decoration:underline;opacity:.9}
+  #an-cookie-bar .an-t{flex:1;opacity:.88}
+  #an-cookie-bar .an-a{display:flex;gap:6px;flex-shrink:0}
+  #an-cookie-bar button{font-family:inherit;font-weight:700;font-size:12px;padding:7px 12px;border-radius:8px;border:none;cursor:pointer;white-space:nowrap}
+  #an-cookie-no{background:rgba(127,127,127,.18);color:inherit;font-weight:600}
+  #an-cookie-ok{background:#5B3DF5;color:#fff}
+  @media(max-width:480px){#an-cookie-bar{flex-direction:column;align-items:stretch;text-align:left}#an-cookie-bar .an-a{justify-content:flex-end}}
+</style>
+<div id="an-cookie-bar" class="an-hidden" role="dialog" aria-label="Consentimento de cookies">
+  <div class="an-t">Usamos cookies para medir e melhorar o uso do site. <a href="https://criarescala.com.br/privacidade/">Política de privacidade</a></div>
+  <div class="an-a"><button id="an-cookie-no" type="button">Recusar</button><button id="an-cookie-ok" type="button">Aceitar</button></div>
+</div>
+<script>
+(function(){
+  var bar=document.getElementById('an-cookie-bar'), k='criarescala_cookie_consent', s=null;
+  try{ s=localStorage.getItem(k); }catch(e){}
+  if(!s) bar.classList.remove('an-hidden');
+  function done(v){ try{ localStorage.setItem(k,v); }catch(e){} bar.classList.add('an-hidden'); }
+  document.getElementById('an-cookie-ok').addEventListener('click',function(){
+    gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'});
+    if(window.clarity) clarity('consentv2',{ad_Storage:'granted',analytics_Storage:'granted'});
+    done('accepted');
+  });
+  document.getElementById('an-cookie-no').addEventListener('click',function(){ done('rejected'); });
+})();
+</script>
+</body>
+</html>

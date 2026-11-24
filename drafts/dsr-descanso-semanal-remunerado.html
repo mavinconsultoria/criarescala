@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Medição (GA4 + Clarity) com Consent Mode v2 data-analytics="mavin-v1" -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','wait_for_update':500});
+  (function(){ try { if (localStorage.getItem('criarescala_cookie_consent') === 'accepted') gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'}); } catch(e){} })();
+</script>
+<script>
+/* GA4 e Clarity carregados na primeira interação ou 5 s após o carregamento, para não atrasar a página. */
+(function(w,d){
+  var done=false;
+  function load(){
+    if(done) return; done=true;
+    var g=d.createElement('script'); g.async=true; g.src='https://www.googletagmanager.com/gtag/js?id=G-2L3P5YF5HM'; d.head.appendChild(g);
+    gtag('js', new Date()); gtag('config', 'G-2L3P5YF5HM');
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(w,d,"clarity","script","z8ddnrsilw");
+    var ok=false; try{ ok = localStorage.getItem('criarescala_cookie_consent')==='accepted'; }catch(e){}
+    w.clarity('consentv2',{ad_Storage: ok?'granted':'denied', analytics_Storage: ok?'granted':'denied'});
+    ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){ w.removeEventListener(e,load,{passive:true}); });
+  }
+  ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){ w.addEventListener(e,load,{passive:true,once:true}); });
+  w.addEventListener('load',function(){ setTimeout(load,5000); });
+  /* cliques em WhatsApp, telefone e e-mail viram eventos de conversão */
+  d.addEventListener('click',function(ev){
+    var a=ev.target.closest && ev.target.closest('a[href]'); if(!a) return;
+    var h=a.getAttribute('href')||'', n=null;
+    if(/wa\.me|whatsapp/i.test(h)) n='click_whatsapp'; else if(/^tel:/i.test(h)) n='click_telefone'; else if(/^mailto:/i.test(h)) n='click_email';
+    if(n) gtag('event', n, {link_url:h, page_path:location.pathname});
+  }, true);
+})(window,document);
+</script>
+<!-- Fim da medição -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSR: descanso semanal remunerado na escala de 42h | Criar Escala</title>
+<meta name="description" content="O DSR passa a ser de 2 dias a partir de 16/12/2026 (EC 141/2026). Veja quando a falta faz perder o descanso (Lei 605/1949) e como ele fica nas escalas 5x2, 6x2 e 12x36.">
+<link rel="canonical" href="https://criarescala.com.br/blog/dsr-descanso-semanal-remunerado">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Criar Escala">
+<meta property="og:title" content="DSR: o descanso semanal remunerado na escala de 42 horas">
+<meta property="og:description" content="O DSR passa a ser de 2 dias a partir de 16/12/2026 (EC 141/2026). Veja quando a falta faz perder o descanso (Lei 605/1949) e como ele fica nas escalas 5x2, 6x2 e 12x36.">
+<meta property="og:url" content="https://criarescala.com.br/blog/dsr-descanso-semanal-remunerado">
+<meta property="og:image" content="https://criarescala.com.br/og.png">
+<meta property="article:published_time" content="2026-12-08">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/blog/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "DSR: o descanso semanal remunerado na escala de 42 horas",
+  "datePublished": "2026-12-08",
+  "dateModified": "2026-12-08",
+  "author": {
+    "@type": "Organization",
+    "name": "Criar Escala",
+    "url": "https://criarescala.com.br"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Criar Escala",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://criarescala.com.br/apple-touch-icon.png"
+    }
+  },
+  "mainEntityOfPage": "https://criarescala.com.br/blog/dsr-descanso-semanal-remunerado"
+}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="/blog/" class="wm">criar<span class="lime">escala</span><span class="seg">blog</span></a>
+    <nav class="nav-links">
+      <a href="/blog/" class="navlink">Blog</a>
+      <a href="/?utm_source=blog_criarescala&amp;utm_medium=nav" class="btn btn-primary" data-cta="cotacao" data-cta-label="nav">Criar minha escala grátis</a>
+    </nav>
+  </div>
+</header>
+
+<article class="post">
+  <div class="wrap-narrow">
+    <p class="post-meta">Gestão de equipes · 08 dez 2026 · 6 min de leitura</p>
+    <h1>DSR: o descanso semanal remunerado na escala de 42 horas</h1>
+    <p class="dek">O descanso semanal remunerado deixa de ser de 1 dia e passa a ser de 2 a partir de 16/12/2026. Veja o que diz a lei, quando a falta tira o DSR e como ele aparece nas escalas mais comuns.</p>
+    <div class="byline">Equipe Criar Escala</div>
+
+    <div class="post-hero"><img src="/blog/assets/covers/gestao-equipes.svg" alt="Ilustração: DSR: o descanso semanal remunerado na escala de 42 horas" width="800" height="400"></div>
+
+    <div class="post-body">
+
+<p><strong>DSR</strong> é o descanso semanal remunerado: o dia de folga da semana que o empregado recebe sem trabalhar. Hoje, a <a href="https://www.planalto.gov.br/ccivil_03/leis/l0605.htm">Lei 605/1949</a> e o art. 67 da <a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm">CLT</a> garantem 24 horas consecutivas de descanso por semana, preferencialmente aos domingos. A partir de 16/12/2026, a <a href="https://legis.senado.leg.br/norma/44184944/publicacao/44189027">EC 141/2026</a> muda a <a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm">Constituição</a>: o repouso semanal remunerado passa a ser de <strong>2 dias</strong>, um deles preferencialmente aos domingos.</p>
+      <h2>O que diz a lei sobre o DSR</h2>
+      <ul>
+      <li><strong>Até 15/12/2026</strong> — repouso semanal remunerado de 24 horas consecutivas, preferencialmente aos domingos (Lei 605/1949, art. 1º; CLT, art. 67).</li>
+      <li><strong>A partir de 16/12/2026</strong> — o novo art. 7º, XV, da Constituição garante repouso semanal remunerado de 2 dias, um dos quais preferencialmente aos domingos. Pelo art. 10 da emenda, essa regra entra em vigor dois meses após a publicação, mesma data em que a jornada passa a ter limite de 42 horas semanais (art. 6º).</li>
+      <li><strong>Exceção por norma coletiva</strong> — convenção ou acordo coletivo pode criar um regime compensatório que garanta, na média, 2 dias de repouso por semana dentro do mês-calendário, com pelo menos 1 dia de repouso em cada semana de trabalho (novo § 2º do art. 7º).</li>
+      <li><strong>Sem redução de salário</strong> — o aumento do repouso vale para os contratos em vigor, sem qualquer redução salarial (art. 2º da emenda).</li>
+      </ul>
+      <div class="cta-inline">
+        <div class="txt"><strong>Cada pessoa da equipe terá 2 folgas por semana?</strong><span>Simule na Criar Escala, sistema 100% grátis.</span></div>
+        <a href="/?utm_source=blog_criarescala&amp;utm_medium=inline-topo&amp;utm_campaign=dsr-descanso-semanal-remunerado" class="btn btn-ghost" data-cta="cotacao" data-cta-label="inline-topo-dsr-descanso-semanal-remunerado">Simular minha escala grátis</a>
+      </div>
+      <h2>Quanto vale o DSR e quando a falta faz perder</h2>
+      <p>Para quem recebe por mês, o DSR já está dentro do salário: a Lei 605/1949 (art. 7º, § 2º) considera remunerados os dias de repouso do mensalista cujo salário é calculado com base nos dias do mês ou em 30 dias. Para quem recebe por dia, semana ou quinzena, o DSR vale um dia de serviço, e para quem recebe por hora, a jornada normal, nos dois casos computadas as horas extras habitualmente prestadas (art. 7º, a e b).</p>
+      <p>O art. 6º diz que a remuneração do repouso não é devida quando o empregado, sem motivo justificado, não trabalhou a semana anterior inteira, cumprindo integralmente o horário. Ou seja: a falta injustificada faz perder o valor do DSR daquela semana, não o dia de descanso em si. O § 1º lista motivos justificados, entre eles:</p>
+      <ul>
+      <li>as ausências previstas no art. 473 da CLT;</li>
+      <li>a ausência justificada a critério da empresa;</li>
+      <li>a paralisação do serviço por conveniência do empregador;</li>
+      <li>até 3 dias consecutivos por casamento;</li>
+      <li>a falta por acidente do trabalho;</li>
+      <li>a doença comprovada.</li>
+      </ul>
+      <p>A Lei 605/1949 foi escrita para um repouso de 1 dia. Como a perda do DSR por falta se aplica a um repouso de 2 dias ainda não está detalhado na lei: confirme o critério com o departamento pessoal antes de aplicar descontos a partir de 16/12/2026.</p>
+      <h2>Como o DSR aparece nas escalas mais comuns</h2>
+      <ul>
+      <li><strong>Escala 5x2</strong> — cinco dias de trabalho e duas folgas na semana. É o modelo que já entrega os 2 dias de repouso de forma natural. Veja <a href="/blog/escala-5x2-jornada-42-horas-como-montar">como montar a escala 5x2 com 42 horas</a>.</li>
+      <li><strong>Escala 6x2</strong> — em ciclos de 8 dias, algumas semanas ficam com só 1 folga. No longo prazo, a média é de 1,75 folga por semana, abaixo de 2. Ela depende do regime compensatório por norma coletiva ou de ajustes nas folgas. Detalhamos em <a href="/blog/escala-6x2-como-funciona">escala 6x2: como funciona</a>.</li>
+      <li><strong>Escala 12x36</strong> — pelo art. 59-A, parágrafo único, da CLT, o salário mensal da 12x36 já abrange o descanso semanal remunerado e o descanso em feriados. A emenda não cita a 12x36 pelo nome; veja o que muda em <a href="/blog/escala-12x36-depois-do-fim-da-6x1">escala 12x36 depois do fim da 6x1</a>.</li>
+      <li><strong>Domingos</strong> — o repouso continua preferencialmente aos domingos. No comércio, a <a href="https://legis.senado.leg.br/norma/551977/publicacao/34619787">Lei 10.101/2000</a> exige que a folga coincida com o domingo pelo menos 1 vez a cada 3 semanas. Veja <a href="/blog/trabalhar-aos-domingos-rodizio-de-folgas">como fazer o rodízio de folgas aos domingos</a>.</li>
+      </ul>
+      <p>Na <a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=dsr-descanso-semanal-remunerado" data-cta="cotacao" data-cta-label="texto-dsr-descanso-semanal-remunerado">Criar Escala</a>, você escolhe a jornada da equipe (44h, 42h, 40h, 12x36 ou personalizada), informa como a empresa funciona e recebe a escala do mês pronta, com a escala atual e a da nova regra lado a lado, para ver se cada pessoa fica com as folgas que a lei pede.</p>
+      <div class="cta-inline">
+        <div class="txt"><strong>Precisa redistribuir as folgas da equipe?</strong><span>A Criar Escala monta o mês na nova regra e mostra se vai faltar gente.</span></div>
+        <a href="/?utm_source=blog_criarescala&amp;utm_medium=inline&amp;utm_campaign=dsr-descanso-semanal-remunerado" class="btn btn-ghost" data-cta="cotacao" data-cta-label="inline-dsr-descanso-semanal-remunerado">Usar a Criar Escala grátis</a>
+      </div>
+      <div class="callout"><strong>Sobre a Criar Escala:</strong> é um sistema 100% grátis da Mavin Seguros para montar a escala do mês. Você conta como a empresa funciona (dias, horários, feriados e quantas pessoas precisam estar no atendimento), cadastra a equipe e a jornada, e recebe a escala pronta no calendário — com a escala atual e a da nova regra da EC 141/2026 lado a lado, e o diagnóstico de se vai precisar de mais gente. Funciona no celular, sem baixar app e sem cadastro para montar e ver a escala, e exporta em PDF e Excel. Como toda simulação, não tem validade jurídica: em caso de dúvida sobre a sua categoria, vale consultar um advogado trabalhista ou o departamento pessoal da sua contabilidade. <a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=dsr-descanso-semanal-remunerado" data-cta="cotacao" data-cta-label="texto-dsr-descanso-semanal-remunerado">Monte a sua escala na Criar Escala</a>.</div>
+      <h2>Pontos para revisar na sua escala</h2>
+      <ul>
+      <li>A escala garante 2 dias de repouso por semana a partir de 16/12/2026, ou existe norma coletiva com o regime compensatório do § 2º?</li>
+      <li>Cada pessoa tem folga no domingo com a frequência exigida para a sua atividade?</li>
+      <li>O critério de desconto do DSR por falta injustificada foi revisto para o repouso de 2 dias?</li>
+      <li>As horas extras habituais estão entrando no cálculo do DSR de quem recebe por dia ou por hora?</li>
+      </ul>
+      <div class="callout"><strong>Importante:</strong> Este conteúdo é informativo e não é parecer jurídico. A convenção ou o acordo coletivo da sua categoria pode ter regra própria: antes de aplicar, confirme com um advogado trabalhista ou com o departamento pessoal da sua contabilidade.</div>
+      <p>O descanso semanal dobra em 16/12/2026, e a escala precisa mostrar isso no calendário. <strong><a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=dsr-descanso-semanal-remunerado" data-cta="cotacao" data-cta-label="texto-dsr-descanso-semanal-remunerado">Monte a escala do mês na Criar Escala</a></strong> e veja as folgas de cada pessoa na nova regra.</p>
+      <div class="related">
+        <h4>Continue lendo</h4>
+        <div class="related-links">
+          <a href="/blog/escala-5x2-jornada-42-horas-como-montar">Escala 5x2 com jornada de 42 horas: como montar a partir de 16/12</a>
+          <a href="/blog/escala-6x2-como-funciona">Escala 6x2: como funciona e quando substitui a 6x1</a>
+          <a href="/blog/trabalhar-aos-domingos-rodizio-de-folgas">Trabalhar aos domingos: como fazer o rodízio de folgas</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</article>
+
+<section class="section">
+  <div class="wrap">
+    <div class="strip-cta">
+      <div>
+        <h3>Sua escala garante os 2 dias de descanso?</h3>
+        <p>Na Criar Escala você monta a escala do mês e vê a escala atual e a da nova regra lado a lado. Sistema 100% grátis, uma solução da Mavin Seguros.</p>
+      </div>
+      <a href="/?utm_source=blog_criarescala&amp;utm_medium=strip&amp;utm_campaign=dsr-descanso-semanal-remunerado" class="btn btn-primary" data-cta="cotacao" data-cta-label="strip-dsr-descanso-semanal-remunerado">Simular minha escala grátis</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="wm">criar<span class="lime">escala</span></div>
+        <p>Sistema gratuito para montar a escala do mês da sua equipe, já com a nova regra de jornada.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Navegue</h5>
+        <a href="/blog/">Blog</a>
+        <a href="/">Criar minha escala</a>
+        <a href="https://mavinseguros.com.br/privacidade/">Política de privacidade</a>
+      </div>
+      <div class="foot-col">
+        <h5>Quem faz</h5>
+        <a href="https://mavinseguros.com.br">Mavin Seguros</a>
+        <a href="mailto:contato@mavinseguros.com.br">contato@mavinseguros.com.br</a>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p class="legal-txt">Criar Escala é uma solução da Mavin. MAVIN CONSULTORIA &amp; CORRETAGEM DE SEGUROS LTDA · CNPJ 68.132.516/0001-23 · R. Adelino Leal Nunes, 279, Novo Mundo, Curitiba/PR. Conteúdo informativo, sem validade jurídica: confirme com um advogado trabalhista ou com o departamento pessoal da sua contabilidade.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/blog/assets/site.js"></script>
+<!-- Banner de consentimento de cookies (LGPD) -->
+<style>
+  #an-cookie-bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;max-width:640px;margin:0 auto;background:#111827;color:#F9FAFB;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.25);padding:10px 12px 10px 16px;display:flex;align-items:center;gap:12px;font-family:inherit;font-size:12px;line-height:1.4;transition:transform .3s ease,opacity .3s ease}
+  #an-cookie-bar.an-hidden{transform:translateY(20px);opacity:0;pointer-events:none}
+  #an-cookie-bar a{color:inherit;text-decoration:underline;opacity:.9}
+  #an-cookie-bar .an-t{flex:1;opacity:.88}
+  #an-cookie-bar .an-a{display:flex;gap:6px;flex-shrink:0}
+  #an-cookie-bar button{font-family:inherit;font-weight:700;font-size:12px;padding:7px 12px;border-radius:8px;border:none;cursor:pointer;white-space:nowrap}
+  #an-cookie-no{background:rgba(127,127,127,.18);color:inherit;font-weight:600}
+  #an-cookie-ok{background:#5B3DF5;color:#fff}
+  @media(max-width:480px){#an-cookie-bar{flex-direction:column;align-items:stretch;text-align:left}#an-cookie-bar .an-a{justify-content:flex-end}}
+</style>
+<div id="an-cookie-bar" class="an-hidden" role="dialog" aria-label="Consentimento de cookies">
+  <div class="an-t">Usamos cookies para medir e melhorar o uso do site. <a href="https://criarescala.com.br/privacidade/">Política de privacidade</a></div>
+  <div class="an-a"><button id="an-cookie-no" type="button">Recusar</button><button id="an-cookie-ok" type="button">Aceitar</button></div>
+</div>
+<script>
+(function(){
+  var bar=document.getElementById('an-cookie-bar'), k='criarescala_cookie_consent', s=null;
+  try{ s=localStorage.getItem(k); }catch(e){}
+  if(!s) bar.classList.remove('an-hidden');
+  function done(v){ try{ localStorage.setItem(k,v); }catch(e){} bar.classList.add('an-hidden'); }
+  document.getElementById('an-cookie-ok').addEventListener('click',function(){
+    gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'});
+    if(window.clarity) clarity('consentv2',{ad_Storage:'granted',analytics_Storage:'granted'});
+    done('accepted');
+  });
+  document.getElementById('an-cookie-no').addEventListener('click',function(){ done('rejected'); });
+})();
+</script>
+</body>
+</html>

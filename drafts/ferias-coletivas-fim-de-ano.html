@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Medição (GA4 + Clarity) com Consent Mode v2 data-analytics="mavin-v1" -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','wait_for_update':500});
+  (function(){ try { if (localStorage.getItem('criarescala_cookie_consent') === 'accepted') gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'}); } catch(e){} })();
+</script>
+<script>
+/* GA4 e Clarity carregados na primeira interação ou 5 s após o carregamento, para não atrasar a página. */
+(function(w,d){
+  var done=false;
+  function load(){
+    if(done) return; done=true;
+    var g=d.createElement('script'); g.async=true; g.src='https://www.googletagmanager.com/gtag/js?id=G-2L3P5YF5HM'; d.head.appendChild(g);
+    gtag('js', new Date()); gtag('config', 'G-2L3P5YF5HM');
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(w,d,"clarity","script","z8ddnrsilw");
+    var ok=false; try{ ok = localStorage.getItem('criarescala_cookie_consent')==='accepted'; }catch(e){}
+    w.clarity('consentv2',{ad_Storage: ok?'granted':'denied', analytics_Storage: ok?'granted':'denied'});
+    ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){ w.removeEventListener(e,load,{passive:true}); });
+  }
+  ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){ w.addEventListener(e,load,{passive:true,once:true}); });
+  w.addEventListener('load',function(){ setTimeout(load,5000); });
+  /* cliques em WhatsApp, telefone e e-mail viram eventos de conversão */
+  d.addEventListener('click',function(ev){
+    var a=ev.target.closest && ev.target.closest('a[href]'); if(!a) return;
+    var h=a.getAttribute('href')||'', n=null;
+    if(/wa\.me|whatsapp/i.test(h)) n='click_whatsapp'; else if(/^tel:/i.test(h)) n='click_telefone'; else if(/^mailto:/i.test(h)) n='click_email';
+    if(n) gtag('event', n, {link_url:h, page_path:location.pathname});
+  }, true);
+})(window,document);
+</script>
+<!-- Fim da medição -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Férias coletivas no fim de ano: prazos e escala | Criar Escala</title>
+<meta name="description" content="Férias coletivas podem ser divididas em até 2 períodos de no mínimo 10 dias, com aviso 15 dias antes (CLT, art. 139). Veja os prazos e como montar a escala.">
+<link rel="canonical" href="https://criarescala.com.br/blog/ferias-coletivas-fim-de-ano">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Criar Escala">
+<meta property="og:title" content="Férias coletivas no fim de ano: prazos e como montar a escala">
+<meta property="og:description" content="Férias coletivas podem ser divididas em até 2 períodos de no mínimo 10 dias, com aviso 15 dias antes (CLT, art. 139). Veja os prazos e como montar a escala.">
+<meta property="og:url" content="https://criarescala.com.br/blog/ferias-coletivas-fim-de-ano">
+<meta property="og:image" content="https://criarescala.com.br/og.png">
+<meta property="article:published_time" content="2026-12-01">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/blog/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Férias coletivas no fim de ano: prazos e como montar a escala",
+  "datePublished": "2026-12-01",
+  "dateModified": "2026-12-01",
+  "author": {
+    "@type": "Organization",
+    "name": "Criar Escala",
+    "url": "https://criarescala.com.br"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Criar Escala",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://criarescala.com.br/apple-touch-icon.png"
+    }
+  },
+  "mainEntityOfPage": "https://criarescala.com.br/blog/ferias-coletivas-fim-de-ano"
+}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="/blog/" class="wm">criar<span class="lime">escala</span><span class="seg">blog</span></a>
+    <nav class="nav-links">
+      <a href="/blog/" class="navlink">Blog</a>
+      <a href="/?utm_source=blog_criarescala&amp;utm_medium=nav" class="btn btn-primary" data-cta="cotacao" data-cta-label="nav">Criar minha escala grátis</a>
+    </nav>
+  </div>
+</header>
+
+<article class="post">
+  <div class="wrap-narrow">
+    <p class="post-meta">Gestão de equipes · 01 dez 2026 · 6 min de leitura</p>
+    <h1>Férias coletivas no fim de ano: prazos e como montar a escala</h1>
+    <p class="dek">A CLT permite dar férias coletivas para a empresa toda ou só para alguns setores. Veja os avisos obrigatórios, a divisão em até dois períodos e como organizar a equipe que continua trabalhando.</p>
+    <div class="byline">Equipe Criar Escala</div>
+
+    <div class="post-hero"><img src="/blog/assets/covers/gestao-equipes.svg" alt="Ilustração: Férias coletivas no fim de ano: prazos e como montar a escala" width="800" height="400"></div>
+
+    <div class="post-body">
+
+<p>As <strong>férias coletivas</strong> podem ser dadas a todos os empregados da empresa ou só a alguns estabelecimentos ou setores. É o que diz o art. 139 da <a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm">CLT</a>. Elas podem ser divididas em até 2 períodos no ano, desde que nenhum tenha menos de 10 dias corridos, e precisam ser comunicadas com pelo menos 15 dias de antecedência. No fim de ano, essa é a forma mais comum de parar a operação ou reduzir a equipe entre o Natal e o Ano Novo.</p>
+      <h2>Férias coletivas: o que diz a CLT</h2>
+      <ul>
+      <li><strong>Quem pode sair</strong> — todos os empregados da empresa ou de determinados estabelecimentos ou setores (art. 139, caput). Dá para parar a loja e manter o estoque funcionando, por exemplo.</li>
+      <li><strong>Até 2 períodos por ano</strong> — cada um com pelo menos 10 dias corridos (art. 139, § 1º).</li>
+      <li><strong>Quem tem menos de 12 meses de casa</strong> — tira férias proporcionais junto com os colegas, e começa a contar um novo período aquisitivo (art. 140).</li>
+      <li><strong>Pagamento</strong> — a remuneração das férias, com o terço constitucional (<a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm">Constituição</a>, art. 7º, XVII), é paga até 2 dias antes do início (CLT, art. 145).</li>
+      <li><strong>Abono pecuniário</strong> — nas férias coletivas, a conversão de 1/3 das férias em dinheiro precisa de acordo coletivo com o sindicato (art. 143, § 2º).</li>
+      </ul>
+      <div class="cta-inline">
+        <div class="txt"><strong>Quem vai ficar trabalhando no fim de ano?</strong><span>Monte a escala da equipe reduzida na Criar Escala. Grátis.</span></div>
+        <a href="/?utm_source=blog_criarescala&amp;utm_medium=inline-topo&amp;utm_campaign=ferias-coletivas-fim-de-ano" class="btn btn-ghost" data-cta="cotacao" data-cta-label="inline-topo-ferias-coletivas-fim-de-ano">Montar minha escala grátis</a>
+      </div>
+      <h2>Os avisos obrigatórios e os prazos</h2>
+      <p>O art. 139 da CLT prevê três avisos, todos com antecedência mínima de 15 dias:</p>
+      <ol>
+      <li><strong>Ministério do Trabalho e Emprego</strong> — a empresa informa as datas de início e fim e quais estabelecimentos ou setores estão incluídos (art. 139, § 2º). A comunicação é feita pelo serviço <a href="https://www.gov.br/pt-br/servicos/comunicar-ferias-coletivas">Comunicar Férias Coletivas</a>, no gov.br. Segundo a própria página do serviço, microempresas e empresas de pequeno porte estão dispensadas dessa comunicação (Lei Complementar 123/2006, art. 51, V).</li>
+      <li><strong>Sindicato</strong> — no mesmo prazo, a empresa envia cópia da comunicação aos sindicatos da categoria profissional (art. 139, § 3º).</li>
+      <li><strong>Empregados</strong> — também no mesmo prazo, a empresa afixa aviso nos locais de trabalho (art. 139, § 3º).</li>
+      </ol>
+      <p>Na prática, conte os 15 dias para trás a partir do primeiro dia de férias e não deixe para a última semana. Se a dispensa de comunicar o Ministério vale para a sua empresa, e se o sindicato e o aviso afixado continuam necessários, é um ponto para confirmar com o departamento pessoal.</p>
+      <div class="callout"><strong>Atenção ao dia de início:</strong> o art. 134, § 3º, da CLT proíbe que as férias comecem nos 2 dias que antecedem feriado ou dia de repouso semanal remunerado. Em 2026, o Natal cai numa sexta-feira e o 1º de janeiro de 2027 também. Confira com o departamento pessoal como essa regra se aplica às férias coletivas da sua empresa antes de fechar as datas.</div>
+      <h2>Como montar a escala de quem continua trabalhando</h2>
+      <p>Quando as férias coletivas valem só para alguns setores, quem fica de plantão segue a escala normal, e o fim de ano tem detalhes que pesam:</p>
+      <ul>
+      <li><strong>Defina a cobertura mínima</strong> — quantas pessoas precisam estar em cada dia e turno com a equipe reduzida. Com menos gente, uma falta já abre um furo.</li>
+      <li><strong>Marque os feriados</strong> — 25 de dezembro e 1º de janeiro são feriados nacionais (<a href="https://www.planalto.gov.br/ccivil_03/leis/l0662.htm">Lei 662/1949</a>). Quem trabalha neles recebe em dobro ou tem folga em outro dia, como explicamos em <a href="/blog/trabalhar-no-feriado-obrigatorio-dobro-ou-folga">trabalho em feriado: dobro ou folga</a>.</li>
+      <li><strong>Aplique a nova regra a partir de 16/12</strong> — pela <a href="https://legis.senado.leg.br/norma/44184944/publicacao/44189027">EC 141/2026</a>, a jornada normal passa a ter limite de 42 horas semanais e o repouso semanal remunerado passa a ser de 2 dias. A escala da segunda quinzena de dezembro, inclusive a de quem fica de plantão, já precisa seguir essas regras.</li>
+      <li><strong>Reveze quem fica</strong> — se possível, alterne de um ano para o outro quem trabalha no fim de ano, para não pesar sempre nas mesmas pessoas.</li>
+      </ul>
+      <p>Montar a escala da equipe reduzida no papel, com feriados e a mudança de jornada no meio do mês, é onde os furos aparecem. Na <a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=ferias-coletivas-fim-de-ano" data-cta="cotacao" data-cta-label="texto-ferias-coletivas-fim-de-ano">Criar Escala</a>, você informa os dias e horários de funcionamento, os feriados e quantas pessoas precisam estar no atendimento, e o sistema monta a escala do mês e mostra se a equipe que ficou dá conta.</p>
+      <div class="cta-inline">
+        <div class="txt"><strong>A equipe que fica cobre todos os dias?</strong><span>A Criar Escala mostra os dias descobertos antes que eles aconteçam.</span></div>
+        <a href="/?utm_source=blog_criarescala&amp;utm_medium=inline&amp;utm_campaign=ferias-coletivas-fim-de-ano" class="btn btn-ghost" data-cta="cotacao" data-cta-label="inline-ferias-coletivas-fim-de-ano">Usar a Criar Escala grátis</a>
+      </div>
+      <div class="callout"><strong>Sobre a Criar Escala:</strong> é um sistema 100% grátis da Mavin Seguros para montar a escala do mês. Você conta como a empresa funciona (dias, horários, feriados e quantas pessoas precisam estar no atendimento), cadastra a equipe e a jornada, e recebe a escala pronta no calendário — com a escala atual e a da nova regra da EC 141/2026 lado a lado, e o diagnóstico de se vai precisar de mais gente. Funciona no celular, sem baixar app e sem cadastro para montar e ver a escala, e exporta em PDF e Excel. Como toda simulação, não tem validade jurídica: em caso de dúvida sobre a sua categoria, vale consultar um advogado trabalhista ou o departamento pessoal da sua contabilidade. <a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=ferias-coletivas-fim-de-ano" data-cta="cotacao" data-cta-label="texto-ferias-coletivas-fim-de-ano">Monte a sua escala na Criar Escala</a>.</div>
+      <h2>Checklist das férias coletivas de fim de ano</h2>
+      <ul>
+      <li>As datas de início e fim estão definidas, com cada período de pelo menos 10 dias corridos?</li>
+      <li>A comunicação ao Ministério do Trabalho (se a empresa não for dispensada), ao sindicato e aos empregados vai sair com pelo menos 15 dias de antecedência?</li>
+      <li>O pagamento das férias, com o terço, está programado para até 2 dias antes do início?</li>
+      <li>A escala de quem continua trabalhando já considera os feriados e as regras que valem a partir de 16/12/2026?</li>
+      </ul>
+      <div class="callout"><strong>Importante:</strong> Este conteúdo é informativo e não é parecer jurídico. A convenção ou o acordo coletivo da sua categoria pode ter regra própria: antes de aplicar, confirme com um advogado trabalhista ou com o departamento pessoal da sua contabilidade.</div>
+      <p>Férias coletivas bem planejadas evitam furo na escala e correria no departamento pessoal. <strong><a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=ferias-coletivas-fim-de-ano" data-cta="cotacao" data-cta-label="texto-ferias-coletivas-fim-de-ano">Monte a escala de dezembro na Criar Escala</a></strong> e veja, dia a dia, se a equipe que fica cobre a operação.</p>
+      <div class="related">
+        <h4>Continue lendo</h4>
+        <div class="related-links">
+          <a href="/blog/trabalhar-no-feriado-obrigatorio-dobro-ou-folga">Trabalho em feriado: é obrigatório, paga em dobro ou dá folga?</a>
+          <a href="/blog/escala-5x2-jornada-42-horas-como-montar">Escala 5x2 com jornada de 42 horas: como montar a partir de 16/12</a>
+          <a href="/blog/como-calcular-equipe-ideal-para-escala-sem-furo">Como calcular quantas pessoas são necessárias para cobrir uma escala sem furo</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</article>
+
+<section class="section">
+  <div class="wrap">
+    <div class="strip-cta">
+      <div>
+        <h3>Quem fica e quem sai de férias no fim de ano?</h3>
+        <p>Na Criar Escala você monta a escala do mês com a equipe que continua trabalhando e vê se algum dia fica descoberto. Sistema 100% grátis, uma solução da Mavin Seguros.</p>
+      </div>
+      <a href="/?utm_source=blog_criarescala&amp;utm_medium=strip&amp;utm_campaign=ferias-coletivas-fim-de-ano" class="btn btn-primary" data-cta="cotacao" data-cta-label="strip-ferias-coletivas-fim-de-ano">Simular minha escala grátis</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="wm">criar<span class="lime">escala</span></div>
+        <p>Sistema gratuito para montar a escala do mês da sua equipe, já com a nova regra de jornada.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Navegue</h5>
+        <a href="/blog/">Blog</a>
+        <a href="/">Criar minha escala</a>
+        <a href="https://mavinseguros.com.br/privacidade/">Política de privacidade</a>
+      </div>
+      <div class="foot-col">
+        <h5>Quem faz</h5>
+        <a href="https://mavinseguros.com.br">Mavin Seguros</a>
+        <a href="mailto:contato@mavinseguros.com.br">contato@mavinseguros.com.br</a>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p class="legal-txt">Criar Escala é uma solução da Mavin. MAVIN CONSULTORIA &amp; CORRETAGEM DE SEGUROS LTDA · CNPJ 68.132.516/0001-23 · R. Adelino Leal Nunes, 279, Novo Mundo, Curitiba/PR. Conteúdo informativo, sem validade jurídica: confirme com um advogado trabalhista ou com o departamento pessoal da sua contabilidade.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/blog/assets/site.js"></script>
+<!-- Banner de consentimento de cookies (LGPD) -->
+<style>
+  #an-cookie-bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;max-width:640px;margin:0 auto;background:#111827;color:#F9FAFB;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.25);padding:10px 12px 10px 16px;display:flex;align-items:center;gap:12px;font-family:inherit;font-size:12px;line-height:1.4;transition:transform .3s ease,opacity .3s ease}
+  #an-cookie-bar.an-hidden{transform:translateY(20px);opacity:0;pointer-events:none}
+  #an-cookie-bar a{color:inherit;text-decoration:underline;opacity:.9}
+  #an-cookie-bar .an-t{flex:1;opacity:.88}
+  #an-cookie-bar .an-a{display:flex;gap:6px;flex-shrink:0}
+  #an-cookie-bar button{font-family:inherit;font-weight:700;font-size:12px;padding:7px 12px;border-radius:8px;border:none;cursor:pointer;white-space:nowrap}
+  #an-cookie-no{background:rgba(127,127,127,.18);color:inherit;font-weight:600}
+  #an-cookie-ok{background:#5B3DF5;color:#fff}
+  @media(max-width:480px){#an-cookie-bar{flex-direction:column;align-items:stretch;text-align:left}#an-cookie-bar .an-a{justify-content:flex-end}}
+</style>
+<div id="an-cookie-bar" class="an-hidden" role="dialog" aria-label="Consentimento de cookies">
+  <div class="an-t">Usamos cookies para medir e melhorar o uso do site. <a href="https://criarescala.com.br/privacidade/">Política de privacidade</a></div>
+  <div class="an-a"><button id="an-cookie-no" type="button">Recusar</button><button id="an-cookie-ok" type="button">Aceitar</button></div>
+</div>
+<script>
+(function(){
+  var bar=document.getElementById('an-cookie-bar'), k='criarescala_cookie_consent', s=null;
+  try{ s=localStorage.getItem(k); }catch(e){}
+  if(!s) bar.classList.remove('an-hidden');
+  function done(v){ try{ localStorage.setItem(k,v); }catch(e){} bar.classList.add('an-hidden'); }
+  document.getElementById('an-cookie-ok').addEventListener('click',function(){
+    gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'});
+    if(window.clarity) clarity('consentv2',{ad_Storage:'granted',analytics_Storage:'granted'});
+    done('accepted');
+  });
+  document.getElementById('an-cookie-no').addEventListener('click',function(){ done('rejected'); });
+})();
+</script>
+</body>
+</html>

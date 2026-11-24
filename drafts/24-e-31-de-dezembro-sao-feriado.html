@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Medição (GA4 + Clarity) com Consent Mode v2 data-analytics="mavin-v1" -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','wait_for_update':500});
+  (function(){ try { if (localStorage.getItem('criarescala_cookie_consent') === 'accepted') gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'}); } catch(e){} })();
+</script>
+<script>
+/* GA4 e Clarity carregados na primeira interação ou 5 s após o carregamento, para não atrasar a página. */
+(function(w,d){
+  var done=false;
+  function load(){
+    if(done) return; done=true;
+    var g=d.createElement('script'); g.async=true; g.src='https://www.googletagmanager.com/gtag/js?id=G-2L3P5YF5HM'; d.head.appendChild(g);
+    gtag('js', new Date()); gtag('config', 'G-2L3P5YF5HM');
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(w,d,"clarity","script","z8ddnrsilw");
+    var ok=false; try{ ok = localStorage.getItem('criarescala_cookie_consent')==='accepted'; }catch(e){}
+    w.clarity('consentv2',{ad_Storage: ok?'granted':'denied', analytics_Storage: ok?'granted':'denied'});
+    ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){ w.removeEventListener(e,load,{passive:true}); });
+  }
+  ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){ w.addEventListener(e,load,{passive:true,once:true}); });
+  w.addEventListener('load',function(){ setTimeout(load,5000); });
+  /* cliques em WhatsApp, telefone e e-mail viram eventos de conversão */
+  d.addEventListener('click',function(ev){
+    var a=ev.target.closest && ev.target.closest('a[href]'); if(!a) return;
+    var h=a.getAttribute('href')||'', n=null;
+    if(/wa\.me|whatsapp/i.test(h)) n='click_whatsapp'; else if(/^tel:/i.test(h)) n='click_telefone'; else if(/^mailto:/i.test(h)) n='click_email';
+    if(n) gtag('event', n, {link_url:h, page_path:location.pathname});
+  }, true);
+})(window,document);
+</script>
+<!-- Fim da medição -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>24 e 31 de dezembro são feriado? Ponto facultativo | Criar Escala</title>
+<meta name="description" content="24 e 31 de dezembro não são feriados nacionais. O ponto facultativo vale para o serviço público federal. Veja o que isso muda na escala de fim de ano.">
+<link rel="canonical" href="https://criarescala.com.br/blog/24-e-31-de-dezembro-sao-feriado">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Criar Escala">
+<meta property="og:title" content="24 e 31 de dezembro são feriado? Ponto facultativo e a escala de fim de ano">
+<meta property="og:description" content="24 e 31 de dezembro não são feriados nacionais. O ponto facultativo vale para o serviço público federal. Veja o que isso muda na escala de fim de ano.">
+<meta property="og:url" content="https://criarescala.com.br/blog/24-e-31-de-dezembro-sao-feriado">
+<meta property="og:image" content="https://criarescala.com.br/og.png">
+<meta property="article:published_time" content="2026-12-03">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/blog/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "24 e 31 de dezembro são feriado? Ponto facultativo e a escala de fim de ano",
+  "datePublished": "2026-12-03",
+  "dateModified": "2026-12-03",
+  "author": {
+    "@type": "Organization",
+    "name": "Criar Escala",
+    "url": "https://criarescala.com.br"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Criar Escala",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://criarescala.com.br/apple-touch-icon.png"
+    }
+  },
+  "mainEntityOfPage": "https://criarescala.com.br/blog/24-e-31-de-dezembro-sao-feriado"
+}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="/blog/" class="wm">criar<span class="lime">escala</span><span class="seg">blog</span></a>
+    <nav class="nav-links">
+      <a href="/blog/" class="navlink">Blog</a>
+      <a href="/?utm_source=blog_criarescala&amp;utm_medium=nav" class="btn btn-primary" data-cta="cotacao" data-cta-label="nav">Criar minha escala grátis</a>
+    </nav>
+  </div>
+</header>
+
+<article class="post">
+  <div class="wrap-narrow">
+    <p class="post-meta">Gestão de equipes · 03 dez 2026 · 5 min de leitura</p>
+    <h1>24 e 31 de dezembro são feriado? Ponto facultativo e a escala de fim de ano</h1>
+    <p class="dek">Natal e Ano Novo são feriados nacionais, mas as vésperas não. Veja o que é ponto facultativo, para quem ele vale e como organizar a escala do comércio e dos serviços nesses dias.</p>
+    <div class="byline">Equipe Criar Escala</div>
+
+    <div class="post-hero"><img src="/blog/assets/covers/gestao-equipes.svg" alt="Ilustração: 24 e 31 de dezembro são feriado? Ponto facultativo e a escala de fim de ano" width="800" height="400"></div>
+
+    <div class="post-body">
+
+<p>Resposta curta: não. <strong>24 e 31 de dezembro não são feriados nacionais</strong>. Os feriados de fim de ano são 25 de dezembro e 1º de janeiro, previstos na <a href="https://www.planalto.gov.br/ccivil_03/leis/l0662.htm">Lei 662/1949</a>. As vésperas aparecem como <strong>ponto facultativo</strong> na portaria anual do governo federal, que vale para o serviço público federal, não para as empresas privadas. Na empresa privada, 24 e 31 são dias normais de trabalho, a menos que uma lei local, a convenção coletiva ou a própria empresa diga outra coisa.</p>
+      <h2>Quais são os feriados nacionais</h2>
+      <p>Os feriados nacionais estão em leis federais:</p>
+      <ul>
+      <li><strong>Lei 662/1949</strong> (com a redação da Lei 10.607/2002) — 1º de janeiro, 21 de abril, 1º de maio, 7 de setembro, 2 de novembro, 15 de novembro e 25 de dezembro.</li>
+      <li><strong><a href="https://www.planalto.gov.br/ccivil_03/leis/l6802.htm">Lei 6.802/1980</a></strong> — 12 de outubro.</li>
+      <li><strong><a href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14759.htm">Lei 14.759/2023</a></strong> — 20 de novembro, Dia Nacional de Zumbi e da Consciência Negra.</li>
+      </ul>
+      <p>Além deles, a <a href="https://www.planalto.gov.br/ccivil_03/leis/l9093.htm">Lei 9.093/1995</a> permite feriados civis estaduais (a data magna do estado) e municipais (início e término do ano do centenário do município) e até 4 feriados religiosos definidos em lei municipal, incluída a Sexta-Feira da Paixão. Por isso, vale conferir a lei da sua cidade e do seu estado.</p>
+      <div class="cta-inline">
+        <div class="txt"><strong>Quem trabalha no Natal e quem trabalha no Ano Novo?</strong><span>Monte a escala de dezembro na Criar Escala. Grátis.</span></div>
+        <a href="/?utm_source=blog_criarescala&amp;utm_medium=inline-topo&amp;utm_campaign=24-e-31-de-dezembro-sao-feriado" class="btn btn-ghost" data-cta="cotacao" data-cta-label="inline-topo-24-e-31-de-dezembro-sao-feriado">Montar minha escala grátis</a>
+      </div>
+      <h2>O que é ponto facultativo</h2>
+      <p>Ponto facultativo é um dia em que o órgão público pode dispensar o expediente. Para 2026, a <a href="https://www.in.gov.br/web/dou/-/portaria-mgi-n-11.460-de-29-de-dezembro-de-2025-678388627">Portaria MGI 11.460/2025</a>, do Ministério da Gestão e da Inovação em Serviços Públicos, definiu 24 de dezembro e 31 de dezembro como ponto facultativo após as 13 horas. A portaria vale para os órgãos e entidades da administração pública federal. Ela não obriga a empresa privada a fechar nem a dispensar ninguém.</p>
+      <h2>Como fica a escala no comércio e nos serviços</h2>
+      <ul>
+      <li><strong>24 e 31 de dezembro</strong> — são dias normais de trabalho. A empresa pode manter o horário, reduzir o expediente ou liberar a equipe. Se liberar por decisão própria, o dia não tira o descanso semanal remunerado de ninguém: a <a href="https://www.planalto.gov.br/ccivil_03/leis/l0605.htm">Lei 605/1949</a> (art. 6º, § 1º, c) considera motivo justificado a paralisação do serviço nos dias em que, por conveniência do empregador, não houve trabalho. Se a ideia for compensar essas horas depois, isso precisa estar previsto em acordo de compensação ou banco de horas (CLT, art. 59, §§ 2º, 5º e 6º).</li>
+      <li><strong>25 de dezembro e 1º de janeiro</strong> — são feriados. Quem trabalha recebe em dobro ou tem folga em outro dia (Lei 605/1949, art. 9º). No comércio em geral, o trabalho em feriado depende de autorização em convenção coletiva e da legislação municipal (<a href="https://legis.senado.leg.br/norma/551977/publicacao/34619787">Lei 10.101/2000</a>, art. 6º-A). Detalhamos isso em <a href="/blog/trabalhar-no-feriado-obrigatorio-dobro-ou-folga">trabalho em feriado: dobro ou folga</a>.</li>
+      <li><strong>Convenção coletiva</strong> — algumas categorias negociam regras próprias para as vésperas, como horário reduzido. Confira a convenção da sua categoria antes de fechar a escala.</li>
+      </ul>
+      <p>Em 2026, 24 e 31 caem numa quinta-feira, e 25 de dezembro e 1º de janeiro numa sexta. São dois fins de semana prolongados seguidos, e as duas semanas já estão sob a regra nova: a partir de 16/12/2026, a <a href="https://legis.senado.leg.br/norma/44184944/publicacao/44189027">EC 141/2026</a> limita a jornada normal a 42 horas semanais e garante repouso semanal remunerado de 2 dias. Como o feriado, a folga compensatória e os dois dias de repouso se combinam na mesma semana é uma pergunta para o departamento pessoal da sua empresa.</p>
+      <p>Para não decidir em cima da hora quem trabalha em cada data, monte a escala de dezembro com antecedência. Na <a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=24-e-31-de-dezembro-sao-feriado" data-cta="cotacao" data-cta-label="texto-24-e-31-de-dezembro-sao-feriado">Criar Escala</a>, você informa os feriados junto com os dias e horários de funcionamento e quantas pessoas precisam estar no atendimento, e o sistema monta a escala do mês e mostra se a equipe dá conta.</p>
+      <div class="cta-inline">
+        <div class="txt"><strong>Sua escala de dezembro já considera a regra nova?</strong><span>A Criar Escala mostra a escala atual e a da nova regra lado a lado.</span></div>
+        <a href="/?utm_source=blog_criarescala&amp;utm_medium=inline&amp;utm_campaign=24-e-31-de-dezembro-sao-feriado" class="btn btn-ghost" data-cta="cotacao" data-cta-label="inline-24-e-31-de-dezembro-sao-feriado">Usar a Criar Escala grátis</a>
+      </div>
+      <div class="callout"><strong>Sobre a Criar Escala:</strong> é um sistema 100% grátis da Mavin Seguros para montar a escala do mês. Você conta como a empresa funciona (dias, horários, feriados e quantas pessoas precisam estar no atendimento), cadastra a equipe e a jornada, e recebe a escala pronta no calendário — com a escala atual e a da nova regra da EC 141/2026 lado a lado, e o diagnóstico de se vai precisar de mais gente. Funciona no celular, sem baixar app e sem cadastro para montar e ver a escala, e exporta em PDF e Excel. Como toda simulação, não tem validade jurídica: em caso de dúvida sobre a sua categoria, vale consultar um advogado trabalhista ou o departamento pessoal da sua contabilidade. <a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=24-e-31-de-dezembro-sao-feriado" data-cta="cotacao" data-cta-label="texto-24-e-31-de-dezembro-sao-feriado">Monte a sua escala na Criar Escala</a>.</div>
+      <h2>Checklist da escala de fim de ano</h2>
+      <ul>
+      <li>A empresa vai abrir normalmente, com horário reduzido ou fechar em 24 e 31 de dezembro? A equipe já sabe?</li>
+      <li>A lei municipal ou estadual cria algum feriado nessas datas na sua cidade?</li>
+      <li>A convenção coletiva autoriza o trabalho em 25/12 e 1º/1, se a sua empresa for do comércio?</li>
+      <li>Quem trabalha no Natal folga no Ano Novo, ou o contrário? O rodízio está registrado na escala?</li>
+      </ul>
+      <div class="callout"><strong>Importante:</strong> Este conteúdo é informativo e não é parecer jurídico. A convenção ou o acordo coletivo da sua categoria pode ter regra própria: antes de aplicar, confirme com um advogado trabalhista ou com o departamento pessoal da sua contabilidade.</div>
+      <p>24 e 31 de dezembro não são feriados, mas costumam ser os dias mais disputados da escala. <strong><a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=24-e-31-de-dezembro-sao-feriado" data-cta="cotacao" data-cta-label="texto-24-e-31-de-dezembro-sao-feriado">Monte a escala de dezembro na Criar Escala</a></strong> e defina com antecedência quem trabalha em cada data.</p>
+      <div class="related">
+        <h4>Continue lendo</h4>
+        <div class="related-links">
+          <a href="/blog/trabalhar-no-feriado-obrigatorio-dobro-ou-folga">Trabalho em feriado: é obrigatório, paga em dobro ou dá folga?</a>
+          <a href="/blog/ferias-coletivas-fim-de-ano">Férias coletivas no fim de ano: prazos e como montar a escala</a>
+          <a href="/blog/escala-de-revezamento-como-organizar-turnos">Escala de revezamento: como organizar turnos sem sobrecarregar ninguém</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</article>
+
+<section class="section">
+  <div class="wrap">
+    <div class="strip-cta">
+      <div>
+        <h3>Sua escala de Natal e Ano Novo já está pronta?</h3>
+        <p>Na Criar Escala você monta a escala do mês com os feriados informados e vê se algum dia fica descoberto. Sistema 100% grátis, uma solução da Mavin Seguros.</p>
+      </div>
+      <a href="/?utm_source=blog_criarescala&amp;utm_medium=strip&amp;utm_campaign=24-e-31-de-dezembro-sao-feriado" class="btn btn-primary" data-cta="cotacao" data-cta-label="strip-24-e-31-de-dezembro-sao-feriado">Simular minha escala grátis</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="wm">criar<span class="lime">escala</span></div>
+        <p>Sistema gratuito para montar a escala do mês da sua equipe, já com a nova regra de jornada.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Navegue</h5>
+        <a href="/blog/">Blog</a>
+        <a href="/">Criar minha escala</a>
+        <a href="https://mavinseguros.com.br/privacidade/">Política de privacidade</a>
+      </div>
+      <div class="foot-col">
+        <h5>Quem faz</h5>
+        <a href="https://mavinseguros.com.br">Mavin Seguros</a>
+        <a href="mailto:contato@mavinseguros.com.br">contato@mavinseguros.com.br</a>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p class="legal-txt">Criar Escala é uma solução da Mavin. MAVIN CONSULTORIA &amp; CORRETAGEM DE SEGUROS LTDA · CNPJ 68.132.516/0001-23 · R. Adelino Leal Nunes, 279, Novo Mundo, Curitiba/PR. Conteúdo informativo, sem validade jurídica: confirme com um advogado trabalhista ou com o departamento pessoal da sua contabilidade.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/blog/assets/site.js"></script>
+<!-- Banner de consentimento de cookies (LGPD) -->
+<style>
+  #an-cookie-bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;max-width:640px;margin:0 auto;background:#111827;color:#F9FAFB;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.25);padding:10px 12px 10px 16px;display:flex;align-items:center;gap:12px;font-family:inherit;font-size:12px;line-height:1.4;transition:transform .3s ease,opacity .3s ease}
+  #an-cookie-bar.an-hidden{transform:translateY(20px);opacity:0;pointer-events:none}
+  #an-cookie-bar a{color:inherit;text-decoration:underline;opacity:.9}
+  #an-cookie-bar .an-t{flex:1;opacity:.88}
+  #an-cookie-bar .an-a{display:flex;gap:6px;flex-shrink:0}
+  #an-cookie-bar button{font-family:inherit;font-weight:700;font-size:12px;padding:7px 12px;border-radius:8px;border:none;cursor:pointer;white-space:nowrap}
+  #an-cookie-no{background:rgba(127,127,127,.18);color:inherit;font-weight:600}
+  #an-cookie-ok{background:#5B3DF5;color:#fff}
+  @media(max-width:480px){#an-cookie-bar{flex-direction:column;align-items:stretch;text-align:left}#an-cookie-bar .an-a{justify-content:flex-end}}
+</style>
+<div id="an-cookie-bar" class="an-hidden" role="dialog" aria-label="Consentimento de cookies">
+  <div class="an-t">Usamos cookies para medir e melhorar o uso do site. <a href="https://criarescala.com.br/privacidade/">Política de privacidade</a></div>
+  <div class="an-a"><button id="an-cookie-no" type="button">Recusar</button><button id="an-cookie-ok" type="button">Aceitar</button></div>
+</div>
+<script>
+(function(){
+  var bar=document.getElementById('an-cookie-bar'), k='criarescala_cookie_consent', s=null;
+  try{ s=localStorage.getItem(k); }catch(e){}
+  if(!s) bar.classList.remove('an-hidden');
+  function done(v){ try{ localStorage.setItem(k,v); }catch(e){} bar.classList.add('an-hidden'); }
+  document.getElementById('an-cookie-ok').addEventListener('click',function(){
+    gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'});
+    if(window.clarity) clarity('consentv2',{ad_Storage:'granted',analytics_Storage:'granted'});
+    done('accepted');
+  });
+  document.getElementById('an-cookie-no').addEventListener('click',function(){ done('rejected'); });
+})();
+</script>
+</body>
+</html>

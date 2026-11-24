@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Medição (GA4 + Clarity) com Consent Mode v2 data-analytics="mavin-v1" -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','wait_for_update':500});
+  (function(){ try { if (localStorage.getItem('criarescala_cookie_consent') === 'accepted') gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'}); } catch(e){} })();
+</script>
+<script>
+/* GA4 e Clarity carregados na primeira interação ou 5 s após o carregamento, para não atrasar a página. */
+(function(w,d){
+  var done=false;
+  function load(){
+    if(done) return; done=true;
+    var g=d.createElement('script'); g.async=true; g.src='https://www.googletagmanager.com/gtag/js?id=G-2L3P5YF5HM'; d.head.appendChild(g);
+    gtag('js', new Date()); gtag('config', 'G-2L3P5YF5HM');
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(w,d,"clarity","script","z8ddnrsilw");
+    var ok=false; try{ ok = localStorage.getItem('criarescala_cookie_consent')==='accepted'; }catch(e){}
+    w.clarity('consentv2',{ad_Storage: ok?'granted':'denied', analytics_Storage: ok?'granted':'denied'});
+    ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){ w.removeEventListener(e,load,{passive:true}); });
+  }
+  ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){ w.addEventListener(e,load,{passive:true,once:true}); });
+  w.addEventListener('load',function(){ setTimeout(load,5000); });
+  /* cliques em WhatsApp, telefone e e-mail viram eventos de conversão */
+  d.addEventListener('click',function(ev){
+    var a=ev.target.closest && ev.target.closest('a[href]'); if(!a) return;
+    var h=a.getAttribute('href')||'', n=null;
+    if(/wa\.me|whatsapp/i.test(h)) n='click_whatsapp'; else if(/^tel:/i.test(h)) n='click_telefone'; else if(/^mailto:/i.test(h)) n='click_email';
+    if(n) gtag('event', n, {link_url:h, page_path:location.pathname});
+  }, true);
+})(window,document);
+</script>
+<!-- Fim da medição -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Controle de ponto: quando é obrigatório | Criar Escala</title>
+<meta name="description" content="O controle de ponto é obrigatório em estabelecimentos com mais de 20 trabalhadores (CLT, art. 74). Veja os tipos de ponto eletrônico, o ponto por exceção e o que guardar.">
+<link rel="canonical" href="https://criarescala.com.br/blog/controle-de-ponto-obrigatorio">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Criar Escala">
+<meta property="og:title" content="Controle de ponto: quando é obrigatório e quais sistemas valem">
+<meta property="og:description" content="O controle de ponto é obrigatório em estabelecimentos com mais de 20 trabalhadores (CLT, art. 74). Veja os tipos de ponto eletrônico, o ponto por exceção e o que guardar.">
+<meta property="og:url" content="https://criarescala.com.br/blog/controle-de-ponto-obrigatorio">
+<meta property="og:image" content="https://criarescala.com.br/og.png">
+<meta property="article:published_time" content="2026-12-22">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/blog/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Controle de ponto: quando é obrigatório e quais sistemas valem",
+  "datePublished": "2026-12-22",
+  "dateModified": "2026-12-22",
+  "author": {
+    "@type": "Organization",
+    "name": "Criar Escala",
+    "url": "https://criarescala.com.br"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Criar Escala",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://criarescala.com.br/apple-touch-icon.png"
+    }
+  },
+  "mainEntityOfPage": "https://criarescala.com.br/blog/controle-de-ponto-obrigatorio"
+}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="/blog/" class="wm">criar<span class="lime">escala</span><span class="seg">blog</span></a>
+    <nav class="nav-links">
+      <a href="/blog/" class="navlink">Blog</a>
+      <a href="/?utm_source=blog_criarescala&amp;utm_medium=nav" class="btn btn-primary" data-cta="cotacao" data-cta-label="nav">Criar minha escala grátis</a>
+    </nav>
+  </div>
+</header>
+
+<article class="post">
+  <div class="wrap-narrow">
+    <p class="post-meta">Gestão de equipes · 22 dez 2026 · 6 min de leitura</p>
+    <h1>Controle de ponto: quando é obrigatório e quais sistemas valem</h1>
+    <p class="dek">A CLT exige o registro de entrada e saída a partir de 21 trabalhadores no estabelecimento, e a Portaria MTP 671/2021 define quais sistemas valem. Veja as regras e o que muda com a jornada de 42 horas.</p>
+    <div class="byline">Equipe Criar Escala</div>
+
+    <div class="post-hero"><img src="/blog/assets/covers/gestao-equipes.svg" alt="Ilustração: Controle de ponto: quando é obrigatório e quais sistemas valem" width="800" height="400"></div>
+
+    <div class="post-body">
+
+<p>O <strong>controle de ponto</strong> é obrigatório nos estabelecimentos com <strong>mais de 20 trabalhadores</strong>. É o que diz o art. 74, § 2º, da <a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm">CLT</a>: nesses casos, a hora de entrada e de saída deve ser anotada em registro manual, mecânico ou eletrônico, conforme as instruções do Ministério do Trabalho, e o intervalo de repouso pode ser pré-assinalado. As regras dos sistemas estão na <a href="https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/legislacao/portarias-1/portarias-vigentes-3/WORDPortarian671de8denovembrode2021compilada21.07.2026.pdf">Portaria MTP 671/2021</a> (arts. 72 a 99).</p>
+      <h2>Quando o controle de ponto é obrigatório</h2>
+      <ul>
+      <li><strong>Todo empregador</strong> — o horário de trabalho deve ser anotado em registro de empregados (art. 74, caput).</li>
+      <li><strong>Estabelecimento com mais de 20 trabalhadores</strong> — passa a ser obrigatório anotar a hora de entrada e de saída (art. 74, § 2º). A conta é por estabelecimento: com 21 trabalhadores ou mais no mesmo estabelecimento, o registro de ponto é obrigatório.</li>
+      <li><strong>Trabalho fora do estabelecimento</strong> — o horário consta de registro manual, mecânico ou eletrônico em poder do empregado (art. 74, § 3º).</li>
+      </ul>
+      <p>Abaixo de 21 trabalhadores, a CLT não obriga o registro de entrada e saída, mas muitas empresas mantêm o ponto mesmo assim, porque é o registro que mostra a jornada que foi de fato cumprida. A convenção da categoria também pode tratar do tema.</p>
+      <div class="cta-inline">
+        <div class="txt"><strong>A escala do mês já está pronta para a regra de 42 horas?</strong><span>Monte na Criar Escala, sistema 100% grátis.</span></div>
+        <a href="/?utm_source=blog_criarescala&amp;utm_medium=inline-topo&amp;utm_campaign=controle-de-ponto-obrigatorio" class="btn btn-ghost" data-cta="cotacao" data-cta-label="inline-topo-controle-de-ponto-obrigatorio">Montar minha escala grátis</a>
+      </div>
+      <h2>Quais sistemas de ponto valem</h2>
+      <ul>
+      <li><strong>Registro manual</strong> — o livro ou a folha de ponto deve espelhar a jornada real, sem a mera anotação do horário do contrato (art. 93 da Portaria). O intervalo pode ser pré-assinalado.</li>
+      <li><strong>Registro mecânico</strong> — o relógio de cartão deve registrar a jornada real de forma impressa e indelével, em cartão individual (art. 94).</li>
+      <li><strong>Ponto eletrônico</strong> — quem opta pelo registro eletrônico deve usar um dos três sistemas do art. 75:
+        <ul>
+        <li><strong>REP-C (convencional)</strong>: o relógio de ponto, equipamento com certificado de conformidade, que fica no local de trabalho (art. 76);</li>
+        <li><strong>REP-A (alternativo)</strong>: sistema autorizado por convenção ou acordo coletivo, que só pode ser usado enquanto o instrumento coletivo estiver em vigor (art. 77);</li>
+        <li><strong>REP-P (via programa)</strong>: programa executado em servidor dedicado ou em nuvem, com registro no INPI, que recebe as marcações por coletores, que podem ser equipamentos, dispositivos ou programas (arts. 75, 78 e 91).</li>
+        </ul>
+      </li>
+      </ul>
+      <p>Seja qual for o sistema, o ponto eletrônico não pode restringir os horários de marcação, marcar o ponto automaticamente pelo horário do contrato, exigir autorização prévia para registrar hora extra nem permitir a alteração dos dados registrados pelo empregado (art. 74 da Portaria).</p>
+      <h2>Ponto por exceção</h2>
+      <p>Desde 2019, a CLT permite o registro de ponto por exceção à jornada regular, por acordo individual escrito, convenção ou acordo coletivo (art. 74, § 4º). Nesse modelo, a pessoa registra só o que foge da jornada combinada: horas extras, atrasos, saídas antecipadas e faltas. A Portaria repete a autorização para o registro manual e o mecânico (arts. 93 e 94, parágrafo único). Para funcionar, a jornada regular precisa estar bem definida, e é aí que entra a escala do mês.</p>
+      <div class="cta-inline">
+        <div class="txt"><strong>A jornada regular de cada pessoa está definida?</strong><span>A Criar Escala monta o mês com turnos e folgas de cada funcionário.</span></div>
+        <a href="/?utm_source=blog_criarescala&amp;utm_medium=inline&amp;utm_campaign=controle-de-ponto-obrigatorio" class="btn btn-ghost" data-cta="cotacao" data-cta-label="inline-controle-de-ponto-obrigatorio">Usar a Criar Escala grátis</a>
+      </div>
+      <h2>O que guardar</h2>
+      <ul>
+      <li><strong>Comprovante de cada marcação</strong> — o REP-C e o REP-P emitem ou disponibilizam o comprovante de registro de ponto do trabalhador, impresso ou em PDF (arts. 79 e 80).</li>
+      <li><strong>Arquivo Fonte de Dados (AFD)</strong> — todos os sistemas eletrônicos geram esse arquivo, que deve ser entregue ao Auditor-Fiscal do Trabalho quando solicitado (art. 81).</li>
+      <li><strong>Arquivo Eletrônico de Jornada (AEJ) e Espelho de Ponto</strong> — gerados pelo programa de tratamento do ponto (arts. 83 e 84). O empregado deve ter acesso ao espelho pelo menos uma vez por mês, e os arquivos devem ser entregues à fiscalização em prazo mínimo de dois dias, a critério do auditor (art. 85).</li>
+      </ul>
+      <p>A seção de ponto da Portaria não fixa um prazo único de guarda. Como referência, a Constituição dá ao trabalhador prazo de cinco anos para cobrar créditos trabalhistas, até o limite de dois anos após o fim do contrato (art. 7º, XXIX). Defina com a contabilidade por quanto tempo guardar os registros da sua empresa.</p>
+      <h2>O que muda no ponto com a jornada de 42 horas</h2>
+      <p>A <a href="https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc141.htm">EC 141/2026</a> reduziu o limite semanal para 42 horas desde 16/12/2026 e para 40 horas a partir de 16/12/2027 (art. 6º), e garantiu repouso semanal remunerado de 2 dias (novo art. 7º, XV, da Constituição). A <a href="https://fenacon.org.br/wp-content/uploads/2026/10/FCOM0007-Nota-Tecnica-6x1-.pdf">nota orientativa da Fenacon</a> recomenda parametrizar no controle de ponto e na folha o novo divisor, os 2 dias de descanso e as regras do termo aditivo da convenção. A emenda também prevê, no art. 8º, que as regras de duração do trabalho e de controle de jornada não se aplicam ao empregado com diploma de nível superior e remuneração mensal igual ou superior a duas vezes e meia o teto do INSS, salvo por liberalidade do empregador ou previsão em norma coletiva, respeitados os 2 dias de repouso.</p>
+      <p>O ponto registra o que foi feito; a escala é o plano. Se a escala do mês já passa do limite semanal, o ponto vai mostrar hora extra. Na <a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=controle-de-ponto-obrigatorio" data-cta="cotacao" data-cta-label="texto-controle-de-ponto-obrigatorio">Criar Escala</a>, você monta a escala do mês e o sistema mostra a escala atual e a da nova regra lado a lado, com as horas de cada funcionário, e exporta em PDF e Excel.</p>
+      <div class="callout"><strong>Sobre a Criar Escala:</strong> é um sistema 100% grátis da Mavin Seguros para montar a escala do mês. Você conta como a empresa funciona (dias, horários, feriados e quantas pessoas precisam estar no atendimento), cadastra a equipe e a jornada, e recebe a escala pronta no calendário — com a escala atual e a da nova regra da EC 141/2026 lado a lado, e o diagnóstico de se vai precisar de mais gente. Funciona no celular, sem baixar app e sem cadastro para montar e ver a escala, e exporta em PDF e Excel. Como toda simulação, não tem validade jurídica: em caso de dúvida sobre a sua categoria, vale consultar um advogado trabalhista ou o departamento pessoal da sua contabilidade. <a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=controle-de-ponto-obrigatorio" data-cta="cotacao" data-cta-label="texto-controle-de-ponto-obrigatorio">Monte a sua escala na Criar Escala</a>.</div>
+      <h2>Pontos para revisar na sua empresa</h2>
+      <ul>
+      <li>Quantos trabalhadores há em cada estabelecimento? Algum passou de 20?</li>
+      <li>O sistema de ponto é um dos três tipos do art. 75 da Portaria, e o REP-A tem convenção ou acordo coletivo em vigor?</li>
+      <li>O ponto e a folha já estão ajustados ao limite de 42 horas e aos 2 dias de repouso semanal?</li>
+      <li>Por quanto tempo a empresa guarda espelhos, AFD e AEJ?</li>
+      </ul>
+      <div class="callout"><strong>Importante:</strong> Este conteúdo é informativo e não é parecer jurídico. A convenção ou o acordo coletivo da sua categoria pode ter regra própria: antes de aplicar, confirme com um advogado trabalhista ou com o departamento pessoal da sua contabilidade.</div>
+      <p>Ponto e escala andam juntos: um mostra o que foi planejado, o outro, o que foi cumprido. <strong><a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=controle-de-ponto-obrigatorio" data-cta="cotacao" data-cta-label="texto-controle-de-ponto-obrigatorio">Monte a escala do mês na Criar Escala</a></strong> e compare com o ponto do mês.</p>
+      <div class="related">
+        <h4>Continue lendo</h4>
+        <div class="related-links">
+          <a href="/blog/limite-de-hora-extra-por-dia">Limite de hora extra por dia: o que muda com a nova jornada</a>
+          <a href="/blog/troca-de-turno-e-banco-de-horas">Troca de turno e banco de horas: como manter o controle quando a escala muda</a>
+          <a href="/blog/intervalo-intrajornada-e-interjornada">Intervalo intrajornada e interjornada: as pausas que a escala precisa respeitar</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</article>
+
+<section class="section">
+  <div class="wrap">
+    <div class="strip-cta">
+      <div>
+        <h3>O ponto mostra o que foi feito. A escala mostra o que foi planejado.</h3>
+        <p>Na Criar Escala você monta a escala do mês da equipe na nova regra e exporta em PDF e Excel para comparar com o ponto. Sistema 100% grátis, uma solução da Mavin Seguros.</p>
+      </div>
+      <a href="/?utm_source=blog_criarescala&amp;utm_medium=strip&amp;utm_campaign=controle-de-ponto-obrigatorio" class="btn btn-primary" data-cta="cotacao" data-cta-label="strip-controle-de-ponto-obrigatorio">Montar minha escala grátis</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="wm">criar<span class="lime">escala</span></div>
+        <p>Sistema gratuito para montar a escala do mês da sua equipe, já com a nova regra de jornada.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Navegue</h5>
+        <a href="/blog/">Blog</a>
+        <a href="/">Criar minha escala</a>
+        <a href="https://mavinseguros.com.br/privacidade/">Política de privacidade</a>
+      </div>
+      <div class="foot-col">
+        <h5>Quem faz</h5>
+        <a href="https://mavinseguros.com.br">Mavin Seguros</a>
+        <a href="mailto:contato@mavinseguros.com.br">contato@mavinseguros.com.br</a>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p class="legal-txt">Criar Escala é uma solução da Mavin. MAVIN CONSULTORIA &amp; CORRETAGEM DE SEGUROS LTDA · CNPJ 68.132.516/0001-23 · R. Adelino Leal Nunes, 279, Novo Mundo, Curitiba/PR. Conteúdo informativo, sem validade jurídica: confirme com um advogado trabalhista ou com o departamento pessoal da sua contabilidade.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/blog/assets/site.js"></script>
+<!-- Banner de consentimento de cookies (LGPD) -->
+<style>
+  #an-cookie-bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;max-width:640px;margin:0 auto;background:#111827;color:#F9FAFB;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.25);padding:10px 12px 10px 16px;display:flex;align-items:center;gap:12px;font-family:inherit;font-size:12px;line-height:1.4;transition:transform .3s ease,opacity .3s ease}
+  #an-cookie-bar.an-hidden{transform:translateY(20px);opacity:0;pointer-events:none}
+  #an-cookie-bar a{color:inherit;text-decoration:underline;opacity:.9}
+  #an-cookie-bar .an-t{flex:1;opacity:.88}
+  #an-cookie-bar .an-a{display:flex;gap:6px;flex-shrink:0}
+  #an-cookie-bar button{font-family:inherit;font-weight:700;font-size:12px;padding:7px 12px;border-radius:8px;border:none;cursor:pointer;white-space:nowrap}
+  #an-cookie-no{background:rgba(127,127,127,.18);color:inherit;font-weight:600}
+  #an-cookie-ok{background:#5B3DF5;color:#fff}
+  @media(max-width:480px){#an-cookie-bar{flex-direction:column;align-items:stretch;text-align:left}#an-cookie-bar .an-a{justify-content:flex-end}}
+</style>
+<div id="an-cookie-bar" class="an-hidden" role="dialog" aria-label="Consentimento de cookies">
+  <div class="an-t">Usamos cookies para medir e melhorar o uso do site. <a href="https://criarescala.com.br/privacidade/">Política de privacidade</a></div>
+  <div class="an-a"><button id="an-cookie-no" type="button">Recusar</button><button id="an-cookie-ok" type="button">Aceitar</button></div>
+</div>
+<script>
+(function(){
+  var bar=document.getElementById('an-cookie-bar'), k='criarescala_cookie_consent', s=null;
+  try{ s=localStorage.getItem(k); }catch(e){}
+  if(!s) bar.classList.remove('an-hidden');
+  function done(v){ try{ localStorage.setItem(k,v); }catch(e){} bar.classList.add('an-hidden'); }
+  document.getElementById('an-cookie-ok').addEventListener('click',function(){
+    gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'});
+    if(window.clarity) clarity('consentv2',{ad_Storage:'granted',analytics_Storage:'granted'});
+    done('accepted');
+  });
+  document.getElementById('an-cookie-no').addEventListener('click',function(){ done('rejected'); });
+})();
+</script>
+</body>
+</html>

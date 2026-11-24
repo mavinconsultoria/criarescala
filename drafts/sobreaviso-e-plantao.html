@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Medição (GA4 + Clarity) com Consent Mode v2 data-analytics="mavin-v1" -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','wait_for_update':500});
+  (function(){ try { if (localStorage.getItem('criarescala_cookie_consent') === 'accepted') gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'}); } catch(e){} })();
+</script>
+<script>
+/* GA4 e Clarity carregados na primeira interação ou 5 s após o carregamento, para não atrasar a página. */
+(function(w,d){
+  var done=false;
+  function load(){
+    if(done) return; done=true;
+    var g=d.createElement('script'); g.async=true; g.src='https://www.googletagmanager.com/gtag/js?id=G-2L3P5YF5HM'; d.head.appendChild(g);
+    gtag('js', new Date()); gtag('config', 'G-2L3P5YF5HM');
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(w,d,"clarity","script","z8ddnrsilw");
+    var ok=false; try{ ok = localStorage.getItem('criarescala_cookie_consent')==='accepted'; }catch(e){}
+    w.clarity('consentv2',{ad_Storage: ok?'granted':'denied', analytics_Storage: ok?'granted':'denied'});
+    ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){ w.removeEventListener(e,load,{passive:true}); });
+  }
+  ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){ w.addEventListener(e,load,{passive:true,once:true}); });
+  w.addEventListener('load',function(){ setTimeout(load,5000); });
+  /* cliques em WhatsApp, telefone e e-mail viram eventos de conversão */
+  d.addEventListener('click',function(ev){
+    var a=ev.target.closest && ev.target.closest('a[href]'); if(!a) return;
+    var h=a.getAttribute('href')||'', n=null;
+    if(/wa\.me|whatsapp/i.test(h)) n='click_whatsapp'; else if(/^tel:/i.test(h)) n='click_telefone'; else if(/^mailto:/i.test(h)) n='click_email';
+    if(n) gtag('event', n, {link_url:h, page_path:location.pathname});
+  }, true);
+})(window,document);
+</script>
+<!-- Fim da medição -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobreaviso e plantão: quando a espera conta | Criar Escala</title>
+<meta name="description" content="Sobreaviso é pago a 1/3 da hora normal e prontidão a 2/3 (CLT, art. 244). Veja a diferença para o plantão, o que diz a Súmula 428 do TST e como registrar na escala.">
+<link rel="canonical" href="https://criarescala.com.br/blog/sobreaviso-e-plantao">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Criar Escala">
+<meta property="og:title" content="Sobreaviso e plantão: quando o tempo de espera conta na jornada">
+<meta property="og:description" content="Sobreaviso é pago a 1/3 da hora normal e prontidão a 2/3 (CLT, art. 244). Veja a diferença para o plantão, o que diz a Súmula 428 do TST e como registrar na escala.">
+<meta property="og:url" content="https://criarescala.com.br/blog/sobreaviso-e-plantao">
+<meta property="og:image" content="https://criarescala.com.br/og.png">
+<meta property="article:published_time" content="2026-12-12">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/blog/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Sobreaviso e plantão: quando o tempo de espera conta na jornada",
+  "datePublished": "2026-12-12",
+  "dateModified": "2026-12-12",
+  "author": {
+    "@type": "Organization",
+    "name": "Criar Escala",
+    "url": "https://criarescala.com.br"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Criar Escala",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://criarescala.com.br/apple-touch-icon.png"
+    }
+  },
+  "mainEntityOfPage": "https://criarescala.com.br/blog/sobreaviso-e-plantao"
+}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="/blog/" class="wm">criar<span class="lime">escala</span><span class="seg">blog</span></a>
+    <nav class="nav-links">
+      <a href="/blog/" class="navlink">Blog</a>
+      <a href="/?utm_source=blog_criarescala&amp;utm_medium=nav" class="btn btn-primary" data-cta="cotacao" data-cta-label="nav">Criar minha escala grátis</a>
+    </nav>
+  </div>
+</header>
+
+<article class="post">
+  <div class="wrap-narrow">
+    <p class="post-meta">Gestão de equipes · 12 dez 2026 · 5 min de leitura</p>
+    <h1>Sobreaviso e plantão: quando o tempo de espera conta na jornada</h1>
+    <p class="dek">Ficar em casa esperando o chamado, aguardar ordens no local ou trabalhar no turno de plantão são situações diferentes, com pagamentos diferentes. Veja o que diz a CLT e como levar isso para a escala.</p>
+    <div class="byline">Equipe Criar Escala</div>
+
+    <div class="post-hero"><img src="/blog/assets/covers/gestao-equipes.svg" alt="Ilustração: Sobreaviso e plantão: quando o tempo de espera conta na jornada" width="800" height="400"></div>
+
+    <div class="post-body">
+
+<p><strong>Sobreaviso</strong> é o tempo em que o empregado fica fora do trabalho, esperando ser chamado a qualquer momento. A <a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm">CLT</a> trata do tema no art. 244, escrito para os ferroviários e aplicado por analogia a outras atividades: as horas de sobreaviso são pagas a 1/3 do salário normal, e as de prontidão, a 2/3 do salário-hora normal. Já o <strong>plantão</strong> em que a pessoa está no local, trabalhando ou à disposição, conta como jornada normal.</p>
+      <h2>Sobreaviso, prontidão e plantão: a diferença</h2>
+      <ul>
+      <li><strong>Sobreaviso</strong> — o empregado fica em casa aguardando o chamado. Cada escala de sobreaviso é de no máximo 24 horas, e as horas são contadas à razão de 1/3 do salário normal (art. 244, § 2º).</li>
+      <li><strong>Prontidão</strong> — o empregado fica nas dependências da empresa aguardando ordens. A escala de prontidão é de no máximo 12 horas, e as horas são contadas à razão de 2/3 do salário-hora normal (art. 244, § 3º).</li>
+      <li><strong>Plantão no local</strong> — a CLT considera serviço efetivo o período em que o empregado está à disposição do empregador, aguardando ou executando ordens (art. 4º). Esse tempo entra na jornada e segue as regras de hora extra, intervalo e adicional noturno.</li>
+      </ul>
+      <p>A palavra "plantão" é usada para as duas coisas: o plantão no local e o "plantão" a distância, com o celular ligado. O que decide o pagamento não é o nome, é onde a pessoa fica e quanto a empresa controla esse tempo.</p>
+      <div class="cta-inline">
+        <div class="txt"><strong>Sua equipe sabe quem está de plantão?</strong><span>Monte a escala do mês na Criar Escala. Grátis.</span></div>
+        <a href="/?utm_source=blog_criarescala&amp;utm_medium=inline-topo&amp;utm_campaign=sobreaviso-e-plantao" class="btn btn-ghost" data-cta="cotacao" data-cta-label="inline-topo-sobreaviso-e-plantao">Montar minha escala grátis</a>
+      </div>
+      <h2>Celular da empresa gera sobreaviso? A Súmula 428 do TST</h2>
+      <p>A <a href="https://www.tst.jus.br/pmnoticias/-/asset_publisher/89Dk/content/id/2415116">Súmula 428</a>, do Tribunal Superior do Trabalho, responde a essa dúvida em dois itens:</p>
+      <ul>
+      <li><strong>Item I</strong> — o uso de celular, notebook ou outro instrumento fornecido pela empresa, por si só, não caracteriza sobreaviso.</li>
+      <li><strong>Item II</strong> — está em sobreaviso o empregado que, a distância e submetido a controle da empresa por esses instrumentos, permanece em regime de plantão ou equivalente, aguardando a qualquer momento o chamado para o serviço durante o período de descanso.</li>
+      </ul>
+      <p>Ou seja: ter o celular da empresa não basta. O que pesa é estar escalado para atender chamados no período de descanso, sob controle da empresa.</p>
+      <h2>Como registrar sobreaviso e plantão na escala</h2>
+      <ul>
+      <li><strong>Separe os tipos na escala</strong> — turno de trabalho, plantão no local e sobreaviso precisam aparecer de forma diferente, porque são pagos de forma diferente.</li>
+      <li><strong>Respeite o limite de cada escala</strong> — até 24 horas seguidas de sobreaviso e até 12 horas de prontidão, pelo art. 244.</li>
+      <li><strong>Registre os chamados</strong> — quando a pessoa de sobreaviso é chamada e trabalha, as horas trabalhadas deixam de ser espera. Anote início e fim de cada atendimento para a folha.</li>
+      <li><strong>Reveze</strong> — distribuir o sobreaviso entre a equipe evita que as mesmas pessoas passem todas as noites e fins de semana esperando o telefone tocar.</li>
+      <li><strong>Confira a convenção</strong> — a convenção ou o acordo coletivo tem prevalência sobre a lei quando trata de regime de sobreaviso (CLT, art. 611-A, VIII). Muitas categorias têm cláusula própria.</li>
+      </ul>
+      <p>A partir de 16/12/2026, a <a href="https://legis.senado.leg.br/norma/44184944/publicacao/44189027">EC 141/2026</a> limita a jornada normal a 42 horas semanais e garante repouso semanal remunerado de 2 dias. Como o sobreaviso nos dias de folga e os chamados durante o descanso se encaixam nessas regras é um ponto para confirmar com o departamento pessoal.</p>
+      <p>Na <a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=sobreaviso-e-plantao" data-cta="cotacao" data-cta-label="texto-sobreaviso-e-plantao">Criar Escala</a>, você monta a escala do mês com os turnos da equipe e compartilha um link pelo WhatsApp: cada pessoa vê só os próprios dias e horários no celular, sem baixar app.</p>
+      <div class="cta-inline">
+        <div class="txt"><strong>Quer dividir os plantões de forma justa?</strong><span>A Criar Escala distribui turnos e folgas automaticamente.</span></div>
+        <a href="/?utm_source=blog_criarescala&amp;utm_medium=inline&amp;utm_campaign=sobreaviso-e-plantao" class="btn btn-ghost" data-cta="cotacao" data-cta-label="inline-sobreaviso-e-plantao">Usar a Criar Escala grátis</a>
+      </div>
+      <div class="callout"><strong>Sobre a Criar Escala:</strong> é um sistema 100% grátis da Mavin Seguros para montar a escala do mês. Você conta como a empresa funciona (dias, horários, feriados e quantas pessoas precisam estar no atendimento), cadastra a equipe e a jornada, e recebe a escala pronta no calendário — com a escala atual e a da nova regra da EC 141/2026 lado a lado, e o diagnóstico de se vai precisar de mais gente. Funciona no celular, sem baixar app e sem cadastro para montar e ver a escala, e exporta em PDF e Excel. Como toda simulação, não tem validade jurídica: em caso de dúvida sobre a sua categoria, vale consultar um advogado trabalhista ou o departamento pessoal da sua contabilidade. <a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=sobreaviso-e-plantao" data-cta="cotacao" data-cta-label="texto-sobreaviso-e-plantao">Monte a sua escala na Criar Escala</a>.</div>
+      <h2>Pontos para revisar no seu sobreaviso</h2>
+      <ul>
+      <li>A escala separa trabalho, plantão no local e sobreaviso?</li>
+      <li>Alguma escala de sobreaviso passa de 24 horas seguidas, ou de prontidão passa de 12 horas?</li>
+      <li>Os chamados atendidos estão sendo registrados com início e fim?</li>
+      <li>A convenção da categoria tem regra própria para sobreaviso?</li>
+      </ul>
+      <div class="callout"><strong>Importante:</strong> Este conteúdo é informativo e não é parecer jurídico. A convenção ou o acordo coletivo da sua categoria pode ter regra própria: antes de aplicar, confirme com um advogado trabalhista ou com o departamento pessoal da sua contabilidade.</div>
+      <p>Sobreaviso sem registro vira dúvida na folha e reclamação na equipe. <strong><a href="/?utm_source=blog_criarescala&amp;utm_medium=texto&amp;utm_campaign=sobreaviso-e-plantao" data-cta="cotacao" data-cta-label="texto-sobreaviso-e-plantao">Monte a escala do mês na Criar Escala</a></strong> e deixe claro quem trabalha e quem fica disponível em cada dia.</p>
+      <div class="related">
+        <h4>Continue lendo</h4>
+        <div class="related-links">
+          <a href="/blog/escala-de-revezamento-como-organizar-turnos">Escala de revezamento: como organizar turnos sem sobrecarregar ninguém</a>
+          <a href="/blog/intervalo-intrajornada-e-interjornada">Intervalo intrajornada e interjornada: as pausas que a escala precisa respeitar</a>
+          <a href="/blog/adicional-noturno-como-funciona">Adicional noturno: horário, hora reduzida e como fica na escala</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</article>
+
+<section class="section">
+  <div class="wrap">
+    <div class="strip-cta">
+      <div>
+        <h3>Quem está de sobreaviso nesta semana?</h3>
+        <p>Na Criar Escala você monta a escala do mês com os turnos da equipe e compartilha com todos pelo celular. Sistema 100% grátis, uma solução da Mavin Seguros.</p>
+      </div>
+      <a href="/?utm_source=blog_criarescala&amp;utm_medium=strip&amp;utm_campaign=sobreaviso-e-plantao" class="btn btn-primary" data-cta="cotacao" data-cta-label="strip-sobreaviso-e-plantao">Simular minha escala grátis</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="wm">criar<span class="lime">escala</span></div>
+        <p>Sistema gratuito para montar a escala do mês da sua equipe, já com a nova regra de jornada.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Navegue</h5>
+        <a href="/blog/">Blog</a>
+        <a href="/">Criar minha escala</a>
+        <a href="https://mavinseguros.com.br/privacidade/">Política de privacidade</a>
+      </div>
+      <div class="foot-col">
+        <h5>Quem faz</h5>
+        <a href="https://mavinseguros.com.br">Mavin Seguros</a>
+        <a href="mailto:contato@mavinseguros.com.br">contato@mavinseguros.com.br</a>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p class="legal-txt">Criar Escala é uma solução da Mavin. MAVIN CONSULTORIA &amp; CORRETAGEM DE SEGUROS LTDA · CNPJ 68.132.516/0001-23 · R. Adelino Leal Nunes, 279, Novo Mundo, Curitiba/PR. Conteúdo informativo, sem validade jurídica: confirme com um advogado trabalhista ou com o departamento pessoal da sua contabilidade.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/blog/assets/site.js"></script>
+<!-- Banner de consentimento de cookies (LGPD) -->
+<style>
+  #an-cookie-bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;max-width:640px;margin:0 auto;background:#111827;color:#F9FAFB;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.25);padding:10px 12px 10px 16px;display:flex;align-items:center;gap:12px;font-family:inherit;font-size:12px;line-height:1.4;transition:transform .3s ease,opacity .3s ease}
+  #an-cookie-bar.an-hidden{transform:translateY(20px);opacity:0;pointer-events:none}
+  #an-cookie-bar a{color:inherit;text-decoration:underline;opacity:.9}
+  #an-cookie-bar .an-t{flex:1;opacity:.88}
+  #an-cookie-bar .an-a{display:flex;gap:6px;flex-shrink:0}
+  #an-cookie-bar button{font-family:inherit;font-weight:700;font-size:12px;padding:7px 12px;border-radius:8px;border:none;cursor:pointer;white-space:nowrap}
+  #an-cookie-no{background:rgba(127,127,127,.18);color:inherit;font-weight:600}
+  #an-cookie-ok{background:#5B3DF5;color:#fff}
+  @media(max-width:480px){#an-cookie-bar{flex-direction:column;align-items:stretch;text-align:left}#an-cookie-bar .an-a{justify-content:flex-end}}
+</style>
+<div id="an-cookie-bar" class="an-hidden" role="dialog" aria-label="Consentimento de cookies">
+  <div class="an-t">Usamos cookies para medir e melhorar o uso do site. <a href="https://criarescala.com.br/privacidade/">Política de privacidade</a></div>
+  <div class="an-a"><button id="an-cookie-no" type="button">Recusar</button><button id="an-cookie-ok" type="button">Aceitar</button></div>
+</div>
+<script>
+(function(){
+  var bar=document.getElementById('an-cookie-bar'), k='criarescala_cookie_consent', s=null;
+  try{ s=localStorage.getItem(k); }catch(e){}
+  if(!s) bar.classList.remove('an-hidden');
+  function done(v){ try{ localStorage.setItem(k,v); }catch(e){} bar.classList.add('an-hidden'); }
+  document.getElementById('an-cookie-ok').addEventListener('click',function(){
+    gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'});
+    if(window.clarity) clarity('consentv2',{ad_Storage:'granted',analytics_Storage:'granted'});
+    done('accepted');
+  });
+  document.getElementById('an-cookie-no').addEventListener('click',function(){ done('rejected'); });
+})();
+</script>
+</body>
+</html>
