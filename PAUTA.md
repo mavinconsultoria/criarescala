@@ -49,7 +49,7 @@ Critério (aprovado pelo Vinicius em 2026-11-04): tema só entra com volume de b
 | 2026-11-17 | Banco de horas: como funciona com a jornada de 42 horas | drafts/banco-de-horas-jornada-42-horas.html | publicado (busca/mês: banco de horas 6.600; como funciona 4.400; fonte: CLT art. 59; nota Fenacon) |
 | 2026-11-19 | Modelo de escala de trabalho 5x2 (com planilha grátis) | blog/modelo-de-escala-de-trabalho-5x2.html | publicado (busca/mês: modelo de escala de trabalho 1.000; planilha de escala 720; fonte: EC 141/2026) |
 | 2026-11-21 | Trabalhar no feriado: é obrigatório, paga em dobro ou dá folga? | drafts/trabalhar-no-feriado-obrigatorio-dobro-ou-folga.html | agendado 2026-11-21 (busca/mês: trabalho em feriado 2.900; feriado trabalhado 2.900; fonte: Lei 605/1949 art. 9º) |
-| 2026-11-24 | Escala 5x1: ainda é permitida com 2 folgas semanais? | drafts/escala-5x1-e-permitida.html | agendado 2026-11-24 (busca/mês: escala 5x1 6.600; fonte: EC 141/2026 (confirmar no texto; se não houver resposta clara, trocar o tema)) |
+| 2026-11-24 | Escala 5x1: ainda é permitida com 2 folgas semanais? | blog/escala-5x1-e-permitida.html | publicado (busca/mês: escala 5x1 6.600; fonte: EC 141/2026) |
 | 2026-11-26 | Trabalhar aos domingos: como fazer o rodízio de folgas | drafts/trabalhar-aos-domingos-rodizio-de-folgas.html | agendado 2026-11-26 (busca/mês: trabalhar aos domingos 880; fonte: Lei 10.101/2000 art. 6º; CLT art. 67) |
 | 2026-11-28 | Limite de hora extra por dia: o que muda com a nova jornada | drafts/limite-de-hora-extra-por-dia.html | agendado 2026-11-28 (busca/mês: limite de hora extra por dia 390; fonte: CLT art. 59; nota Fenacon) |
 
