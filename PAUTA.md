@@ -51,7 +51,7 @@ Critério (aprovado pelo Vinicius em 2026-11-04): tema só entra com volume de b
 | 2026-11-21 | Trabalhar no feriado: é obrigatório, paga em dobro ou dá folga? | drafts/trabalhar-no-feriado-obrigatorio-dobro-ou-folga.html | agendado 2026-11-21 (busca/mês: trabalho em feriado 2.900; feriado trabalhado 2.900; fonte: Lei 605/1949 art. 9º) |
 | 2026-11-24 | Escala 5x1: ainda é permitida com 2 folgas semanais? | blog/escala-5x1-e-permitida.html | publicado (busca/mês: escala 5x1 6.600; fonte: EC 141/2026) |
 | 2026-11-26 | Trabalhar aos domingos: como fazer o rodízio de folgas | blog/trabalhar-aos-domingos-rodizio-de-folgas.html | publicado (busca/mês: trabalhar aos domingos 880; fonte: Lei 10.101/2000 art. 6º; CLT art. 67) |
-| 2026-11-28 | Limite de hora extra por dia: o que muda com a nova jornada | drafts/limite-de-hora-extra-por-dia.html | agendado 2026-11-28 (busca/mês: limite de hora extra por dia 390; fonte: CLT art. 59; nota Fenacon) |
+| 2026-11-28 | Limite de hora extra por dia: o que muda com a nova jornada | blog/limite-de-hora-extra-por-dia.html | publicado (busca/mês: limite de hora extra por dia 390; fonte: CLT art. 59; nota Fenacon) |
 
 Também aprovado: atualizar o post publicado fim-da-escala-6x1-o-que-muda-para-as-equipes (termo "fim da escala 6x1", 165.000/mês) com os prazos oficiais e links para os posts acima.
 
